@@ -1,0 +1,12 @@
+K čemu slouží .gitignore.
+
+Je to soubor kam se vypisuji soubory a adresáře co git nemá versovat. Velmi často provozní prostředí co vytváří třeba python nebo soubory s hesly a pod
+
+Ja se zapisuji vzory do .gitignore uveď příklady pro:
+	Ignrování všech .log souborů
+	Ignorování adresáře build.
+
+Řešení
+
+*.log #Bude ignorovat všechny log soubory
+build/  #Bude ignorovat adresař a vše v něm.
