@@ -1,0 +1,144 @@
+commit 87d71bc94f7fd0c53b9534cbfd526cb4f4707d84 (HEAD -> master, pridat-gitignore)
+Author: Nina Leonidovna <abasheeva@gmail.com>
+Date:   Wed Oct 1 14:58:20 2025 +0200
+
+    Přidán soubor .gitignore
+
+diff --git a/.gitignore b/.gitignore
+new file mode 100644
+index 0000000..613bf00
+--- /dev/null
++++ b/.gitignore
+@@ -0,0 +1,2 @@
++*.tmp
++pracovni/
+
+commit 00aeca69c065b093ded421dd7bdef266ceb01ec2 (oprava-readme)
+Author: Nina Leonidovna <abasheeva@gmail.com>
+Date:   Wed Oct 1 14:54:15 2025 +0200
+
+    Opravenen překlep v readme
+
+diff --git a/readme.md b/readme.md
+index 618d118..a59efc0 100644
+--- a/readme.md
++++ b/readme.md
+@@ -1,3 +1,3 @@
+ Tento repozitáx obsahuje cestovní průvodce po různých městech a zemích.
+ 
+-Obsahuje: Paříž, Francie, Londýn
++Obsahuje: Paříž, Francie, Londýn, Berlin
+
+commit b84114c91a771257a3aa2fffea05e76cfbd19667 (pridat-berlin)
+Author: Nina Leonidovna <abasheeva@gmail.com>
+Date:   Wed Oct 1 14:51:34 2025 +0200
+
+    Přidán průvodce po Berlíně
+
+diff --git a/berlin.md b/berlin.md
+new file mode 100644
+index 0000000..469dd49
+--- /dev/null
++++ b/berlin.md
+@@ -0,0 +1,13 @@
++Berlín (německy Berlin, IPA: [bɛʁˈliːn], zvuk poslech) je hlavní a největší město Německa a zároveň městskou spolkovou zemí Spolkové republiky Německo. Hlavním městem Německa se stal roku 1991 a od znovusjednocení Německa 3. října 1990, a tím i obou částí města – západní a východní, patří Berlín mezi největší města v Evropě a je největším městem Evropské unie. Zcela jej obklopuje spolkový stát Braniborsko. Žije zde přibližně 3,78 milionu[3] obyvatel. V metropolitní oblasti Berlína žije přibližně 4,5 milionu obyvatel, takže je po Porúří druhou nejlidnatější oblastí v Německu.[4] Ve 20. letech 20. století byl Berlín třetím největším městem na světě. Metropolitní region Berlín-Braniborsko je třetí největší metropolitní oblastí po Porýní-Porúří a Porýní-Pomohaní.[5]
++
++Berlín leží v rovině, na břehu řeky Sprévy, která se vlévá do Havoly – pravostranného přítoku Labe, v západní čtvrti Špandava. Mezi hlavní topografické rysy města patří mnoho jezer v západních a jihovýchodních čtvrtích, z nichž největší je jezero Müggelsee. Jezera jsou tvořena výše zmíněnými řekami. Asi jednu třetinu rozlohy města tvoří lesy, parky, zahrady, řeky, vodní kanály a jezera.[6]
++
++Existence města je prvně doložena ze 13. století. Tehdy se zde křížily dvě důležité obchodní stezky.[7] V 15. století se stalo hlavním městem Braniborského markrabství (1417–1701) a Pruského království (1701–1918), jeho důležitost však vzrostla zejména roku 1871, kdy se stalo hlavním městem Německé říše (1871–1918). Od té doby si pozici nejdůležitějšího německého města Berlín podržel i za Výmarské republiky (1918–1933) a Třetí říše (1933–1945).
++
++Po druhé světové válce bylo válkou poničené město rozděleno na čtyři sektory patřící vítězům druhé světové války. Sovětský sektor (Východní Berlín) se stal hlavním městem menšího východního Německa, kdežto metropolí západního Německa se stal Bonn. V té době část města, tzv. Západní Berlín, který vznikl z francouzské, britské a americké části, měla status nezávislého státu, byť v zásadě kulturně i politicky přináležela k západnímu Německu. Obě části města byly od roku 1961 odděleny Berlínskou zdí, která se stala symbolem studené války a její pád roku 1989 pak symbolem pádu komunismu v Evropě. Po znovusjednocení Německa 3. října 1990 se sjednotilo znovu i město a stalo se opět celoněmeckou metropolí. Přesídlil sem i parlament – Německý spolkový sněm (německy Deutscher Bundestag), pro nějž byla rekonstruována budova Říšského sněmu (Reichstag).
++
++Berlín je světovým centrem kultury, politiky, médií a vědy.[8] Ekonomika města je založena high-tech firmách a sektoru služeb, který zahrnuje širokou škálu společností. Berlín je také evropským dopravním uzlem letecké a železniční dopravy. Sám má velmi složitou síť veřejné dopravy.
++
++Berlín je domovem světově uznávaných univerzit, jako je Humboldtova univerzita, Svobodná univerzita Berlín, Univerzita umění v Berlíně nebo Technická univerzita Berlín. Berlínská zoologická zahrada je nejnavštěvovanější zoologickou zahradou v Evropě. Proslulým je každoroční filmový festival obvykle nazývaný zkráceně Berlinale. Filmy se natáčí například ve studiích Babelsberg. Celkově je město stále oblíbenějším cílem filmařů.[9]
++
++Známou lokalitou je Ostrov muzeí, kde se krom pěti slavných muzeí nachází i Berlínská katedrála. Ostrov patří ke třem berlínským položkám zapsaným na seznam Světového dědictví UNESCO. Dalšími dvěma jsou paláce a parky v Postupimi a Berlíně a skupina modernistických budov z let 1913–1934. K dalším symbolům města patří Braniborská brána, třída Unter den Linden, Postupimské náměstí, Židovský památník, Vítězný sloup, East Side Gallery, Alexanderplatz a nedaleko stojící berlínský televizní vysílač (Berliner Fernsehturm), nejvyšší stavba v Německu s výškou 368 metrů. 
+
+commit 5bb66f890da3d6c3c243c903949ee737adb99b7e
+Merge: 241e6e7 db867df
+Author: Nina Leonidovna <abasheeva@gmail.com>
+Date:   Wed Oct 1 14:48:10 2025 +0200
+
+    Merge branch 'pridat-londyn'
+
+commit 241e6e7951456b23f4632eb4e2feb4db4d734224
+Author: Nina Leonidovna <abasheeva@gmail.com>
+Date:   Wed Oct 1 14:44:14 2025 +0200
+
+    Rozšířen seznam v README.md
+
+diff --git a/readme.md b/readme.md
+index b69d5ad..f53da71 100644
+--- a/readme.md
++++ b/readme.md
+@@ -1 +1,3 @@
+ Tento repozitáx obsahuje cestovní průvodce po různých městech a zemích.
++
++Obsahuje: Paříž, Francie
+
+commit db867dfb15869729f8e3682e8c321eb107be4709 (pridat-londyn)
+Author: Nina Leonidovna <abasheeva@gmail.com>
+Date:   Wed Oct 1 14:41:06 2025 +0200
+
+    Upraven readme.md
+
+diff --git a/readme.md b/readme.md
+index b69d5ad..7477b14 100644
+--- a/readme.md
++++ b/readme.md
+@@ -1 +1,3 @@
+ Tento repozitáx obsahuje cestovní průvodce po různých městech a zemích.
++
++Obsahuje: Paříž, Londýn
+
+commit fb5f137f435578062c79000067a92d214ee811b5
+Author: Nina Leonidovna <abasheeva@gmail.com>
+Date:   Wed Oct 1 14:36:08 2025 +0200
+
+    Přidán průvodce po Londynu
+
+diff --git a/londyn.txt b/londyn.txt
+new file mode 100644
+index 0000000..3e3f23a
+--- /dev/null
++++ b/londyn.txt
+@@ -0,0 +1,7 @@
++Londýn (anglicky London s výslovností výslovnost [ˈlʌndən]IPA) je s 8,8 miliony obyvatel hlavní a největší město Anglie a Spojeného království.[2] Leží na řece Temži v jihovýchodní Anglii, 80 km[3] od ústí řeky Temže do Severního moře a je významným osídlením již téměř dvě tisíciletí.[4] City, starověké jádro a finanční centrum města, bylo založeno Římany jako Londinium.[5] Ve Westminsteru, západně od City, po staletí sídlí národní vláda a parlament. Od 19. století[6] název „Londýn“ odkazuje také na metropoli kolem tohoto jádra, historicky rozdělenou mezi hrabství Middlesex, Essex, Surrey, Kent a Hertfordshire.[7]
++
++Londýn má jako jedno z největších světových globálních měst[8] silný vliv na světové umění, zábavu, módu, obchod a finance, vzdělání, zdravotnictví, média, vědu a techniku, cestovní ruch, dopravu a komunikace.[9][10] Jeho HDP ve výši 801,66 miliard EUR v roce 2017 z něj dělá největší městskou ekonomiku v Evropě[11] a je jedním z hlavních finančních center světa. S největší koncentrací vysokoškolských institucí v Evropě[12] je sídlem některých z nejlépe hodnocených akademických institucí na světě – Imperial College London (přírodní a aplikované vědy), London School of Economics (společenské vědy) a University College London.[13][14] Londýn je nejnavštěvovanějším městem v Evropě a má nejrušnější letiště na světě.[15] Londýnské metro je nejstarší na světě.[16]
++
++V Londýně se mluví více než 300 jazyky.[17] Počet obyvatel Velkého Londýna byl v roce 2023 necelých 10 milionů,[18] což z něj dělá druhé nejlidnatější město Evropy.[19] Žije zde 13,4 % obyvatel Spojeného království[20] a více než 16 % obyvatel Anglie. Londýnská metropolitní oblast je s asi 14 miliony obyvatel v roce 2016 třetí nejlidnatější v Evropě.[21]
++
++V Londýně se nachází čtyři památky světového dědictví: Tower; Královské botanické zahrady; Westminsterský palác, Westminsterské opatství a kostel sv. Markéty; a také historické osídlení v Greenwichi, kde se nachází Královská greenwichská observatoř, kterou prochází základní poledník (0° zeměpisné délky) a pomocí které je definován greenwichský střední čas.[22] Mezi další památky patří Buckinghamský palác, Londýnské oko, Piccadilly Circus, Katedrála svatého Pavla, Tower Bridge a Trafalgarské náměstí. Londýn má mnoho muzeí, galerií, knihoven a kulturních míst, včetně Britského muzea, Národní galerie, Přírodopisného muzea, Tate Modern, Britské knihovny a četných divadel ve West Endu.[23] Mezi důležité sportovní události konané v Londýně patří finále FA Cupu, tenisový turnaj Wimbledon a londýnský maraton. V roce 2012 se Londýn stal prvním městem, které hostilo letní olympijské hry třikrát.[24] 
+
+commit a2734507f6d83a2a6992b5e1c0576b93ad013e80 (pridat-pariz, pariz-update)
+Author: Nina Leonidovna <abasheeva@gmail.com>
+Date:   Wed Oct 1 14:28:50 2025 +0200
+
+    Přidán průvodce po Paříži
+
+diff --git a/pariz.txt b/pariz.txt
+new file mode 100644
+index 0000000..cfa8d92
+--- /dev/null
++++ b/pariz.txt
+@@ -0,0 +1,3 @@
++Paříž (francouzsky Paris), hlavní a zároveň největší město Francie, je správním centrem regionu Île-de-France, zahrnujícího Paříž a její předměstí, přičemž sama tvoří správní obvod se zvláštním statutem Ville de Paris („město Paříž“). Představuje přirozené centrum Pařížské aglomerace a díky 552,7 miliardám € HDP (2008)[2] hospodářsky nejaktivnější oblast ve Francii.
++
++V Paříži sídlí vedení téměř poloviny všech francouzských společností stejně jako kanceláře hlavních mezinárodních firem a ředitelství mnoha mezinárodních organizací, jako jsou UNESCO, OECD nebo ICC. Paříž je proto významným světovým kulturním, obchodním i politickým centrem. Počet obyvatel v roce 2021 činil 2 138 551,[1] v celé aglomeraci pak 11 133 427[1] (údaj z roku 2021). Město se stalo nositelem Řádu čestné legie,[3] Válečného kříže 1914–1918[4] a Řádu osvobození.[5] 
+
+commit 6421a1bc2206e1c009a8907c7b24bce8e1c7f3a5
+Author: Nina Leonidovna <abasheeva@gmail.com>
+Date:   Wed Oct 1 14:25:00 2025 +0200
+
+    Inicializace projektu
+
+diff --git a/readme.md b/readme.md
+new file mode 100644
+index 0000000..b69d5ad
+--- /dev/null
++++ b/readme.md
+@@ -0,0 +1 @@
++Tento repozitáx obsahuje cestovní průvodce po různých městech a zemích.
+
