@@ -1,0 +1,54 @@
+commit e3478e9ad30a87540a04b9d42e1eed5421feb6c8
+Author: Jana Dražková <drazkova.j@gmail.com>
+Date:   Sun Sep 28 00:05:10 2025 +0200
+
+    Přidán soubor .gitignore
+
+commit 8ac034c038d7e2ac92d56b843a042754e0e317a9
+Author: Jana Dražková <drazkova.j@gmail.com>
+Date:   Sat Sep 27 23:56:41 2025 +0200
+
+    Opravenen překlep v readme
+
+commit 121dc1f68d1430852c4a6184d2eea12af995b267
+Author: Jana Dražková <drazkova.j@gmail.com>
+Date:   Sat Sep 27 23:52:02 2025 +0200
+
+    Přidán průvodce po Berlíně
+
+commit 66e0a29416f0de69a8b25ea3f245ee039472bddc
+Merge: 80c2f97 f24328e
+Author: Jana Dražková <drazkova.j@gmail.com>
+Date:   Sat Sep 27 23:49:21 2025 +0200
+
+    Merge branch 'pridat-londyn'
+
+commit 80c2f97dbf8fed54bcf31fa44b1a6e2fd66daa35
+Author: Jana Dražková <drazkova.j@gmail.com>
+Date:   Sat Sep 27 23:39:20 2025 +0200
+
+    Rozšířen seznam v README.md
+
+commit f24328ecc14983aae17f085ac4be79358a4dc571
+Author: Jana Dražková <drazkova.j@gmail.com>
+Date:   Sat Sep 27 23:37:16 2025 +0200
+
+    Přidán obsah do READ.md
+
+commit 136cd4182300e2f1c1290e2d03c9d21011e1da04
+Author: Jana Dražková <drazkova.j@gmail.com>
+Date:   Sat Sep 27 23:35:52 2025 +0200
+
+    Přidán průvodce po Londýně
+
+commit 68948506c74d1980db296b3272ca2233d0efabbc
+Author: Jana Dražková <drazkova.j@gmail.com>
+Date:   Sat Sep 27 23:32:51 2025 +0200
+
+    Přidán průvodce po Paříži
+
+commit 1b0197a15ad8851b38f7bb434dcf2ec987a0d47c
+Author: Jana Dražková <drazkova.j@gmail.com>
+Date:   Sat Sep 27 23:24:58 2025 +0200
+
+    Inicializace projektu
