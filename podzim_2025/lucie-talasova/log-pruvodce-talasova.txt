@@ -1,0 +1,163 @@
+commit 5a683953fad0a946a4ee0716db83419a226047f6
+Author: Luc1et-Fedora <milujememarcipan@seznam.cz>
+Date:   Tue Sep 30 14:11:52 2025 +0200
+
+    Přidán soubor .gitignore
+
+diff --git a/.gitignore b/.gitignore
+new file mode 100644
+index 0000000..613bf00
+--- /dev/null
++++ b/.gitignore
+@@ -0,0 +1,2 @@
++*.tmp
++pracovni/
+
+commit 4bc264ab6fafcc62ba8157d39984235cd4d08148
+Author: Luc1et-Fedora <milujememarcipan@seznam.cz>
+Date:   Tue Sep 30 14:09:26 2025 +0200
+
+    Opraven překlep v readme
+
+diff --git a/README.md b/README.md
+index 040fe50..eac9907 100644
+--- a/README.md
++++ b/README.md
+@@ -1,2 +1,2 @@
+-Tento repozitáx obsahuje cestovní průvodce po  městech a státech.
++Tento repozitář obsahuje cestovní průvodce po  městech a státech.
+ Obsahuje: Paříž, Francie, Londýn
+
+commit fb03745678f2f33cfe7efda59340f877fa2fcf67
+Author: Luc1et-Fedora <milujememarcipan@seznam.cz>
+Date:   Tue Sep 30 14:05:23 2025 +0200
+
+    Přidán průvodce po Berlíně .txt
+
+diff --git a/berlin.txt b/berlin.txt
+new file mode 100644
+index 0000000..f20e01f
+--- /dev/null
++++ b/berlin.txt
+@@ -0,0 +1,5 @@
++Stručný průvodce po Berlíně:
++
++- Zajímavost: Braniborská brána – symbol města a historické místo.
++- Jídlo: Currywurst – oblíbená berlínská specialita.
++- Doprava: Metro (U-Bahn) a tramvaje umožňují snadné cestování po městě.
+
+commit d124ed71e1d6cdb935fc49be94ef69134e703f4b
+Author: Luc1et-Fedora <milujememarcipan@seznam.cz>
+Date:   Tue Sep 30 14:03:32 2025 +0200
+
+    Přidán průvodce po Berlíně .md
+
+diff --git a/berlin.md b/berlin.md
+new file mode 100644
+index 0000000..506b57b
+--- /dev/null
++++ b/berlin.md
+@@ -0,0 +1,10 @@
++# Průvodce Berlínem
++
++## Zajímavost
++Braniborská brána – symbol města a důležité historické místo.
++
++## Jídlo
++Currywurst – typická berlínská specialita, kterou najdete na každém rohu.
++
++## Doprava
++Rozsáhlá síť metra (U-Bahn) a tramvají, ideální pro rychlé cestování po městě.
+
+commit 37dbef158c614def7856879dc25786ed84a203ca
+Merge: 3a29679 7e16dfc
+Author: Luc1et-Fedora <milujememarcipan@seznam.cz>
+Date:   Tue Sep 30 13:52:58 2025 +0200
+
+    Sjednocen popis v README.md.
+
+commit 3a296791ca2b0fafe713ca5d751e096d444ae20c
+Author: Luc1et-Fedora <milujememarcipan@seznam.cz>
+Date:   Tue Sep 30 13:47:27 2025 +0200
+
+    Rozšířen seznam v README.md
+
+diff --git a/README.md b/README.md
+index b69d5ad..e13ffa5 100644
+--- a/README.md
++++ b/README.md
+@@ -1 +1,2 @@
+ Tento repozitáx obsahuje cestovní průvodce po různých městech a zemích.
++Obsahuje: Paříž, Francie
+
+commit 7e16dfc9a2f78a346ae7fc9b3163668c94ca0980
+Author: Luc1et-Fedora <milujememarcipan@seznam.cz>
+Date:   Tue Sep 30 13:43:00 2025 +0200
+
+    Upraveno README
+
+diff --git a/README.md b/README.md
+index b69d5ad..ba58686 100644
+--- a/README.md
++++ b/README.md
+@@ -1 +1,3 @@
+-Tento repozitáx obsahuje cestovní průvodce po různých městech a zemích.
++Tento repozitáx obsahuje cestovní průvodce po těchto městech:
++Paříž
++Londýn
+
+commit 3049677b58c681088784dd4ab40ce6d6d139a501
+Author: Luc1et-Fedora <milujememarcipan@seznam.cz>
+Date:   Tue Sep 30 13:40:29 2025 +0200
+
+    Přidán průvodce po Londýně.
+
+diff --git a/londyn.txt b/londyn.txt
+new file mode 100644
+index 0000000..711f619
+--- /dev/null
++++ b/londyn.txt
+@@ -0,0 +1,8 @@
++Stručný průvodce po Londýně:
++
++- Big Ben a Westminsterský palác: symbol Londýna.
++- Tower Bridge: slavný zdvižný most.
++- Tower of London: historická pevnost a korunovační klenoty.
++- British Museum: jedno z největších muzeí světa, vstup zdarma.
++- Buckingham Palace: sídlo královské rodiny, střídání stráží.
++- London Eye: obří vyhlídkové kolo s krásným výhledem.
+
+commit bdf45cdfeb7e7cf624386e517653bdb862199d11
+Author: Luc1et-Fedora <milujememarcipan@seznam.cz>
+Date:   Tue Sep 30 13:35:38 2025 +0200
+
+    Přidán průvodce po Paříži
+
+diff --git a/pariz.txt b/pariz.txt
+new file mode 100644
+index 0000000..229e059
+--- /dev/null
++++ b/pariz.txt
+@@ -0,0 +1,8 @@
++Stručný průvodce po Paříži:
++
++- Eiffelova věž: symbol města, krásný výhled na Paříž.
++- Louvre: slavné muzeum s Monou Lisou.
++- Notre-Dame: gotická katedrála, nutná zastávka.
++- Montmartre: umělecká čtvrť, bazilika Sacré-Cœur.
++- Champs-Élysées: slavný bulvár k Vítěznému oblouku.
++- Seina: projížďka lodí ukáže město z jiné perspektivy.
+
+commit 057709fc8b953df97797488151ffae6a567d96d7
+Author: Luc1et-Fedora <milujememarcipan@seznam.cz>
+Date:   Tue Sep 30 13:24:21 2025 +0200
+
+    Inicializace projektu
+
+diff --git a/README.md b/README.md
+new file mode 100644
+index 0000000..b69d5ad
+--- /dev/null
++++ b/README.md
+@@ -0,0 +1 @@
++Tento repozitáx obsahuje cestovní průvodce po různých městech a zemích.
