@@ -1,0 +1,55 @@
+commit cf0af0eb1a042da293f01b117690ff0a02fffb7d (HEAD -> master, pridat-gitignore)
+Author: Dragca Kvasnickova <kvasnickova@kvadr.eu>
+Date:   Thu Oct 2 12:11:49 2025 +0200
+
+    Přidán soubor .gitignore
+
+commit e33f930c7900faa61dfab7fbf461b1344b5eb88b (oprava-readme)
+Author: Dragca Kvasnickova <kvasnickova@kvadr.eu>
+Date:   Thu Oct 2 12:05:51 2025 +0200
+
+    Opraven překlep v README
+
+commit f271b78dab52342e547c5251921080137da889fe
+Author: Dragca Kvasnickova <kvasnickova@kvadr.eu>
+Date:   Thu Oct 2 11:55:47 2025 +0200
+
+    Přidán průvodce po Berlíně
+
+commit 5e5ca0104da418aa42df681d89264cc752f13cd9
+Merge: 71e77da d3925d6
+Author: Dragca Kvasnickova <kvasnickova@kvadr.eu>
+Date:   Thu Oct 2 11:40:47 2025 +0200
+
+    Merge branch 'pridat-londyn'
+
+commit 71e77dafa251ff1896d67de1b599f8cd3e7a430f
+Author: Dragca Kvasnickova <kvasnickova@kvadr.eu>
+Date:   Wed Oct 1 22:37:56 2025 +0200
+
+    Rozšířen seznam v README.md)
+
+commit d3925d691eb59cd2005d2dcb9a21aae1215d3595
+Author: Dragca Kvasnickova <kvasnickova@kvadr.eu>
+Date:   Wed Oct 1 22:30:36 2025 +0200
+
+    upraveno README
+
+commit ccb77d3dadf0aca5d71348f20ee6f7dbffd45481
+Author: Dragca Kvasnickova <kvasnickova@kvadr.eu>
+Date:   Wed Oct 1 22:28:13 2025 +0200
+
+    Přidán průvodce pro Londýn
+    
+commit 1829d86eeb74dd2a6e293bcc4e813cb582211cba
+Author: Dragca Kvasnickova <kvasnickova@kvadr.eu>
+Date:   Wed Oct 1 22:16:50 2025 +0200
+
+    Přidán průvodce po Paříži
+
+commit 69d8d3f69373bd3d1c6498b7aff5b5deef9ca3c3
+Author: Dragca Kvasnickova <kvasnickova@kvadr.eu>
+Date:   Wed Oct 1 22:03:01 2025 +0200
+
+    Inicializace projektu
+
