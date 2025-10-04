@@ -40,17 +40,16 @@ Ad1) Protože tyto hodnoty se hned při použití gitu pouřžívají
 a ukládají se v historii. Také slouží v případě že se soubory
 následně posílají do vzdáleného repozitáře k identifikaci uživatele.
 
-Ad2) 	Pracovní adresář fyzické místo na mám disku kde mám uložené
+Ad2) 	Pracovní adresář fyzické místo na disku kde mám uložené
 soubory. 
 	Index(staging area) něco jako "pracovní" verze změn jsou v něm
-	přidané soubory které by se měli následně poslat do repozitáře.
+	přidané soubory, které by se měli následně poslat do repozitáře.
 
-	Repozitář je seznam souborů jejich změny historie atd. To co je
-	v adresáři .git
+	Repozitář je seznam souborů jejich změny historie atd.
 
 Ad3)	Git add: vezme aktuální soubor a přidá ho do stage.
 	Git commit: uloží změny souboru ze stage do repozitáře +
-	přidá datim změny a popis změn autorem
+	přidá datum změny a popis změn autorem.
 
 Ad4)	Jednoznačný identifikátor revize je to jedinečný odkaz na odeslanou
 změnu.
@@ -58,17 +57,17 @@ změnu.
 Ad5)	Git má vlastní struktůru ve které uchovává změny souboru a co se v
 souborech měnilo. Neduplikuje soubory, zaznamenává rozdíly.
 
-Ad6)	Každý clon má celý repozitář a historii, je možné pracovat samostatně
-offline, neni nutný centrální místo. Změny se nísůedně synchronizují.
+Ad6)	Každý má celý repozitář a jeho historii, je možné pracovat samostatně
+offline, neni nutný centrální bod. Změny se následně synchronizují.
 
-Ad7)	Důvodem je asi právě ten distribuovaný systém. Main je stabilní
+Ad7)	Důvodem je asi právě distribuovaný systém. Main je stabilní větev
 a změny se provádějí v branchi kde je pak následně lehčí udělat merge do main
 větve.
 
 Ad8)	Merge spojí větve do hlavní a přidá komentář.
 	rebase - dle názvu a netu asi vytvoří paralerní větev projektu. Historie
-se přepiše minimálně hashe. Vytvoří nezávislou odnož projektu, která již nejde
-snadno spojit s předchozí!!
+se přepiše minimálně hashe. Vytvoří nezávisl projekt, která již nejde snadno 
+spojit s předchozím!!
 
 ad9) 	pull request je žádost o začlenění změn z větve do jiné (nejčastěji
 main) slouži ke kontrole codu a transparentnímu schválení. pull request je
@@ -79,7 +78,7 @@ výkonu apod.
 
 ad11)	Je to soubor kam se vypisuji soubory a adresáře co git nebude sledovat
 nebude přidávat do stage ani repozitáře. Velmi často provozní prostředí co
-vytváří třeba python nebo soubory s hesly a pod
+vytváří třeba python nebo soubory s hesly a pod.
 
 ad12) 	Nevím co jsem našel na netu tak ignorování se týká jen nesledovaných
 souborů. Už sledovaný soubor zůstane trackovaný. Chceš li ho přestat sledovat
@@ -88,6 +87,7 @@ použij
 	git commit -m "Stop tracking generated file"
 	
 	Po výše uvedeném pak .gitignore udrží soubor mimo.
+
 ad13)	Protože zbytečně nafukují repozitář spomalují následné synchronizace,
 způsobují konflity ve verzích a nepatří do zdrojového kodu!!!
 
