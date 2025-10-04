@@ -1,12 +1,101 @@
-K čemu slouží .gitignore.
+1) Proč je vhodné nastavit uživatelské jméno a e-mail hned po instalaci?
 
-Je to soubor kam se vypisuji soubory a adresáře co git nemá versovat. Velmi často provozní prostředí co vytváří třeba python nebo soubory s hesly a pod
+2) Jaký je rozdíl mezi pracovním adresářem, indexem (staging area) a
+repozitářem?  
 
-Ja se zapisuji vzory do .gitignore uveď příklady pro:
-	Ignrování všech .log souborů
-	Ignorování adresáře build.
+3) Co se děje při příkazu git add a co při git commit?
 
-Řešení
+4) Vysvětli, co je to commit hash a proč je důležitý.  
 
-*.log #Bude ignorovat všechny log soubory
-build/  #Bude ignorovat adresař a vše v něm.
+5) Jak Git uchovává historii změn? Uveď rozdíl oproti klasickému ukládání
+souborů.  
+
+6) Co znamená, že Git je „distribuovaný systém pro správuverzí“?  
+
+7) Proč je doporučeno používat větve místo práce přímo v hlavní větvi
+ (main/master)?  
+
+8) Jaký je rozdíl mezi git merge a git rebase? Uveď příklad, kdy bys 
+použil/a který. Co se stane s historií, pokud sloučíš větev pomocí 
+merge? A co při rebase? Pozn.: Co je rebase jsme se na kurzu neučili, 
+ale jde taky o způsob slučování větví, který je dobré znát. 
+Zkus si o tom dohledat informace.  
+
+9) Jaký je účel pull requestu a proč se používá?  
+
+10) Co znamená code review a jaký je jeho přínos?  
+
+11) K čemu je soubor .gitignore ?  
+
+12) Co se stane, pokud přidáš do .gitignore soubor, který už je ve 
+verzovací historii?  
+
+13)Proč je vhodné ignorovat logy, dočasné soubory editorů nebo sestavení?
+
+14) Jak se zapisují vzory do .gitignore? Uveď příklady pro:
+	Ignorování všech .log souboru
+	Ignorování adresáře build
+
+Ad1) Protože tyto hodnoty se hned při použití gitu pouřžívají
+a ukládají se v historii. Také slouží v případě že se soubory
+následně posílají do vzdáleného repozitáře k identifikaci uživatele.
+
+Ad2) 	Pracovní adresář fyzické místo na mám disku kde mám uložené
+soubory. 
+	Index(staging area) něco jako "pracovní" verze změn jsou v něm
+	přidané soubory které by se měli následně poslat do repozitáře.
+
+	Repozitář je seznam souborů jejich změny historie atd. To co je
+	v adresáři .git
+
+Ad3)	Git add: vezme aktuální soubor a přidá ho do stage.
+	Git commit: uloží změny souboru ze stage do repozitáře +
+	přidá datim změny a popis změn autorem
+
+Ad4)	Jednoznačný identifikátor revize je to jedinečný odkaz na odeslanou
+změnu.
+
+Ad5)	Git má vlastní struktůru ve které uchovává změny souboru a co se v
+souborech měnilo. Neduplikuje soubory, zaznamenává rozdíly.
+
+Ad6)	Každý clon má celý repozitář a historii, je možné pracovat samostatně
+offline, neni nutný centrální místo. Změny se nísůedně synchronizují.
+
+Ad7)	Důvodem je asi právě ten distribuovaný systém. Main je stabilní
+a změny se provádějí v branchi kde je pak následně lehčí udělat merge do main
+větve.
+
+Ad8)	Merge spojí větve do hlavní a přidá komentář.
+	rebase - dle názvu a netu asi vytvoří paralerní větev projektu. Historie
+se přepiše minimálně hashe. Vytvoří nezávislou odnož projektu, která již nejde
+snadno spojit s předchozí!!
+
+ad9) 	pull request je žádost o začlenění změn z větve do jiné (nejčastěji
+main) slouži ke kontrole codu a transparentnímu schválení. pull request je
+funkce platforem (github.com) v gitu není!!!
+
+ad10) 	Nevím tipnu že je to kontrola kódu. Přínos asi hledání chyb, ladění
+výkonu apod.
+
+ad11)	Je to soubor kam se vypisuji soubory a adresáře co git nebude sledovat
+nebude přidávat do stage ani repozitáře. Velmi často provozní prostředí co
+vytváří třeba python nebo soubory s hesly a pod
+
+ad12) 	Nevím co jsem našel na netu tak ignorování se týká jen nesledovaných
+souborů. Už sledovaný soubor zůstane trackovaný. Chceš li ho přestat sledovat
+použij 
+	git rm --cached path/to/file
+	git commit -m "Stop tracking generated file"
+	
+	Po výše uvedeném pak .gitignore udrží soubor mimo.
+ad13)	Protože zbytečně nafukují repozitář spomalují následné synchronizace,
+způsobují konflity ve verzích a nepatří do zdrojového kodu!!!
+
+ad14)	ignoruj všechny logy.	*.log
+	ignoruj adresář build	build/
+	Do souboru se vypíše patern jenž má být ignorován
+	* = libovolný řetězec znaků
+	? = jeden znak
+	/ = na konci značí adresář, na začátku se vztahuje k root repa.
+
+
