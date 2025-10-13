@@ -1,0 +1,237 @@
+commit cf0af0eb1a042da293f01b117690ff0a02fffb7d
+Author: Dragca Kvasnickova <kvasnickova@kvadr.eu>
+Date:   Thu Oct 2 12:11:49 2025 +0200
+
+    Přidán soubor .gitignore
+
+diff --git a/.gitignore b/.gitignore
+new file mode 100644
+index 0000000..613bf00
+--- /dev/null
++++ b/.gitignore
+@@ -0,0 +1,2 @@
++*.tmp
++pracovni/
+
+commit e33f930c7900faa61dfab7fbf461b1344b5eb88b
+Author: Dragca Kvasnickova <kvasnickova@kvadr.eu>
+Date:   Thu Oct 2 12:05:51 2025 +0200
+
+    Opraven překlep v README
+
+diff --git a/README.md b/README.md
+index fb08210..1d05c56 100644
+--- a/README.md
++++ b/README.md
+@@ -1,3 +1,3 @@
+-Tento repozitář obsahuje cestovní průvodce po různých městech a zemích.
++Tento repozitáx obsahuje cestovní průvodce po různých městech a zemích.
+ Obsahuje: Paříž, Francie, Londýn
+ 
+
+commit f271b78dab52342e547c5251921080137da889fe
+Author: Dragca Kvasnickova <kvasnickova@kvadr.eu>
+Date:   Thu Oct 2 11:55:47 2025 +0200
+
+    Přidán průvodce po Berlíně
+
+diff --git a/berlin.md b/berlin.md
+new file mode 100644
+index 0000000..b244aff
+--- /dev/null
++++ b/berlin.md
+@@ -0,0 +1,31 @@
++Zajímavosti o Berlíně
++
++Berlínská zeď – slavný symbol studené války. Dnes můžeš navštívit její zbytky včetně East Side Gallery, kde jsou malby od umělců z celého světa.
++
++Braniborská brána – historická brána a symbol znovusjednocení Německa po pádu Berlínské zdi.
++
++Ostrov muzeí (Museumsinsel) – komplex pěti světově významných muzeí (např. Pergamonmuseum), zapsaný na seznamu UNESCO.
++
++Televizní věž (Fernsehturm) – vysoká 368 m s otočnou restaurací a panoramatickým výhledem na město.
++
++Tempelhofer Feld – bývalé letiště přeměněné na obří park, kde můžeš jezdit na kole, bruslit, nebo jen relaxovat.
++
++🍽️ Jídlo v Berlíně
++
++Currywurst – ikonická berlínska klobása s kari omáčkou. Najdeš ji všude – od stánků po bistra.
++
++Döner kebab – jeden z nejlepších mimo Turecko. Berlín je považován za místo, kde byl döner „vynalezen“ v jeho dnešní podobě.
++
++Berliner Pfannkuchen – sladké koblihy, často plněné marmeládou (v některých částech Německa jim říkají jen "Pfannkuchen").
++
++Multikulturní kuchyně – skvělá vietnamská, turecká, arabská, izraelská i veganská jídla po celém městě.
++
++🚇 Doprava v Berlíně
++
++MHD (BVG) – síť U-Bahn (metro), S-Bahn (příměstské vlaky), tramvaje a autobusy. Spoje jezdí často a spolehlivě.
++
++Lístky – platí pro všechny druhy MHD. Oblasti se dělí na zóny (nejčastěji ti stačí AB zóna). Lze koupit přes aplikaci BVG nebo automaty.
++
++Kolo – Berlín je velmi přátelský k cyklistům. Můžeš využít sdílená kola (např. Nextbike, Lime).
++
++Chůze – mnoho památek je v dosahu pěšky, hlavně v centru kolem Unter den Linden a Alexanderplatz.
+
+commit 5e5ca0104da418aa42df681d89264cc752f13cd9
+Merge: 71e77da d3925d6
+Author: Dragca Kvasnickova <kvasnickova@kvadr.eu>
+Date:   Thu Oct 2 11:40:47 2025 +0200
+
+    Merge branch 'pridat-londyn'
+
+commit 71e77dafa251ff1896d67de1b599f8cd3e7a430f
+Author: Dragca Kvasnickova <kvasnickova@kvadr.eu>
+Date:   Wed Oct 1 22:37:56 2025 +0200
+
+    Rozšířen seznam v README.md)
+
+diff --git a/README.md b/README.md
+index 83b3192..b223357 100644
+--- a/README.md
++++ b/README.md
+@@ -1 +1,2 @@
+ Tento repozitář obsahuje cestovní průvodce po různých městech a zemích.
++Obsahuje: Paříž, Francie
+
+commit d3925d691eb59cd2005d2dcb9a21aae1215d3595
+Author: Dragca Kvasnickova <kvasnickova@kvadr.eu>
+Date:   Wed Oct 1 22:30:36 2025 +0200
+
+    upraveno README
+
+diff --git a/README.md b/README.md
+index 83b3192..19768d6 100644
+--- a/README.md
++++ b/README.md
+@@ -1 +1,2 @@
+ Tento repozitář obsahuje cestovní průvodce po různých městech a zemích.
++Obsahuje: Paříž, Londýn
+
+commit ccb77d3dadf0aca5d71348f20ee6f7dbffd45481
+Author: Dragca Kvasnickova <kvasnickova@kvadr.eu>
+Date:   Wed Oct 1 22:28:13 2025 +0200
+
+    Přidán průvodce pro Londýn
+
+diff --git a/londyn.txt b/londyn.txt
+new file mode 100644
+index 0000000..8b6992a
+--- /dev/null
++++ b/londyn.txt
+@@ -0,0 +1,50 @@
++Zajímavosti o Londýně
++
++Big Ben není věž!
++Big Ben je jméno zvonu uvnitř věže, která se od roku 2012 oficiálně jmenuje Elizabeth Tower.
++
++Londýn má více než 170 muzeí
++Většina z nich je zdarma – například British Museum, Tate Modern nebo Natural History Museum.
++
++Pod Londýnem vede říčka
++Město bylo postaveno na řece Fleet, která dnes teče skrytá pod ulicemi. Je to jedna z několika „pohřbených“ řek Londýna.
++
++V Tower of London jsou stráženi krkavci
++Podle legendy pokud opustí Tower, padne britská monarchie. Proto tam mají „rezidentní“ krkavce.
++
++Největší městské finance
++Londýnská City je jedním z největších finančních center světa – a přitom je menší než 3 km².
++
++🍽️ Typické jídlo a gastronomie
++
++Fish and Chips
++Klasika – smažená treska s hranolky a octem. Tradičně podávané v papíru.
++
++English Breakfast
++Vydatná snídaně s vejci, slaninou, fazolemi, klobásou, toastem a často i grilovanými rajčaty.
++
++Sunday Roast
++Pečené maso (např. hovězí, kuře nebo jehněčí) s bramborami, zeleninou a omáčkou – podává se hlavně v neděli.
++
++Afternoon Tea
++Tradiční čaj o páté s drobnými sendviči, koláčky (scones) a sladkostmi. Stylový zážitek třeba v hotelu Ritz nebo Fortnum & Mason.
++
++Mezinárodní kuchyně
++Londýn je velmi multikulturní. Najdeš tu skvělou indickou, pákistánskou, karibskou, čínskou nebo nigerijskou kuchyni.
++
++🚇 Doprava v Londýně
++
++Underground (Tube)
++Nejstarší metro na světě – funguje od roku 1863. Má 11 linek a je nejrychlejším způsobem, jak se pohybovat po městě.
++
++Oyster karta nebo bezkontaktní platba
++Nejvýhodnější způsob placení MHD. Stačí „pípnout“ u turniketu. Funguje i s běžnou platební kartou.
++
++Červené double-deckery (autobusy)
++Ikonické autobusy, ideální na delší trasy nebo pokud chceš vidět město z výšky.
++
++River Bus (lodní doprava)
++Lodě po Temži spojují klíčová místa – skvělý způsob, jak se vyhnout dopravním zácpám a vidět město z vody.
++
++Chůze a parky
++Mnoho atrakcí je blízko sebe. Procházky přes Hyde Park, St. James's Park nebo podél South Bank jsou nádherné.
+
+commit 1829d86eeb74dd2a6e293bcc4e813cb582211cba
+Author: Dragca Kvasnickova <kvasnickova@kvadr.eu>
+Date:   Wed Oct 1 22:16:50 2025 +0200
+
+    Přidán průvodce po Paříži
+
+diff --git a/pariz.txt b/pariz.txt
+new file mode 100644
+index 0000000..8613218
+--- /dev/null
++++ b/pariz.txt
+@@ -0,0 +1,38 @@
++Zajímavosti o Paříži
++
++Eiffelova věž měla být původně dočasná!
++Byla postavena pro světovou výstavu v roce 1889 a měla být po 20 letech zbourána. Díky své popularitě zůstala a je dnes symbolem města.
++
++Podzemí Paříže ukrývá katakomby
++Jsou to staré lomy, kam bylo v 18. století přesunuto více než 6 milionů lidských ostatků kvůli přeplněným hřbitovům.
++
++Nejširší avenue – Champs-Élysées je slavná třída dlouhá 1,9 km. Zde najdeš luxusní obchody, kavárny a končí u Vítězného oblouku.
++
++Město světel – přezdívka La Ville Lumière má dvojí význam: Paříž byla jedním z prvních měst s pouličním osvětlením a také centrem intelektuálního života.
++
++Více než 1 800 pekáren
++Paříž je považována za pekárenský ráj – každý den se tu upečou statisíce baget.
++
++🍽️ Jídlo a kulinářské zážitky
++
++Croissant – ikonická francouzská snídaně. I když jeho původ sahá do Rakouska, Francouzi ho dovedli k dokonalosti.
++
++Bageta – klasika, kterou Francouzi kupují každý den. V roce 2022 byla bageta zapsána na seznam kulturního dědictví UNESCO.
++
++Sýry a víno – Francie má přes 1 000 druhů sýrů. K nim se hodí sklenka vína z Bordeaux nebo Burgundska.
++
++Escargots (šneci) – delikatesa, která může být překvapivě chutná, hlavně s česnekovým máslem.
++
++Crêpes a galettes – tenké palačinky (sladké i slané), které najdeš na ulicích i v kavárnách.
++
++🚇 Doprava v Paříži
++
++Metro – Rychlé, levné a rozsáhlé. Má 16 linek a přes 300 stanic. Intervaly jsou krátké, ale ve špičce bývá hodně plné.
++
++Navigace – Doporučuji aplikace jako Citymapper, Google Maps nebo místní RATP.
++
++Vélib’ – systém sdílených kol. Ideální na krátké přesuny po městě.
++
++Chůze – Paříž je skvělá pro pěší procházky. Vzdálenosti nejsou velké a cestou narazíš na mnoho krásných zákoutí.
++
++Doprava z letiště – Z Charles de Gaulle (CDG) jede příměstský vlak RER B do centra. Z Orly pak Orlyval + RER.
+
+commit 69d8d3f69373bd3d1c6498b7aff5b5deef9ca3c3
+Author: Dragca Kvasnickova <kvasnickova@kvadr.eu>
+Date:   Wed Oct 1 22:03:01 2025 +0200
+
+    Inicializace projektu
+
+diff --git a/README.md b/README.md
+new file mode 100644
+index 0000000..83b3192
+--- /dev/null
++++ b/README.md
+@@ -0,0 +1 @@
++Tento repozitář obsahuje cestovní průvodce po různých městech a zemích.
