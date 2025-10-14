@@ -1,0 +1,27 @@
+01 Co dělá  ls -v?
+	C - seřadí soubory podle hodnot čísel v názvech
+02 /home/mh/data, jak se dostanu do /home/mh?
+	I - cd ..
+03 pwd vypisuje /home/mh/vec, co ukáže ls -F ../archiv?
+	E - original/ pnas_final/ pnas_2/
+04 pwd vypisuje /home/mh/archiv, jak vypsat pnas_2/ pnas_final/ original/?
+	B - ls -r -F
+05 touch novy_soubor.txt
+	01 vytvořil se prázdný soubor novy_soubor.txt
+	02 při použití ls se soubor zobrazí
+	03 zjistím, že je novy_soubor.txt prázdný
+	04 touch - vytvoří prázdný nový soubor
+06 jak pesunout:
+	mv sucrose.dat maltose.dat ../raw
+07 jak opravit překlep:
+	B - mv statsitika.txt statistika.txt
+08 vystup:
+	B -rekombinace
+09 přesun dvou souborů:
+	mv fructose.dat sucrose.dat analyzed/
+10 Který vytvoří strukturu  adresářů?
+	B - mkdir 2016-05-20
+	    cd 2016-05-20
+	    mkdir data
+	    cd data
+	    mkdir raw process
