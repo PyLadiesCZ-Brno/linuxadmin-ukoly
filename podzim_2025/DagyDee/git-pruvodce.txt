@@ -1,0 +1,194 @@
+dagmarvodakova@uspgh-spgweb-d1:~/pruvodce$ git log -p master
+commit 4143643205fdec2ab769022cad9f11bd6a1f1463 (HEAD -> master, pridat-gitignore)
+Author: Dagmar Vodáková <d.vodakova@seznam.cz>
+Date:   Tue Oct 14 21:39:58 2025 +0200
+
+    Přidán soubor .gitignore.
+
+diff --git a/.gitignore b/.gitignore
+new file mode 100644
+index 0000000..613bf00
+--- /dev/null
++++ b/.gitignore
+@@ -0,0 +1,2 @@
++*.tmp
++pracovni/
+
+commit 42c811b067ed4ffad1704695f7d03b0c01d2f5bb (oprava-readme)
+Author: Dagmar Vodáková <d.vodakova@seznam.cz>
+Date:   Tue Oct 14 21:35:04 2025 +0200
+
+    Opravenen překlep v readme.
+
+diff --git a/README.md b/README.md
+index 6bc5bb5..76ed3b7 100644
+--- a/README.md
++++ b/README.md
+@@ -1,4 +1,4 @@
+-Tento repozitáx obsahuje cestovní průvodce po různých městech a zemích.
++Tento repozitář obsahuje cestovní průvodce po různých městech a zemích.
+ 
+ Obsahuje: Paříž, Francie, Londýn
+ 
+
+commit 7f69ee88bfd405c18d81fc2a64baac1fd52a3fce (pridat-berlin)
+Author: Dagmar Vodáková <d.vodakova@seznam.cz>
+Date:   Tue Oct 14 21:28:40 2025 +0200
+
+    Přidán průvodce po Berlíně.
+
+diff --git a/berlin.txt b/berlin.txt
+new file mode 100644
+index 0000000..c7fbfdd
+--- /dev/null
++++ b/berlin.txt
+@@ -0,0 +1,23 @@
++🍽️ Jídlo:
++
++Typické pokrmy: Currywurst (klobása s kari omáčkou), Döner kebab, Berliner Pfannkuchen (kobliha).
++
++Berlín má pestrou mezinárodní kuchyni — hodně street foodu a vegetariánských možností.
++
++Oblíbené jsou i pekařství s čerstvým chlebem a preclíky.
++
++🏰 Zajímavost:
++
++Berlínská zeď padla v roce 1989 — dnes z ní zbyly jen části, např. East Side Gallery.
++
++Ve městě je více mostů než v Benátkách (přes 900!).
++
++Každý rok se tu koná slavný filmový festival Berlinale.
++
++🚇 Doprava:
++
++Velmi rozvinutá síť U-Bahn (metro) a S-Bahn (příměstské vlaky).
++
++Lidé často jezdí na kole — město je cyklisticky přátelské.
++
++Jeden lístek platí na metro, tramvaje, autobusy i vlaky v rámci systému BVG.
+
+commit 10d21e8fd91ed826468f4e8aaa405ef44c2db2dd
+Merge: 72b4738 012db8d
+Author: Dagmar Vodáková <d.vodakova@seznam.cz>
+Date:   Tue Oct 14 21:23:11 2025 +0200
+
+    Merge branch 'pridat-londyn'
+
+commit 72b47382f8981d59b3b8e7b1e8bcdac664d728ed (pariz-update)
+Author: Dagmar Vodáková <d.vodakova@seznam.cz>
+Date:   Tue Oct 14 21:12:04 2025 +0200
+
+    Rozšířen seznam v README.md.
+
+diff --git a/README.md b/README.md
+index b69d5ad..f53da71 100644
+--- a/README.md
++++ b/README.md
+@@ -1 +1,3 @@
+ Tento repozitáx obsahuje cestovní průvodce po různých městech a zemích.
++
++Obsahuje: Paříž, Francie
+
+commit 012db8d99e8423c0c3645175861f31ff35bef17a (pridat-londyn)
+Author: Dagmar Vodáková <d.vodakova@seznam.cz>
+Date:   Tue Oct 14 21:03:25 2025 +0200
+
+    Do README.md přidán obsah průvodce.
+
+diff --git a/README.md b/README.md
+index b69d5ad..7477b14 100644
+--- a/README.md
++++ b/README.md
+@@ -1 +1,3 @@
+ Tento repozitáx obsahuje cestovní průvodce po různých městech a zemích.
++
++Obsahuje: Paříž, Londýn
+
+commit 0274cc159ab09fd85f91faa9dd0460f6621d1680
+Author: Dagmar Vodáková <d.vodakova@seznam.cz>
+Date:   Tue Oct 14 20:56:23 2025 +0200
+
+    Přidán průvodce po Londýně.
+
+diff --git a/londyn.txt b/londyn.txt
+new file mode 100644
+index 0000000..974989d
+--- /dev/null
++++ b/londyn.txt
+@@ -0,0 +1,23 @@
++🍽️ Jídlo:
++
++Typická jídla: fish and chips, English breakfast, shepherd’s pie, Sunday roast.
++
++Populární je také indická a asijská kuchyně — Londýn je hodně multikulturní.
++
++Odpolední čaj (afternoon tea) s koláčky a sendviči je klasická tradice.
++
++🏰 Zajímavost:
++
++Londýn má přes 170 muzeí, včetně British Museum a Natural History Museum.
++
++V Toweru of London se uchovávají korunovační klenoty.
++
++Město má více než 8 milionů obyvatel a mluví se tu více než 300 jazyky.
++
++🚇 Doprava:
++
++Metro (the Tube) je nejstarší na světě — otevřelo se už v roce 1863.
++
++Slavné jsou červené dvoupatrové autobusy a černé taxíky.
++
++Mnoho lidí používá kartu Oyster nebo bezkontaktní platby pro veřejnou dopravu.
+
+commit f567be9bf7c2eff3d55d85e1df0bd4a98fd921d8 (pridat-pariz)
+Author: Dagmar Vodáková <d.vodakova@seznam.cz>
+Date:   Tue Oct 14 20:48:26 2025 +0200
+
+    Přidán průvodce po Paříži.
+
+diff --git a/pariz.txt b/pariz.txt
+new file mode 100644
+index 0000000..f2afd1d
+--- /dev/null
++++ b/pariz.txt
+@@ -0,0 +1,23 @@
++🍽️ Jídlo:
++
++Croissanty, bagety a sýry jsou základ — snídaně bývá jednoduchá, ale výborná.
++
++Typická jídla: coq au vin, boeuf bourguignon, ratatouille, crêpes.
++
++Kavárenská kultura — lidé si dávají kávu venku a sledují ruch města.
++
++🏰 Zajímavost:
++
++Eiffelova věž měla být původně jen dočasná konstrukce pro světovou výstavu v roce 1889.
++
++V Paříži je víc než 150 muzeí, včetně největšího — Louvru.
++
++Pod městem jsou rozsáhlé katakomby s ostatky milionů lidí.
++
++🚇 Doprava:
++
++Metro je velmi rozvinuté (víc než 300 stanic), nejrychlejší způsob přesunu po městě.
++
++Populární jsou i elektrokoloběžky a sdílená kola (Vélib’).
++
++Centrum se dá pohodlně projít pěšky — většina hlavních památek je blízko sebe.
+
+commit a2db0465236791d5656177192b02011d806b07af
+Author: Dagmar Vodáková <d.vodakova@seznam.cz>
+Date:   Tue Oct 14 20:38:38 2025 +0200
+
+    Inicializace projektu.
+
+diff --git a/README.md b/README.md
+new file mode 100644
+index 0000000..b69d5ad
+--- /dev/null
++++ b/README.md
+@@ -0,0 +1 @@
++Tento repozitáx obsahuje cestovní průvodce po různých městech a zemích.
+(END)
+
+
