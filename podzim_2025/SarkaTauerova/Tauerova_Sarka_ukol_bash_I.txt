@@ -1,0 +1,13 @@
+1) seradi podle cisel v nazvech
+2) I. tedy cd ..
+3) E.
+4) B.
+5) vytvořil novy_soubor.txt prázdný tam kde jsem
+ano graficky to ukáže také
+ne co obsahuje nezjistím
+touch slouží k vytvoření nového prázdného souboru tam kde jsem
+6) ../raw/
+7) B. mv stary novy
+8) B jen to rekombinace
+9) mv *.dat analyzed/
+10) A, B
