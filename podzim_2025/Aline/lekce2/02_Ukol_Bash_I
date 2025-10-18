@@ -1,7 +1,7 @@
 1. C
-2. C, E, G, H, I, J
-3.C
-4.-Žádný z uvedených příkazů nevypíše pnas_2/ pnas_final/ original/,
+2.I
+3.E
+4.Žádný z uvedených příkazů nevypíše pnas_2/ pnas_final/ original.
 5. -novy_soubor.txt
 -rw-r--r-- 1 mh mh 0 říj 15 14:32 novy_soubor.txt
 -touch- vytvoří soubor, pokud neexistuje, nebo jen aktualizuje jeho čas, pokud existuje.
