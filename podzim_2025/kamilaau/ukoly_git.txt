@@ -1,0 +1,49 @@
+ÚKOLY_1
+1.    Proč je vhodné nastavit uživatelské jméno a e-mail hned po instalaci?
+- Aby šlo vidět, kdo udělal změnu na projektu uloženém v Gitu
+
+2.    Jaký je rozdíl mezi pracovním adresářem, indexem (staging area) a repozitářem?
+- pracovní adresář je složka, ve které pracuji na projektu
+- index (standing area) je fáze, kdy řeknu gitu, aby sledoval novou verzi pomocí git add a čeká na vytvoření nové revize pomocí git commit
+- repozitář je složka, ve které git sleduje změny
+
+3.    Co se děje při příkazu git add a co při git commit?
+git add - řekne gitu, aby sledoval novou verzi
+git commit - vytvoří novou revizi
+
+4.    Vysvětli, co je to commit hash a proč je důležitý.
+- unikátní označení revize, pomocí kterého se vždy dá dostat ke konkrétní verzi projektu
+
+5.    Jak Git uchovává historii změn? Uveď rozdíl oproti klasickému ukládání souborů.
+- změny uchovává ve větvích, kdy je vidět, která verze navazuje na kterou a zároveň je popsáno, čím se jednotlivé verze liší
+
+6.    Co znamená, že Git je „distribuovaný systém pro správu verzí“?
+- ukládá plnou historii změn na všech místech, kde je repozitář stažen a každý uživatel má svou vlastní kopii
+
+7.    Proč je doporučeno používat větve místo práce přímo v hlavní větvi (main/master)?
+- umožňuje to pracovat více lidem na stejném projektu
+- prvně se udělá změna jako větev a poté co někdo zkontroluje, že to funguje se změna může zaimplementovat do hlavní větve
+
+8.    Jaký je rozdíl mezi git merge a git rebase? Uveď příklad, kdy bys použil/a který. Co se stane s historií, pokud sloučíš větev pomocí merge? A co při rebase? Pozn.: Co je rebase jsme se na kurzu neučili, ale jde taky o způsob slučování větví, který je dobré znát. Zkus si o tom dohledat informace.
+git merge - kombinuje historie dvou větví a zachovává je
+git rebase - přepíše historii přidáním změn z jedné větve do druhé, nezachovává historii původní, výsledek je lineární a více organizovaný
+
+9.    Jaký je účel pull requestu a proč se používá?
+- aby se někdo podíval na změny a buď je přijal nebo řekl jak je ještě vylepšit
+
+10.    Co znamená code review a jaký je jeho přínos?
+- posouzení kódu
+- spolupráce, prevence chyb a vytvoření silnějšího, kvalitnějšího kódu
+
+11.    K čemu je soubor .gitignore ?
+pro ignorování souborů
+12.    Co se stane, pokud přidáš do .gitignore soubor, který už je ve verzovací historii?
+- git ho bude pořád sledovat
+
+13.    Proč je vhodné ignorovat logy, dočasné soubory editorů nebo sestavení?
+- aby zbytečně nezaplňovaly repozitář a neztěžovaly sledování skutečných změn
+
+14.    Jak se zapisují vzory do .gitignore? Uveď příklady pro:
+        ignorování všech .log souborů   *.log
+        ignorování adresáře build   build/
+
