@@ -1,7 +1,7 @@
 1) seradi podle cisel v nazvech
-2) I. tedy cd ..
+2) C, E, G, H, I, J
 3) E.
-4) B.
+4) B.a C.ale to -r změní pořadí na obrácené ne?
 5) vytvořil novy_soubor.txt prázdný tam kde jsem
 ano graficky to ukáže také
 ne co obsahuje nezjistím
@@ -10,4 +10,4 @@ touch slouží k vytvoření nového prázdného souboru tam kde jsem
 7) B. mv stary novy
 8) B jen to rekombinace
 9) mv *.dat analyzed/
-10) A, B
+10) A, B a D
