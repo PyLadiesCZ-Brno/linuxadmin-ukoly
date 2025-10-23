@@ -220,3 +220,59 @@ drwxrwx---. 1 root ucitele  16 23. říj 11.40 /opt/skola/ucitele/
 
 
 
+Bonus: Sudo zapomíná
+
+1. Co by měl dělat tento příkaz?
+ll /var/db/sudo/lectured/ :
+udělat dlouhý výpis obsahu adresáře
+
+Příkaz ale pod běžným uživatelským účtem nefunguje; potřebuješ sudo ll /var/db/sudo/lectured/. To ale taky nefunguje. Proč? Jak to spravit?:
+
+Musím použít ls -l, ll je alias a sudo spuští program ve filesystému. Aliasy ve filesystemu nefungují.
+
+2.   Jaké soubory jsou v /var/db/sudo/lectured/? Komu patří? Jak jsou velké?
+
+-rw-------. 1 root dragca 0 24. zář 18.42 1000
+-rw-------. 1 root eva    0 16. říj 07.04 1001
+-rw-------. 1 root petr   0 15. říj 22.01 1003
+    Jsou to prázdné soubory, pojmenované podle UID uživatele, kterým byla zobrazena varovná hláška při prvním použití sudo. Vlastník souborů je root, skupina je tam vždy primární skupina uživatele, kterému se hláška zobrazila.
+
+3.    Jaké soubory jsou v /var/run/sudo/ts? Komu patří? Jak jsou velké? Kdo k nim má jaká práva?
+
+    sudo ls -la /var/run/sudo/ts
+celkem 4
+drwx------. 2 root root    60 22. říj 11.09 .
+drwx--x--x. 3 root root    60 22. říj 12.17 ..
+-rw-------. 1 root dragca 168 23. říj 21.48 1000
+jsou to malé soubory v řádech desítek bytů, tzv "časová razítka" timestamps, která se vytvoří po autorizaci uživatele při použití sudo. Od časového údaje v timestamp se potom počítá určitý nastavený časový interval, po jehož dobu uživatel při opakovaném použití příkazů se sudo nemusí znovu zadávat heslo. Soubory jsou pojmenován podle UID uživatele, který se autorizoval zadáním hesla. Právo k timestamp má pouze majitel, tedy root a to pro čtení a zápis.
+
+4. Jak by vypadal příkaz, který smaže „tvůj“ soubor v /var/run/sudo/ts?
+     sudo rm /var/run/sudo/ts/1000
+
+5. Vyzkoušej si ale, že tohle nefunguje s příkazem pro smazání „tvého“ souboru v /var/run/sudo/ts. Když ho pustíš několikrát za sebou, sudo se vždycky znovu zeptá na heslo. Proč?: 
+
+Protože když tu časovou známku smažu, tak sudo neví, že jsem se před 10 vteřinami autorizovala a musím znovu při použití sudo zadat heslo.
+
+    Zadej tyhle příkazy:
+        Smaž „svůj“ soubor z /var/db/sudo/lectured/.:
+        sudo rm /var/db/sudo/lectured/1000
+        Smaž „svůj“ soubor z /var/run/sudo/ts.:
+        sudo rm /var/run/sudo/ts/1000
+        
+        Spusť sudo echo.
+
+    A odpověz:
+6.        Co je u sudo echo jinak?: 
+
+        zobrazí se varovná hláška:
+Věříme, že jste od správce místního systému obdrželi obvyklé školení.
+Obvykle se jedná o tyto tři věci:
+
+    Respektujte soukromí druhých.
+    Přemýšlejte, než začnete psát.
+    S velkými právy přichází velká zodpovědnost.
+
+7.        K čemu slouží soubory ve /var/db/sudo/lectured/?:
+jsou zde prázdné soubory pojmenované podle UID uživatele, který již použil sudo a byl "lectured" o tom, jak se s právy, které ná sudo dává "chovat".
+
+
