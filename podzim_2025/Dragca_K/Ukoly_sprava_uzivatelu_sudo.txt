@@ -1,0 +1,222 @@
+A Práce se soubory a výstupem 
+1.    Co udělá příkaz cat a kdy je vhodné ho použít? - vypíše obsah souboru (nebo i více souborů za sebou, pokud zadám víc argumentů )do terminálu. Je vhodnější na kratší soubory. Pokud spustím cat bez argumentu, program vypíše po stisku enter vstup z klávesnice.
+2.    Jaký je rozdíl mezi less a cat? - cat vypisuje do příkazové řádky a pokud je výpis delší než na obrazovku, musím scrolovat v terminálu. 
+-Less je program pro zobrazení větších souborů, umožňuje zobrazit jen jeden soubor na rozdíl od cat, ale obsah souboru se otevře jako čtečka. V less se můžu pohybovat pomocí šipek nebo PgUp, PgDn, můžu zde vzhledávat pomocí /, je to pokročilejší nástroj pro zobrazení obsahu souboru.
+3.    K čemu slouží příkaz head a jak určíš, kolik řádků zobrazí? - slouží k zobrazení začátku/"hlavičky" souboru, výchozí nastavení bez zadání přepínače je prvních 10 řádků, díky přepínači -n můžu zadat, kolik řádků chci zobrazit
+4.    Jak bys zjistil, kolik má soubor řádků nebo slov? -počet slov: wc -w <soubor>, počet řádků wc: -l <soubor>, nebo v jednom příkazu wc -lw <soubor>. Bez zadání přepínače vypíše tři hodnoty: počet řádků, počet slov a počet bytů.
+5.    Jaký příkaz bys použil, pokud chceš zobrazit pouze posledních 10 řádků souboru?: - tail <soubor>
+
+B Uživatelé, skupiny a práva
+
+1.    Jaký je rozdíl mezi uživatelem a skupinou v Linuxu? 
+Uživatel - užívá operační systém, každý uživatel je v operačním systému definován jménem a unikátním ID (UID).
+Každý uživatel má svoji primární skupinu (která se asi defaultně jmenuje jako uživatel) a pak může být členem různého počtu sekundárních skupin.
+Seznam uživatelů je uložen v /etc/passwd. Každý proces(t.j. spuštěný program) v operačním systému běží pod nějakým uživatelem.
+
+Skupiny umožňují spravovat přístupová práva adresářů a souborů pro více uživatelů najednou. Každá skupina má svoje GID
+informace o skupinách jsou uloženy v /ect/group
+
+2.    Co znamenají jednotlivé části výpisu oprávnění u souboru (např. -rw-r--r--)? první znak -: označuje typ souboru, v tomto případě běžný soubor, dále 3 bloky po třech znacích: 1.blok práva vlastníka rw- 2. blok práva skupiny r--, 3. blok práva ostatních r-- , každý blok obsahuje r = právo pro čtení, w = právo pro zápis, x = právo pro spuštění. Pokud je ve výpisu písmenko na daném místě, znamená to, že je k tomu oprávně, pokud je zde jen -, právo ke konkrétní operaci nemá (ať už jde o uživatele, skupinu nebo ostatní)
+3.    Jaký je rozdíl mezi vlastníkem souboru a skupinou souboru?
+vlastník je zpravidla ten, kdo soubor vytvořil, má nejvyšší práva - má nad ním plnou kontrolu, definuje práva přístupu k souboru ostatním, 
+skupina je skupina uživatelů, kterým příslušenstvím ke skupině plynou pro skupinu definovaná práva k souboru
+4.    Co obsahují soubory /etc/passwd a /etc/shadow?
+/ect/passwd - seznam uživatelů
+etc/shadow - hesla uživatelů 
+5.    K čemu slouží příkaz chmod a jak se používá?
+Slouží ke změně oprávnění k přístupu k souborům a adresářům, 
+chmod -r <soubor> - odebírám veškěrá práva pro čtení souboru, s "+" je zase přidávám, mám k tomu právo jako vlastník souboru.
+přepínače pro :práva pro čtení: r, zápis :w, právo ke spuštění: x, podle toho jesli přidávám nebo odebíram volím před přepínačem + nebo -.
+mohu definovat i jednotlivá práva pro uživetele: u=<přepínače práv, které chci aktivní>, pro skupinu: g=<přepínače>, ostatní: o=<přepínače> <soubor>
+6.    K čemu slouží příkazy: (všechny ale musím použít se sudo, jinak jako běžný uživatel nemám právo k těmto operacím):
+useradd <uživatel>: vytvoří nového uživatele
+groupadd <skupina>: vytvoří novou skupinu
+usermod - umožňuje různá nastavení uživatele. Díky různým přepínačům (dle usermod --help) můžeme uživatele přidávat k dalším skupinám, nebo nastavit novou primární skupinu, odemknout/zamknout uživatelský účet, nastavit vypršení platnosti účtu a spoustu dalších věcí, které v tuto chvíli nevím, co znamenají.
+passwd <uživatel>: nastaví heslo pro uživatele
+userdel <uživatel>: smaže uživatele
+groupdel <skupina>: smaže skupinu
+
+Praktická část:
+Úkol 1:
+1.  Vytvoř skupiny:
+        studenti: sudo groupadd studenti
+        ucitele: sudo groupadd ucitele
+2.    Vytvoř uživatele:
+        eva (člen skupiny studenti):
+        	sudo useradd eva	
+        	sudo usermod -aG studenti eva
+        adam (člen skupiny studenti):
+        	sudo useradd adam	
+        	sudo usermod -aG studenti adam
+        petr (člen skupiny ucitele):
+        	sudo useradd petr	
+        	sudo usermod -aG ucitele petr
+        
+3.    Nastav každému uživateli heslo (např. test123).:
+    sudo passwd eva....
+4.    Ověř, do jakých skupin uživatelé patří.:
+uid=1001(eva) gid=1003(eva) skupiny=1003(eva),1001(studenti)
+uid=1002(adam) gid=1004(adam) skupiny=1004(adam),1001(studenti)
+uid=1003(petr) gid=1005(petr) skupiny=1005(petr),1002(ucitele)
+
+5.	Přidej uživatele eva také do skupiny ucitele.:
+sudo usermod -aG ucitele eva
+uid=1001(eva) gid=1003(eva) skupiny=1003(eva),1001(studenti),1002(ucitele)
+6.    Smaž uživatele adam a skupinu ucitele.:
+sudo userdel adam
+sudo groupdel ucitele
+
+Úkol 2: Práva a přístup k souborům:
+1. Přepni se na uživatele petr.: su petr
+2. V jeho domovské složce vytvoř soubor poznamka.txt.
+petr@fedora:~$ ls
+poznamka.txt
+3. Zobraz výpis oprávnění.:
+petr@fedora:~$ ls -l poznamka.txt 
+-rw-r--r--. 1 petr petr 0 15. říj 21.44 poznamka.txt
+4. Nastav oprávnění tak, aby vlastník mohl číst i zapisovat, skupina mohla pouze číst, ostatní neměli žádný přístup: 	 
+	chmod u=rw,g=r,o= poznamka.txt  
+-rw-r-----. 1 petr petr 0 15. říj 21.44 poznamka.txt
+a nebo jednoduše, jelikož vlastník a skupina měla ta práva jak je
+požadováno, tak jen: 
+    chmod o= poznamka.txt
+5. petr@fedora:~$ ls -l poznamka.txt 
+-rw-r-----. 1 petr petr 0 15. říj 21.44 poznamka.txt
+6. Změň vlastníka souboru na uživatele eva a skupinu na studenti.
+chown eva:studenti poznamka.txt
+ale z učtu petr mi to nešlo, tak jsem se přepla na svůj účet a pak se sudo:
+sudo chown eva:studenti poznamka.txt 
+Nevím, proč mi to nešlo... že by proto, že k chown je třeba sudo a petr není ve wheel?
+7. Ověř, že soubor má nového vlastníka i skupinu.
+petr@fedora:~$ ll
+celkem 0
+-rw-r-----. 1 eva studenti 0 15. říj 21.44 poznamka.txt
+
+Úkol 3: Sdílená složka pro skupinu
+1.    Jako root vytvoř složku /home/spolecne.
+sudo mkdir /home/spolecne
+ls -l /home
+celkem 0
+drwx------. 1   1002     1004  80 15. říj 21.19 adam
+drwx------. 1 eva    studenti  80 12. říj 18.18 alena
+drwx------. 1 dragca dragca   540 15. říj 22.38 dragca
+drwx------. 1 eva    eva       80 15. říj 21.17 eva
+drwx------. 1 petr   petr     170 15. říj 22.38 petr
+drwxr-xr-x. 1 root   root       0 15. říj 23.05 spolecne
+
+2.    Nastav vlastníka root a skupinu studenti:
+sudo chgrp <studenti> </home/spolecne>
+
+drwxr-xr-x. 1 root   studenti   0 15. říj 23.05 spolecne
+
+3.    Nastav práva tak, aby: vlastník měl práva rw, skupina měla práva rw, ostatní neměli žádná.
+dragca@fedora:~$ sudo chmod u=rw,g=rw,o= /home/spolecne 
+
+drw-rw----. 1 root   studenti   0 15. říj 23.05 spolecne
+
+4.    Nastav setgid bit, aby nově vytvořené soubory ve složce zdědily skupinu studenti:
+
+    chmod g+s /home/spolecne
+    
+drw-rwS---. 1 root   studenti   0 16. říj 07.02 spolecne
+
+5.    Ve složce /home/spolecne vytvoř soubor zkouska.txt jako uživatel eva.
+ikdyž bylo nastavení, jak je vidět výše, nemohla jsem po přepnutí na uživatele eva vytvořit soubor v teto složce. Až po přidání práva execute skupině jsem pak mohla jako eva příkazem touch vytvořit soubor. Výpis složky se změnil na:
+drw-rws---. 1 root   studenti  22 21. říj 18.54 spolecne
+(z velkého S na malé)
+6.    Ověř, že soubor má skupinu studenti:
+
+-rw-r--r--. 1 eva studenti 0 21. říj 18.54 zkouska.txt
+
+7.   Přepni se na uživatele adam a zkontroluj, že může tento soubor číst i upravovat. - Adama jsem měli smazat v úkolech :praktická část 1/ukol 6
+zkusila jsem si jej znovu vytvořit, ale protože už v /home/adam složka adam byla, ikdyž uživatel byl smazaný, bash napsal: "vytvářím poštovní schránku" a pak mi nešlo přepnout se na uživatele adam, psalo mi to, že byl odepřen přístup k /home/adam.
+Proto jsem vytvořila uživatele studentka, přidala ji skupinu studenti.
+ale vzhledem k výpisu oprávnění souboru:
+
+studentka@fedora:~$ ls -l /home/spolecne/zkouska.txt
+-rw-r--r--. 1 eva studenti 0 21. říj 18.54 /home/spolecne/zkouska.txt
+
+může studenka( nebo adam) jen soubor číst, nemůže do něj zapisovat, k tomu se musím přepnout na evu (vlastníka souboru) a zadat chmod g+w zkouska.txt:
+
+-rw-rw-r--. 1 eva studenti 0 21. říj 18.54 zkouska.txt
+pak teprve můžu jako jiný uživatel ze skupiny upravovat soubor:
+studentka@fedora:~$ cat /home/spolecne/zkouska.txt
+tohle zapsala studentka
+
+Úkol 4: Struktura „Školní tým“ #
+1.    Znovu vytvoř skupinu ucitele.
+$ sudo groupadd ucitele
+dragca@fedora:~$ grep ucitele /etc/group
+ucitele:x:1007:
+
+2.    Vytvoř uživatele:
+        reditel
+        ucitelka
+        student1
+        student2
+
+3.    Přiřaď uživatele do skupin:
+        reditel, ucitelka → ucitele
+        student1, student2 → studenti
+        
+ sudo usermod -aG ucitele reditel 
+ sudo usermod -aG ucitele ucitelka
+ sudo usermod -aG studenti student1
+ sudo usermod -aG studenti student2
+ 
+ dragca@fedora:~$ for user in reditel ucitelka student1 student2; do id $user; done
+uid=1006(reditel) gid=1008(reditel) skupiny=1008(reditel),1007(ucitele)
+uid=1007(ucitelka) gid=1009(ucitelka) skupiny=1009(ucitelka),1007(ucitele)
+uid=1008(student1) gid=1010(student1) skupiny=1010(student1),1001(studenti)
+uid=1009(student2) gid=1011(student2) skupiny=1011(student2),1001(studenti)
+
+
+4.    Vytvoř strukturu složek:
+    /opt/skola/
+      ├── ucitele/
+      └── studenti/
+      
+      sudo mkdir /opt/skola/ucitele
+      sudo mkdir /opt/skola/studenti
+      dragca@fedora:~$ tree /opt
+/opt
+└── skola
+    ├── studenti
+    └── ucitele
+
+ 
+5.    Nastav:
+        /opt/skola/ucitele → vlastník root, skupina ucitele, práva 770
+        /opt/skola/studenti → vlastník root, skupina studenti, práva 770
+
+sudo chgrp ucitele /opt/skola/ucitele
+sudo chmod 770 /opt/skola/ucitele/      
+dragca@fedora:~$ ls -ld /opt/skola/ucitele/
+drwxrwx---. 1 root ucitele 0 23. říj 10.54 /opt/skola/ucitele/
+
+sudo chgrp studenti /opt/skola/studenti
+sudo chmod 770 /opt/skola/studenti/
+dragca@fedora:~$ ls -ld /opt/skola/studenti/
+drwxrwx---. 1 root studenti 0 23. říj 10.54 /opt/skola/studenti/
+
+6.    Do obou složek přidej soubor info.txt s krátkým textem (např. „Vítejte ve složce učitelů“).
+dragca@fedora:~$ sudo -i
+root@fedora:~# 
+root@fedora:~# echo Vítejte ve složce učitelů > /opt/skola/ucitele/info.txt
+root@fedora:~# cat /opt/skola/ucitele/info.txt 
+Vítejte ve složce učitelů
+root@fedora:~# echo Vítejte ve složce studentů > /opt/skola/studenti/info.txt
+root@fedora:~# cat /opt/skola/studenti/info.txt 
+Vítejte ve složce studentů
+
+7.    Ověř, že:
+        Učitelé mají přístup pouze do složky ucitele.
+        Studenti pouze do studenti.
+        Ostatní uživatelé nemají přístup do žádné z nich.
+        
+root@fedora:~# ls -ld /opt/skola/studenti/ /opt/skola/ucitele/
+drwxrwx---. 1 root studenti 16 23. říj 11.41 /opt/skola/studenti/
+drwxrwx---. 1 root ucitele  16 23. říj 11.40 /opt/skola/ucitele/
+
+
+
