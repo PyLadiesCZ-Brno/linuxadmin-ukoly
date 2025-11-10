@@ -55,9 +55,17 @@ Praktická část:
 3.    Nastav každému uživateli heslo (např. test123).:
     sudo passwd eva....
 4.    Ověř, do jakých skupin uživatelé patří.:
+id eva adam petr
 uid=1001(eva) gid=1003(eva) skupiny=1003(eva),1001(studenti)
 uid=1002(adam) gid=1004(adam) skupiny=1004(adam),1001(studenti)
 uid=1003(petr) gid=1005(petr) skupiny=1005(petr),1002(ucitele)
+nebo pro zobrazení pouze skupin:
+dragca@fedora:~/linuxadmin-ukoly/podzim_2025/Dragca_K$ groups eva adam petr studentka
+eva : eva studenti
+groups: „adam“: uživatel neexistuje
+petr : petr
+studentka : studentka studenti
+# přidáno už po review, takže už je skupina ucitele u petra smazaná a uživatel adam taky :-), později jsme sice znovu vytvorili skupinu ucitele, ale petra jsme do ni nepridavali.
 
 5.	Přidej uživatele eva také do skupiny ucitele.:
 sudo usermod -aG ucitele eva
@@ -176,8 +184,8 @@ uid=1009(student2) gid=1011(student2) skupiny=1011(student2),1001(studenti)
       ├── ucitele/
       └── studenti/
       
-      sudo mkdir /opt/skola/ucitele
-      sudo mkdir /opt/skola/studenti
+      sudo mkdir -p /opt/skola/ucitele
+      sudo mkdir -p /opt/skola/studenti
       dragca@fedora:~$ tree /opt
 /opt
 └── skola
