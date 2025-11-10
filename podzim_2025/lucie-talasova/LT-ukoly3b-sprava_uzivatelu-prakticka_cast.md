@@ -111,7 +111,7 @@ Po vypracování, odzkoušení všeho, vypracováno Chatem GPT toto shrnutí, je
    - skupina měla práva `rw`,
    - ostatní neměli žádná.
    ```bash
-   sudo chmod 770 /home/spolecne
+   sudo chmod 660 /home/spolecne
    ```
 
 4. Nastav **setgid bit**, aby nově vytvořené soubory ve složce zdědily skupinu `studenti`:
