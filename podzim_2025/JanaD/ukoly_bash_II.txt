@@ -1,0 +1,252 @@
+1. Grepování yamlů
+
+1) ls ~/pyvo-data-master/series/brno-pyvo/events/ | wc -l 
+163
+
+2) ls ~/pyvo-data-master/series/*/events/* | wc -l 
+598
+
+3) grep -w "video:" ~/pyvo-data-master/series/*/events/* | wc -l
+438
+
+4) grep -w "\- name:" ~/pyladies.cz-master/meetups/* | wc -l
+162
+
+5) grep -m 1 -w "video:"  ~/pyvo-data-master/series/*/events/* | wc -l
+143
+
+6) sort ~/pyvo-data-master/series/*/events/* | uniq | grep venue: 
+venue: acko
+venue: alvi
+venue: andini
+venue: artbar
+venue: avu
+venue: baroko
+venue: beer-factory
+venue: beskydsky-pivovarek
+venue: botic-restaurant
+venue: cafe-falk
+venue: cafe-lajka
+venue: coolarna
+venue: crosscafe
+venue: cyrils-pub
+venue: depo
+venue: edunesto
+venue: etaz
+venue: frankies
+venue: hlavni-nadrazi
+venue: hnizdo-snu
+venue: holesovicka-sachta
+venue: hub-20
+venue: h55
+venue: impact-hub
+venue: ires-sc
+venue: jama
+venue: jiraskovy-sady
+venue: kavarna-liberal
+venue: kaverna
+venue: kolocava
+venue: konvikt
+venue: kravi-hora
+venue: local-lokal-industry-pub
+venue: lumir
+venue: luzanky
+venue: moving-station
+venue: na-hradbach
+venue: na-venecku
+venue: palouk
+venue: park-bozetechova
+venue: picolo-piratske-centrum-olomouc
+venue: pivnice-doga
+venue: pivon
+venue: pivovarske-domy
+venue: raven-pub-bolevec
+venue: raven-pub-city
+venue: reset-point
+venue: restaurace-a-penzion-u-salzmannu
+venue: selepka
+venue: sklipek-kiwi-com
+venue: snyt
+venue: sport-club
+venue: the-pub-dejvice
+venue: tyrsuv-sad
+venue: u-drevaka
+venue: u-dreveneho-orla
+venue: u-kachnicky
+venue: u-morice
+venue: u-prejezdu
+venue: u-ptaka
+venue: u-travise
+venue: vila-stvanice
+venue: vinograf
+venue: v-lochu
+venue: vr-levsky
+venue: zivo-u-palecka
+venue: 2to2
+
+7) sort ~/pyvo-data-master/series/*/events/* | uniq -c | grep venue: 
+      1 venue: acko
+      2 venue: alvi
+      2 venue: andini
+     53 venue: artbar
+      1 venue: avu
+      2 venue: baroko
+     13 venue: beer-factory
+      1 venue: beskydsky-pivovarek
+      1 venue: botic-restaurant
+      2 venue: cafe-falk
+      3 venue: cafe-lajka
+     29 venue: coolarna
+      1 venue: crosscafe
+      3 venue: cyrils-pub
+      4 venue: depo
+      1 venue: edunesto
+      1 venue: etaz
+      2 venue: frankies
+      1 venue: hlavni-nadrazi
+      2 venue: hnizdo-snu
+      5 venue: holesovicka-sachta
+      4 venue: hub-20
+      2 venue: h55
+      1 venue: impact-hub
+      1 venue: ires-sc
+      1 venue: jama
+      1 venue: jiraskovy-sady
+      2 venue: kavarna-liberal
+      9 venue: kaverna
+     13 venue: kolocava
+      1 venue: konvikt
+      1 venue: kravi-hora
+      1 venue: local-lokal-industry-pub
+      2 venue: lumir
+     12 venue: luzanky
+      1 venue: moving-station
+      2 venue: na-hradbach
+    134 venue: na-venecku
+     15 venue: palouk
+      1 venue: park-bozetechova
+     16 venue: picolo-piratske-centrum-olomouc
+      5 venue: pivnice-doga
+      1 venue: pivon
+     22 venue: pivovarske-domy
+     17 venue: raven-pub-bolevec
+      1 venue: raven-pub-city
+      1 venue: reset-point
+      5 venue: restaurace-a-penzion-u-salzmannu
+      1 venue: selepka
+     10 venue: sklipek-kiwi-com
+      1 venue: snyt
+      4 venue: sport-club
+      1 venue: the-pub-dejvice
+      1 venue: tyrsuv-sad
+     28 venue: u-drevaka
+      4 venue: u-dreveneho-orla
+      1 venue: u-kachnicky
+      6 venue: u-morice
+      1 venue: u-prejezdu
+     27 venue: u-ptaka
+      1 venue: u-travise
+      3 venue: vila-stvanice
+      1 venue: vinograf
+      1 venue: v-lochu
+     62 venue: vr-levsky
+      1 venue: zivo-u-palecka
+      1 venue: 2to2
+
+7) sort ~/pyvo-data-master/series/*/events/* |  grep venue: | cut -d ':' -f2 | uniq -c | sort -n
+      1  acko
+      1  avu
+      1  beskydsky-pivovarek
+      1  botic-restaurant
+      1  crosscafe
+      1  edunesto
+      1  etaz
+      1  hlavni-nadrazi
+      1  impact-hub
+      1  ires-sc
+      1  jama
+      1  jiraskovy-sady
+      1  konvikt
+      1  kravi-hora
+      1  local-lokal-industry-pub
+      1  moving-station
+      1  park-bozetechova
+      1  pivon
+      1  raven-pub-city
+      1  reset-point
+      1  selepka
+      1  snyt
+      1  the-pub-dejvice
+      1  tyrsuv-sad
+      1  u-kachnicky
+      1  u-prejezdu
+      1  u-travise
+      1  vinograf
+      1  v-lochu
+      1  zivo-u-palecka
+      1  2to2
+      2  alvi
+      2  andini
+      2  baroko
+      2  cafe-falk
+      2  frankies
+      2  hnizdo-snu
+      2  h55
+      2  kavarna-liberal
+      2  lumir
+      2  na-hradbach
+      3  cafe-lajka
+      3  cyrils-pub
+      3  vila-stvanice
+      4  depo
+      4  hub-20
+      4  sport-club
+      4  u-dreveneho-orla
+      5  holesovicka-sachta
+      5  pivnice-doga
+      5  restaurace-a-penzion-u-salzmannu
+      6  u-morice
+      9  kaverna
+     10  sklipek-kiwi-com
+     12  luzanky
+     13  beer-factory
+     13  kolocava
+     15  palouk
+     16  picolo-piratske-centrum-olomouc
+     17  raven-pub-bolevec
+     22  pivovarske-domy
+     27  u-ptaka
+     28  u-drevaka
+     29  coolarna
+     53  artbar
+     62  vr-levsky
+    134  na-venecku
+    
+    lepe:
+    
+    grep -h venue:  ~/pyvo-data-master/series/*/events/* | cut -d \: -f2 | sort | uniq -c | sort -n
+
+8) grep -h name\: ~/pyladies.cz-master/teams/* | sort | cut -d \: -f2 | cut -d ' ' -f2 | uniq -c | sort -n | tail -3
+      6 Veronika
+      7 Petr
+      8 Tomáš
+resp.
+
+   grep -h name\: ~/pyladies.cz-master/teams/* | sort | cut -d \: -f2 | cut -d ' ' -f2 | uniq -c | sort -n | tail -4
+      6 Martin
+      6 Veronika
+      7 Petr
+      8 Tomáš
+
+3. Zastupne znaky
+
+cp *dataset* backup/datasets
+
+cp *calibration.txt backup/calibration
+
+cp 2015-11-* send_to_bob/all_november_files/
+
+cp 2015-*-23-dataset* send_to_bob/all_datasets_created_on_a_23rd/
+
+
+
