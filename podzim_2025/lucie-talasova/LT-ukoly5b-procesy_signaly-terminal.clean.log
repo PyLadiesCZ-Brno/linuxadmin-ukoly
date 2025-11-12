@@ -1,0 +1,425 @@
+Script started on 2025-11-12 14:35:12+01:00 [TERM="xterm-256color" TTY="/dev/pts/3" COLUMNS="204" LINES="45"]
+0;luciet@fedora:~/Dokumenty/brno-linux666;vte.shell.postexec=0666;vte.shell.precmd!7;file://fedora/home/luciet/Dokumenty/brno-linux?2004h133;D;0133;A0m1m32mluciet@fedora0m:1m32m~/Dokumenty/brno-linux0m$ 133;Bmk ditKir ukoly5-procesyK,sK_signaly
+666;vte.shell.preexec!bash: mk: Příkaz nebyl nalezen...
+0;luciet@fedora:~/Dokumenty/brno-linux666;vte.shell.postexec=0666;vte.shell.precmd!7;file://fedora/home/luciet/Dokumenty/brno-linux?2004h133;D;127133;A0m1m32mluciet@fedora0m:1m32m~/Dokumenty/brno-linux0m$ 133;Bmk1Pir ukoly5-procesy_signaly
+666;vte.shell.preexec!0;luciet@fedora:~/Dokumenty/brno-linux666;vte.shell.postexec=0666;vte.shell.precmd!7;file://fedora/home/luciet/Dokumenty/brno-linux?2004h133;D;0133;A0m1m32mluciet@fedora0m:1m32m~/Dokumenty/brno-linux0m$ 133;Bcd ukoly5-procesy_signaly/
+666;vte.shell.preexec!0;luciet@fedora:~/Dokumenty/brno-linux/ukoly5-procesy_signaly666;vte.shell.postexec=0666;vte.shell.precmd!7;file://fedora/home/luciet/Dokumenty/brno-linux/ukoly5-procesy_signaly?2004h133;D;0133;A0m1m32mluciet@fedora0m:1m32m~/Dokumenty/brno-linux/ukoly5-procesy_signaly0m$ 133;Bmk8PePemk2PKmkdirlROOTr"$USER"ignaly/
+666;vte.shell.preexec!0;luciet@fedora:~/Dokumenty/brno-linux/ukoly5-procesy_signaly666;vte.shell.postexec=0666;vte.shell.precmd!7;file://fedora/home/luciet/Dokumenty/brno-linux/ukoly5-procesy_signaly?2004h133;D;0133;A0m1m32mluciet@fedora0m:1m32m~/Dokumenty/brno-linux/ukoly5-procesy_signaly0m$ 133;BTERKtree
+666;vte.shell.preexec!01;34m.0m
+├── 01;34mluciet0m
+└── 01;34mROOT0m
+
+3 directories, 0 files
+0;luciet@fedora:~/Dokumenty/brno-linux/ukoly5-procesy_signaly666;vte.shell.postexec=0666;vte.shell.precmd!7;file://fedora/home/luciet/Dokumenty/brno-linux/ukoly5-procesy_signaly?2004h133;D;0133;A0m1m32mluciet@fedora0m:1m32m~/Dokumenty/brno-linux/ukoly5-procesy_signaly0m$ 133;Bps -ef
+666;vte.shell.preexec!UID	   PID	  PPID	C STIME TTY	     TIME CMD
+root	       1       0  0 lis03 ?	   00:00:30 /usr/lib/systemd/systemd --switched-root --system --deserialize=44 rhgb
+root	       2       0  0 lis03 ?	   00:00:01 [kthreadd]
+root	       3       2  0 lis03 ?	   00:00:00 [pool_workqueue_release]
+root	       4       2  0 lis03 ?	   00:00:00 [kworker/R-rcu_gp]
+root	       5       2  0 lis03 ?	   00:00:00 [kworker/R-sync_wq]
+root	       6       2  0 lis03 ?	   00:00:00 [kworker/R-kvfree_rcu_reclaim]
+root	       7       2  0 lis03 ?	   00:00:00 [kworker/R-slub_flushwq]
+root	       8       2  0 lis03 ?	   00:00:00 [kworker/R-netns]
+root	      13       2  0 lis03 ?	   00:00:00 [kworker/R-mm_percpu_wq]
+root	      15       2  0 lis03 ?	   00:00:00 [ksoftirqd/0]
+root	      16       2  0 lis03 ?	   00:00:33 [rcu_preempt]
+root	      17       2  0 lis03 ?	   00:00:00 [rcu_exp_par_gp_kthread_worker/0]
+root	      18       2  0 lis03 ?	   00:00:01 [rcu_exp_gp_kthread_worker]
+root	      19       2  0 lis03 ?	   00:00:01 [migration/0]
+root	      20       2  0 lis03 ?	   00:00:00 [idle_inject/0]
+root	      21       2  0 lis03 ?	   00:00:00 [cpuhp/0]
+root	      22       2  0 lis03 ?	   00:00:00 [cpuhp/2]
+root	      23       2  0 lis03 ?	   00:00:00 [idle_inject/2]
+root	      24       2  0 lis03 ?	   00:00:02 [migration/2]
+root	      25       2  0 lis03 ?	   00:00:00 [ksoftirqd/2]
+root	      27       2  0 lis03 ?	   00:00:00 [kworker/2:0H-kblockd]
+root	      28       2  0 lis03 ?	   00:00:00 [cpuhp/4]
+root	      29       2  0 lis03 ?	   00:00:00 [idle_inject/4]
+root	      30       2  0 lis03 ?	   00:00:02 [migration/4]
+root	      31       2  0 lis03 ?	   00:00:00 [ksoftirqd/4]
+root	      33       2  0 lis03 ?	   00:00:00 [kworker/4:0H-events_highpri]
+root	      34       2  0 lis03 ?	   00:00:00 [cpuhp/6]
+root	      35       2  0 lis03 ?	   00:00:00 [idle_inject/6]
+root	      36       2  0 lis03 ?	   00:00:02 [migration/6]
+root	      37       2  0 lis03 ?	   00:00:00 [ksoftirqd/6]
+root	      39       2  0 lis03 ?	   00:00:00 [kworker/6:0H-events_highpri]
+root	      40       2  0 lis03 ?	   00:00:00 [cpuhp/1]
+root	      41       2  0 lis03 ?	   00:00:00 [idle_inject/1]
+root	      42       2  0 lis03 ?	   00:00:01 [migration/1]
+root	      43       2  0 lis03 ?	   00:00:00 [ksoftirqd/1]
+root	      45       2  0 lis03 ?	   00:00:00 [kworker/1:0H-events_highpri]
+root	      46       2  0 lis03 ?	   00:00:00 [cpuhp/3]
+root	      47       2  0 lis03 ?	   00:00:00 [idle_inject/3]
+root	      48       2  0 lis03 ?	   00:00:02 [migration/3]
+root	      49       2  0 lis03 ?	   00:00:00 [ksoftirqd/3]
+root	      51       2  0 lis03 ?	   00:00:00 [kworker/3:0H-events_highpri]
+root	      52       2  0 lis03 ?	   00:00:00 [cpuhp/5]
+root	      53       2  0 lis03 ?	   00:00:00 [idle_inject/5]
+root	      54       2  0 lis03 ?	   00:00:01 [migration/5]
+root	      55       2  0 lis03 ?	   00:00:00 [ksoftirqd/5]
+root	      57       2  0 lis03 ?	   00:00:00 [kworker/5:0H-events_highpri]
+root	      58       2  0 lis03 ?	   00:00:00 [cpuhp/7]
+root	      59       2  0 lis03 ?	   00:00:00 [idle_inject/7]
+root	      60       2  0 lis03 ?	   00:00:01 [migration/7]
+root	      61       2  0 lis03 ?	   00:00:00 [ksoftirqd/7]
+root	      63       2  0 lis03 ?	   00:00:00 [kworker/7:0H-events_highpri]
+root	      64       2  0 lis03 ?	   00:00:00 [kdevtmpfs]
+root	      65       2  0 lis03 ?	   00:00:00 [kworker/R-inet_frag_wq]
+root	      66       2  0 lis03 ?	   00:00:00 [rcu_tasks_kthread]
+root	      67       2  0 lis03 ?	   00:00:00 [rcu_tasks_rude_kthread]
+root	      68       2  0 lis03 ?	   00:00:00 [rcu_tasks_trace_kthread]
+root	      69       2  0 lis03 ?	   00:00:00 [kauditd]
+root	      70       2  0 lis03 ?	   00:00:00 [oom_reaper]
+root	      72       2  0 lis03 ?	   00:00:00 [kworker/R-writeback]
+root	      73       2  0 lis03 ?	   00:01:07 [kcompactd0]
+root	      74       2  0 lis03 ?	   00:00:00 [ksmd]
+root	      75       2  0 lis03 ?	   00:00:00 [khugepaged]
+root	      76       2  0 lis03 ?	   00:00:00 [kworker/R-kblockd]
+root	      77       2  0 lis03 ?	   00:00:00 [kworker/R-blkcg_punt_bio]
+root	      78       2  0 lis03 ?	   00:00:00 [kworker/R-kintegrityd]
+root	      79       2  0 lis03 ?	   00:00:00 [irq/9-acpi]
+root	      82       2  0 lis03 ?	   00:00:00 [kworker/R-tpm_dev_wq]
+root	      83       2  0 lis03 ?	   00:00:00 [kworker/R-ata_sff]
+root	      84       2  0 lis03 ?	   00:00:00 [kworker/R-md]
+root	      85       2  0 lis03 ?	   00:00:00 [kworker/R-md_bitmap]
+root	      86       2  0 lis03 ?	   00:00:00 [kworker/R-edac-poller]
+root	      87       2  0 lis03 ?	   00:00:00 [kworker/R-devfreq_wq]
+root	      88       2  0 lis03 ?	   00:00:01 [watchdogd]
+root	      91       2  0 lis03 ?	   00:02:08 [kswapd0]
+root	      92       2  0 lis03 ?	   00:00:00 [kworker/R-cryptd]
+root	     101       2  0 lis03 ?	   00:00:00 [kworker/R-kthrotld]
+root	     103       2  0 lis03 ?	   00:00:00 [irq/24-aerdrv]
+root	     104       2  0 lis03 ?	   00:00:00 [irq/25-aerdrv]
+root	     105       2  0 lis03 ?	   00:00:00 [irq/26-aerdrv]
+root	     106       2  0 lis03 ?	   00:00:00 [irq/27-aerdrv]
+root	     107       2  0 lis03 ?	   00:00:00 [irq/28-aerdrv]
+root	     108       2  0 lis03 ?	   00:00:00 [irq/29-aerdrv]
+root	     109       2  0 lis03 ?	   00:00:00 [kworker/R-acpi_thermal_pm]
+root	     110       2  0 lis03 ?	   00:00:00 [scsi_eh_0]
+root	     111       2  0 lis03 ?	   00:00:00 [kworker/R-scsi_tmf_0]
+root	     112       2  0 lis03 ?	   00:00:00 [scsi_eh_1]
+root	     113       2  0 lis03 ?	   00:00:00 [kworker/R-scsi_tmf_1]
+root	     114       2  0 lis03 ?	   00:00:00 [scsi_eh_2]
+root	     115       2  0 lis03 ?	   00:00:00 [kworker/R-scsi_tmf_2]
+root	     116       2  0 lis03 ?	   00:00:00 [scsi_eh_3]
+root	     117       2  0 lis03 ?	   00:00:00 [kworker/R-scsi_tmf_3]
+root	     118       2  0 lis03 ?	   00:00:00 [scsi_eh_4]
+root	     119       2  0 lis03 ?	   00:00:00 [kworker/R-scsi_tmf_4]
+root	     120       2  0 lis03 ?	   00:00:00 [scsi_eh_5]
+root	     121       2  0 lis03 ?	   00:00:00 [kworker/R-scsi_tmf_5]
+root	     126       2  0 lis03 ?	   00:00:00 [kworker/R-dm_bufio_cache]
+root	     128       2  0 lis03 ?	   00:00:00 [kworker/R-mld]
+root	     129       2  0 lis03 ?	   00:00:00 [kworker/R-ipv6_addrconf]
+root	     130       2  0 lis03 ?	   00:00:00 [kworker/1:1H-kblockd]
+root	     136       2  0 lis03 ?	   00:00:00 [kworker/R-kstrp]
+root	     147       2  0 lis03 ?	   00:00:00 [kworker/u33:0]
+root	     221       2  0 lis03 ?	   00:00:00 [kworker/2:1H]
+root	     225       2  0 lis03 ?	   00:00:00 [kworker/0:1H-kblockd]
+root	     264       2  0 lis03 ?	   00:00:00 [kworker/6:1H-kblockd]
+root	     270       2  0 lis03 ?	   00:00:00 [kworker/5:1H-kblockd]
+root	     272       2  0 lis03 ?	   00:00:00 [kworker/7:1H-kblockd]
+root	     277       2  0 lis03 ?	   00:00:00 [kworker/4:1H-kblockd]
+root	     416       2  0 lis03 ?	   00:00:00 [kworker/R-iscsi_conn_cleanup]
+root	     491       2  0 lis03 ?	   00:00:00 [kworker/R-rpciod]
+root	     492       2  0 lis03 ?	   00:00:00 [kworker/R-xprtiod]
+root	     570       2  0 lis03 ?	   00:00:00 [kworker/3:1H-kblockd]
+root	     664       2  0 lis03 ?	   00:00:00 [kworker/R-btrfs-worker]
+root	     665       2  0 lis03 ?	   00:00:00 [kworker/R-btrfs-delalloc]
+root	     666       2  0 lis03 ?	   00:00:00 [kworker/R-btrfs-flush_delalloc]
+root	     667       2  0 lis03 ?	   00:00:00 [kworker/R-btrfs-cache]
+root	     668       2  0 lis03 ?	   00:00:00 [kworker/R-btrfs-fixup]
+root	     669       2  0 lis03 ?	   00:00:00 [kworker/R-btrfs-endio]
+root	     670       2  0 lis03 ?	   00:00:00 [kworker/R-btrfs-endio-meta]
+root	     671       2  0 lis03 ?	   00:00:00 [kworker/R-btrfs-rmw]
+root	     672       2  0 lis03 ?	   00:00:00 [kworker/R-btrfs-endio-write]
+root	     673       2  0 lis03 ?	   00:00:00 [kworker/R-btrfs-compressed-write]
+root	     674       2  0 lis03 ?	   00:00:00 [kworker/R-btrfs-freespace-write]
+root	     675       2  0 lis03 ?	   00:00:00 [kworker/R-btrfs-delayed-meta]
+root	     676       2  0 lis03 ?	   00:00:00 [kworker/R-btrfs-qgroup-rescan]
+root	     684       2  0 lis03 ?	   00:00:00 [btrfs-cleaner]
+root	     685       2  0 lis03 ?	   00:00:32 [btrfs-transaction]
+root	     791       1  0 lis03 ?	   00:00:12 /usr/lib/systemd/systemd-journald
+root	     825       1  0 lis03 ?	   00:00:02 /usr/lib/systemd/systemd-userdbd
+root	     836       1  0 lis03 ?	   00:00:02 /usr/lib/systemd/systemd-udevd
+root	     838       2  0 lis03 ?	   00:00:00 [psimon]
+root	     916       2  0 lis03 ?	   00:00:00 [jbd2/vda2-8]
+root	     918       2  0 lis03 ?	   00:00:00 [kworker/R-ext4-rsv-conversion]
+systemd+     969       1  0 lis03 ?	   00:03:34 /usr/lib/systemd/systemd-oomd
+systemd+     970       1  0 lis03 ?	   00:00:09 /usr/lib/systemd/systemd-resolved
+root	     971       1  0 lis03 ?	   00:00:00 /usr/bin/auditd
+dbus	     999       1  0 lis03 ?	   00:00:00 /usr/bin/dbus-broker-launch --scope system --audit
+dbus	    1000     999  0 lis03 ?	   00:00:13 dbus-broker --log 4 --controller 9 --machine-id 768d9a2d207f4597893b9a3dec32432b --max-bytes 536870912 --max-fds 4096 --max-matches 131072 --audit
+avahi	    1002       1  0 lis03 ?	   00:00:01 avahi-daemon: running [fedora.local]
+root	    1004       1  0 lis03 ?	   00:00:11 /usr/sbin/irqbalance
+chrony	    1005       1  0 lis03 ?	   00:00:02 /usr/sbin/chronyd -n -F 2
+root	    1006       1  0 lis03 ?	   00:00:00 /usr/libexec/low-memory-monitor
+root	    1007       1  0 lis03 ?	   00:00:00 /usr/sbin/mcelog --daemon --foreground
+polkitd	    1008       1  0 lis03 ?	   00:00:16 /usr/lib/polkit-1/polkitd --no-debug --log-level=notice
+root	    1012       1  0 lis03 ?	   00:00:01 /usr/libexec/accounts-daemon
+root	    1016       1  0 lis03 ?	   00:00:00 /usr/libexec/switcheroo-control
+root	    1017       1  0 lis03 ?	   00:00:04 /usr/lib/systemd/systemd-homed
+root	    1019       1  0 lis03 ?	   00:00:04 /usr/lib/systemd/systemd-logind
+root	    1020       1  0 lis03 ?	   00:00:05 /usr/lib/systemd/systemd-machined
+root	    1021       1  0 lis03 ?	   00:00:03 /usr/libexec/udisks2/udisksd
+root	    1026       1  0 lis03 ?	   00:00:01 /usr/libexec/upowerd
+root	    1032       2  0 lis03 ?	   00:00:00 [psimon]
+avahi	    1037    1002  0 lis03 ?	   00:00:00 avahi-daemon: chroot helper
+root	    1038       1  0 lis03 ?	   00:00:00 /usr/sbin/spice-webdavd -p 9843
+root	    1047       1  0 lis03 ?	   00:00:00 /usr/sbin/abrtd -d -s
+root	    1054       1  0 lis03 ?	   00:00:00 /usr/sbin/alsactl -s -n 19 -c -E ALSA_CONFIG_PATH=/etc/alsa/alsactl.conf --initfile=/lib/alsa/init/00main rdaemon
+root	    1060       2  0 lis03 ?	   00:00:00 [psimon]
+root	    1098       1  0 lis03 ?	   00:00:00 /usr/bin/ModemManager
+root	    1101       1  0 lis03 ?	   00:00:01 /usr/bin/python3 -sP /usr/bin/firewalld --nofork --nopid
+root	    1109       1  0 lis03 ?	   00:00:01 /usr/bin/abrt-dump-journal-core -D -T -f -e
+root	    1110       1  0 lis03 ?	   00:00:01 /usr/bin/abrt-dump-journal-oops -fxtD
+root	    1111       1  0 lis03 ?	   00:00:01 /usr/bin/abrt-dump-journal-xorg -fxtD
+root	    1162       1  0 lis03 ?	   00:00:17 /usr/bin/NetworkManager --no-daemon
+root	    1171       1  0 lis03 ?	   00:00:00 /usr/bin/cupsd -l
+root	    1172       1  0 lis03 ?	   00:00:03 /usr/bin/gssproxy -i
+root	    1173       1  0 lis03 ?	   00:00:43 /usr/bin/python3 -Es /usr/sbin/tuned -l -P
+root	    1229       1  0 lis03 ?	   00:00:24 /usr/sbin/rsyslogd -n
+root	    1243       1  0 lis03 ?	   00:00:00 /usr/sbin/atd -f
+root	    1246       1  0 lis03 ?	   00:00:00 /usr/sbin/crond -n
+root	    1248       1  0 lis03 ?	   00:00:01 /usr/bin/gdm
+root	    1282       1  0 lis03 ?	   00:00:00 /usr/libexec/uresourced
+root	    1294       2  0 lis03 ?	   00:00:00 [psimon]
+root	    1302       1  0 lis03 ?	   00:00:21 /usr/bin/python3 -Es /usr/sbin/tuned-ppd -l
+colord	    1418       1  0 lis03 ?	   00:00:00 /usr/libexec/colord
+root	    1625       1  0 lis03 ?	   00:00:01 /usr/bin/pcscd --foreground --auto-exit
+root	    1700       1  0 lis03 ?	   00:00:01 /usr/sbin/wpa_supplicant -c /etc/wpa_supplicant/wpa_supplicant.conf -u -s
+root	    1759       1  0 lis03 ?	   00:00:26 /usr/sbin/spice-vdagentd
+root	    2018    1248  0 lis03 ?	   00:00:01 gdm-session-worker [pam/gdm-password]
+luciet	    2030       1  0 lis03 ?	   00:00:06 /usr/lib/systemd/systemd --user
+luciet	    2032    2030  0 lis03 ?	   00:00:00 (sd-pam)
+luciet	    2050       1  0 lis03 ?	   00:00:00 /usr/bin/gnome-keyring-daemon --daemonize --login
+luciet	    2062    2018  0 lis03 tty2	   00:00:00 /usr/libexec/gdm-wayland-session /usr/bin/gnome-session
+luciet	    2068    2030  0 lis03 ?	   00:00:00 /usr/bin/dbus-broker-launch --scope user
+luciet	    2073    2068  0 lis03 ?	   00:00:08 dbus-broker --log 4 --controller 9 --machine-id 768d9a2d207f4597893b9a3dec32432b --max-bytes 100000000000000 --max-fds 25000000000000 --max-matches 5000
+luciet	    2077    2062  0 lis03 tty2	   00:00:00 /usr/libexec/gnome-session-binary
+luciet	    2132    2030  0 lis03 ?	   00:00:00 /usr/libexec/gnome-session-ctl --monitor
+luciet	    2133    2030  0 lis03 ?	   00:00:02 /usr/libexec/uresourced --user
+luciet	    2138    2030  0 lis03 ?	   00:00:01 /usr/libexec/gnome-session-binary --systemd-service --session=gnome
+luciet	    2141    2030  0 lis03 ?	   00:00:00 /usr/libexec/gvfsd
+luciet	    2151    2030  0 lis03 ?	   00:00:00 /usr/libexec/gvfsd-fuse /run/user/1000/gvfs -f
+luciet	    2161    2030  0 lis03 ?	   00:00:16 /usr/bin/pipewire
+luciet	    2162    2030  0 lis03 ?	   00:00:26 /usr/bin/wireplumber
+luciet	    2195    2030  3 lis03 ?	   06:31:15 /usr/bin/gnome-shell
+luciet	    2254    2030  0 lis03 ?	   00:00:00 /usr/libexec/at-spi-bus-launcher
+luciet	    2260    2254  0 lis03 ?	   00:00:00 /usr/bin/dbus-broker-launch --config-file=/usr/share/defaults/at-spi2/accessibility.conf --scope user
+luciet	    2261    2260  0 lis03 ?	   00:00:00 dbus-broker --log 4 --controller 9 --machine-id 768d9a2d207f4597893b9a3dec32432b --max-bytes 100000000000000 --max-fds 6400000 --max-matches 5000000000
+luciet	    2263    2030  0 lis03 ?	   00:00:00 /usr/libexec/at-spi2-registryd --use-gnome-session
+luciet	    2268    2030  0 lis03 ?	   00:00:00 /usr/libexec/xdg-permission-store
+luciet	    2269    2030  0 lis03 ?	   00:00:02 /usr/libexec/gnome-shell-calendar-server
+luciet	    2293    2030  0 lis03 ?	   00:00:01 /usr/libexec/evolution-source-registry
+luciet	    2294    2030  0 lis03 ?	   00:00:00 /usr/libexec/dconf-service
+luciet	    2312    2030  0 lis03 ?	   00:00:00 /usr/bin/gjs -m /usr/share/gnome-shell/org.gnome.Shell.Notifications
+luciet	    2317    2030  0 lis03 ?	   00:01:41 /usr/bin/ibus-daemon --panel disable
+luciet	    2318    2030  0 lis03 ?	   00:00:00 /usr/libexec/gsd-a11y-settings
+luciet	    2319    2030  0 lis03 ?	   00:00:01 /usr/libexec/gsd-color
+luciet	    2320    2030  0 lis03 ?	   00:00:00 /usr/libexec/gsd-datetime
+luciet	    2321    2030  0 lis03 ?	   00:00:06 /usr/libexec/gsd-housekeeping
+luciet	    2331    2030  0 lis03 ?	   00:00:00 /usr/libexec/gsd-keyboard
+luciet	    2337    2030  0 lis03 ?	   00:00:02 /usr/libexec/gsd-media-keys
+luciet	    2342    2030  0 lis03 ?	   00:00:01 /usr/libexec/gsd-power
+luciet	    2344    2030  0 lis03 ?	   00:00:03 /usr/bin/spice-vdagent
+luciet	    2346    2030  0 lis03 ?	   00:00:00 /usr/libexec/gsd-print-notifications
+luciet	    2354    2030  0 lis03 ?	   00:00:00 /usr/libexec/gsd-rfkill
+luciet	    2356    2030  0 lis03 ?	   00:00:00 /usr/libexec/gsd-screensaver-proxy
+luciet	    2365    2030  0 lis03 ?	   00:00:00 /usr/libexec/gsd-sharing
+luciet	    2384    2030  0 lis03 ?	   00:00:00 /usr/libexec/gsd-smartcard
+luciet	    2387    2030  0 lis03 ?	   00:00:00 /usr/libexec/gsd-sound
+luciet	    2425    2030  0 lis03 ?	   00:00:00 /usr/libexec/gsd-usb-protection
+luciet	    2433    2195  0 lis03 ?	   00:02:23 /usr/bin/Xwayland :0 -rootless -noreset -accessx -core -auth /run/user/1000/.mutter-Xwaylandauth.IRV5E3 -listenfd 4 -listenfd 5 -displayfd 6 -initfd 7 -
+luciet	    2436    2030  0 lis03 ?	   00:00:00 /usr/libexec/gsd-wacom
+luciet	    2440    2317  0 lis03 ?	   00:00:00 /usr/libexec/ibus-dconf
+luciet	    2443    2317  0 lis03 ?	   00:00:17 /usr/libexec/ibus-extension-gtk3
+luciet	    2477    2030  0 lis03 ?	   00:00:23 /usr/libexec/ibus-portal
+luciet	    2478    2030  0 lis03 ?	   00:00:01 /usr/bin/gjs -m /usr/share/gnome-shell/org.gnome.ScreenSaver
+luciet	    2479    2030  0 lis03 ?	   00:00:00 /usr/libexec/gvfs-udisks2-volume-monitor
+luciet	    2514    2030  0 lis03 ?	   00:00:09 /usr/libexec/gvfs-afc-volume-monitor
+luciet	    2525    2030  0 lis03 ?	   00:00:00 /usr/libexec/gvfs-gphoto2-volume-monitor
+luciet	    2539    2030  0 lis03 ?	   00:00:00 /usr/libexec/gvfs-mtp-volume-monitor
+luciet	    2551    2030  0 lis03 ?	   00:00:00 /usr/libexec/gvfs-goa-volume-monitor
+luciet	    2561    2030  0 lis03 ?	   00:00:00 /usr/libexec/goa-daemon
+luciet	    2584    2030  0 lis03 ?	   00:00:18 /usr/libexec/goa-identity-service
+luciet	    2604    2030  0 lis03 ?	   00:00:00 /usr/libexec/gsd-printer
+luciet	    2611    2030  0 lis03 ?	   00:00:01 /usr/libexec/evolution-calendar-factory
+luciet	    2646    2030  0 lis03 ?	   00:00:00 /usr/libexec/evolution-addressbook-factory
+root	    2669       2  0 lis03 ?	   00:00:00 [kworker/0:2H]
+luciet	    2672    2030  0 lis03 ?	   00:00:08 /usr/bin/pipewire-pulse
+luciet	    2708    2317  0 lis03 ?	   00:00:29 /usr/libexec/ibus-engine-simple
+luciet	    2721    2030  0 lis03 ?	   00:00:05 /usr/libexec/gsd-xsettings
+luciet	    2764    2195  0 lis03 ?	   00:00:12 /usr/libexec/mutter-x11-frames
+luciet	    2773    2030  0 lis03 ?	   00:00:00 /usr/libexec/ibus-x11
+luciet	    2789    2138  0 lis03 ?	   00:14:20 /usr/bin/gnome-software --gapplication-service
+luciet	    2794    2138  0 lis03 ?	   00:00:00 /usr/libexec/gsd-disk-utility-notify
+luciet	    2798    2138  0 lis03 ?	   00:00:36 /usr/bin/xpad
+luciet	    2803    2030  0 lis03 ?	   00:00:00 /usr/bin/abrt-applet --gapplication-service
+luciet	    2804    2138  0 lis03 ?	   00:00:02 /usr/libexec/evolution-data-server/evolution-alarm-notify
+luciet	    2885    2030  0 lis03 ?	   00:00:01 /usr/libexec/xdg-desktop-portal
+luciet	    2897    2030  0 lis03 ?	   00:00:00 /usr/libexec/xdg-document-portal
+root	    2912    2897  0 lis03 ?	   00:00:00 fusermount3 -o rw,nosuid,nodev,fsname=portal,auto_unmount,subtype=portal -- /run/user/1000/doc
+luciet	    2919    2030  0 lis03 ?	   00:00:08 /usr/libexec/xdg-desktop-portal-gnome
+root	    2920       1  0 lis03 ?	   00:00:01 /usr/sbin/abrt-dbus -t133
+luciet	    3017    2030  0 lis03 ?	   00:00:05 /usr/libexec/xdg-desktop-portal-gtk
+luciet	    3098    2030  0 lis03 ?	   00:00:02 /usr/bin/gnome-calendar --gapplication-service
+luciet	    3108    2030  0 lis03 ?	   00:00:00 /usr/lib64/firefox/firefox --dbus-service /usr/bin/firefox
+luciet	    3151    2030  0 lis03 ?	   00:00:00 /usr/libexec/bluetooth/obexd
+luciet	    3153    2141  0 lis03 ?	   00:00:00 /usr/libexec/gvfsd-trash --spawner :1.7 /org/gtk/gvfs/exec_spaw/0
+luciet	    3192    2030  0 lis03 ?	   00:00:00 /usr/lib64/firefox/crashhelper 3108 9 /tmp/ 10 12
+luciet	    3202    2030  0 lis03 ?	   00:00:20 /usr/libexec/localsearch-3
+luciet	    3272    2030  0 lis03 ?	   00:00:00 /usr/libexec/flatpak-session-helper
+luciet	    3277    2030  0 lis03 ?	   00:00:00 server --sh -n /run/user/1000/.flatpak-helper/pkcs11-flatpak-3272 --provider p11-kit-trust.so pkcs11:model=p11-kit-trust?write-protected=yes
+luciet	    3280    2030  0 lis03 ?	   00:00:00 /usr/bin/bwrap --args 43 -- /usr/bin/xdg-dbus-proxy --args=45
+luciet	    3281    3280  0 lis03 ?	   00:00:08 /usr/bin/xdg-dbus-proxy --args=45
+luciet	    3284    2030  0 lis03 ?	   00:00:00 /usr/bin/bwrap --args 43 -- code --reuse-window
+luciet	    3296    2030  0 lis03 ?	   00:00:00 /usr/libexec/flatpak-portal
+luciet	    3315    3284  0 lis03 ?	   00:06:25 /app/extra/vscode/code --ms-enable-electron-run-as-node --extensions-dir=/home/luciet/.var/app/com.visualstudio.code/data/vscode/extensions --reuse-wind
+luciet	    3321    3315  0 lis03 ?	   00:00:00 /app/extra/vscode/code --type=zygote --no-zygote-sandbox
+luciet	    3323    3315  0 lis03 ?	   00:00:00 [zypak-sandbox] <defunct>
+luciet	    3325    3284  0 lis03 ?	   00:00:00 cat
+luciet	    3326    3284  0 lis03 ?	   00:00:00 cat
+luciet	    3327    3296  0 lis03 ?	   00:00:00 /usr/bin/bwrap --args 42 -- /app/bin/zypak-helper child - /app/extra/vscode/code --type=zygote
+luciet	    3346    3284  0 lis03 ?	   00:00:00 /usr/bin/bwrap --args 42 -- /app/bin/zypak-helper child - /app/extra/vscode/code --type=zygote
+luciet	    3347    3346  0 lis03 ?	   00:00:00 /app/extra/vscode/code --type=zygote
+luciet	    3379    3284  0 lis03 ?	   00:00:00 /app/extra/vscode/chrome_crashpad_handler --monitor-self-annotation=ptype=crashpad-handler --no-rate-limit --database=/home/luciet/.var/app/com.visualst
+luciet	    3404    3315  0 lis03 ?	   00:00:40 /proc/self/exe --type=utility --utility-sub-type=network.mojom.NetworkService --lang=en-US --service-sandbox-type=none --crashpad-handler-pid=51 --enabl
+luciet	    3424    3347  0 lis03 ?	   00:27:31 /app/extra/vscode/code --type=zygote
+luciet	    3450    3347  0 lis03 ?	   00:00:59 /app/extra/vscode/code --type=zygote
+luciet	    3499    3321  0 lis03 ?	   00:27:07 /app/extra/vscode/code --type=zygote --no-zygote-sandbox
+luciet	    3534    3315  0 lis03 ?	   00:00:56 /proc/self/exe --type=utility --utility-sub-type=node.mojom.NodeService --lang=en-US --service-sandbox-type=none --crashpad-handler-pid=51 --enable-cras
+luciet	    3536    3315  0 lis03 ?	   00:01:20 /proc/self/exe --type=utility --utility-sub-type=node.mojom.NodeService --lang=en-US --service-sandbox-type=none --crashpad-handler-pid=51 --enable-cras
+luciet	    3563    3315  0 lis03 ?	   00:00:34 /proc/self/exe --type=utility --utility-sub-type=node.mojom.NodeService --lang=en-US --service-sandbox-type=none --dns-result-order=ipv4first --experime
+luciet	    3565    3277  0 lis03 ?	   00:00:03 p11-kit-remote --provider p11-kit-trust.so pkcs11:model=p11-kit-trust?write-protected=yes
+luciet	    3593    3315  0 lis03 ?	   00:01:46 /proc/self/exe --type=utility --utility-sub-type=node.mojom.NodeService --lang=en-US --service-sandbox-type=none --dns-result-order=ipv4first --experime
+luciet	    3600    3315  0 lis03 ?	   00:01:43 /proc/self/exe --type=utility --utility-sub-type=node.mojom.NodeService --lang=en-US --service-sandbox-type=none --crashpad-handler-pid=51 --enable-cras
+luciet	    3664    3593  0 lis03 ?	   00:00:22 /app/extra/vscode/code /app/extra/vscode/resources/app/extensions/markdown-language-features/dist/serverWorkerMain --node-ipc --clientProcessId=252
+luciet	    3694    2317  0 lis03 ?	   00:00:02 /usr/bin/python3 /usr/share/ibus-typing-booster/engine/main.py --ibus
+luciet	    3727    2030  0 lis03 ?	   00:00:00 /usr/libexec/gvfsd-metadata
+passim	    3813       1  0 lis03 ?	   00:00:05 /usr/libexec/passimd
+luciet	    4256    2030  0 lis03 ?	   00:13:58 /usr/bin/ptyxis --gapplication-service
+luciet	    4264    4256  0 lis03 ?	   00:00:20 /usr/libexec/ptyxis-agent --socket-fd=3 --rlimit-nofile=1024
+luciet	    4284    2030  0 lis03 ?	   00:00:00 catatonit -P
+luciet	   11673    2141  0 lis04 ?	   00:00:00 /usr/libexec/gvfsd-recent --spawner :1.7 /org/gtk/gvfs/exec_spaw/1
+luciet	   11674    2141  0 lis04 ?	   00:00:00 /usr/libexec/gvfsd-network --spawner :1.7 /org/gtk/gvfs/exec_spaw/2
+luciet	   11693    2141  0 lis04 ?	   00:00:00 /usr/libexec/gvfsd-dnssd --spawner :1.7 /org/gtk/gvfs/exec_spaw/3
+luciet	   11699    2141  0 lis04 ?	   00:00:04 /usr/libexec/gvfsd-wsdd --spawner :1.7 /org/gtk/gvfs/exec_spaw/4
+luciet	   11704   11699  0 lis04 ?	   00:00:06 /usr/bin/python3 /usr/bin/wsdd --no-host --discovery --listen /run/user/1000/gvfsd/wsdd
+luciet	   11949    3315  0 lis04 ?	   00:08:20 /proc/self/exe --type=utility --utility-sub-type=node.mojom.NodeService --lang=en-US --service-sandbox-type=none --crashpad-handler-pid=51 --enable-cras
+luciet	   11975   11949  0 lis04 pts/1	   00:00:01 /bin/sh
+luciet	   12256    2050  0 lis04 ?	   00:00:00 /usr/bin/ssh-agent -D -a /run/user/1000/keyring/.ssh
+luciet	   16303    3593  0 lis05 ?	   00:00:12 /app/extra/vscode/code /app/extra/vscode/resources/app/extensions/json-language-features/server/dist/node/jsonServerMain --node-ipc --clientProcessId=25
+luciet	   16442   11975  0 lis05 pts/1	   00:00:00 git diff --name-status lucie-talasova..lucie-talasova-vyvoj
+luciet	   16443   16442  0 lis05 pts/1	   00:00:00 /usr/bin/less
+luciet	   17030    2030  0 lis05 ?	   00:00:52 /usr/bin/nautilus --gapplication-service
+luciet	   20894    4264  0 lis05 pts/2	   00:00:04 /usr/bin/bash
+root	   55010       2  0 07:58 ?	   00:00:00 [kworker/0:1-events]
+sssd	   61732       1  0 10:50 ?	   00:00:01 /usr/libexec/sssd/sssd_kcm --logger=files
+luciet	   62146    4264  0 10:56 pts/0	   00:00:00 /usr/bin/bash
+root	   62668       2  0 12:11 ?	   00:00:00 [kworker/4:0-mm_percpu_wq]
+luciet	   62914   62146  0 13:09 pts/0	   00:00:00 sleep 10000
+root	   63047       2  0 13:35 ?	   00:00:00 [kworker/5:0-events]
+root	   63071       2  0 13:45 ?	   00:00:01 [kworker/u32:2-btrfs-endio]
+root	   63194       2  0 14:25 ?	   00:00:00 [kworker/7:0-events]
+root	   63195       2  0 14:26 ?	   00:00:00 [kworker/3:2-cgroup_destroy]
+root	   63253       2  0 14:27 ?	   00:00:00 [kworker/u32:4-btrfs-endio]
+root	   63260       2  0 14:27 ?	   00:00:00 [kworker/1:1-events]
+root	   63277       2  0 14:27 ?	   00:00:00 [kworker/u32:8-events_unbound]
+root	   63334       2  0 14:27 ?	   00:00:00 [kworker/6:3-events]
+root	   63371       2  0 14:27 ?	   00:00:00 [kworker/u32:12-btrfs-endio]
+root	   63406       2  0 14:29 ?	   00:00:00 [kworker/2:0-events]
+luciet	   63496   20894  0 14:31 pts/2	   00:00:00 script terminal.log
+luciet	   63498   63496  0 14:31 pts/3	   00:00:00 bash -i
+root	   63592       2  0 14:33 ?	   00:00:00 [kworker/6:1-events]
+root	   63635       2  0 14:34 ?	   00:00:00 [kworker/0:0-events]
+luciet	   63652   63498  0 14:35 pts/3	   00:00:00 script terminal.log
+luciet	   63654   63652  0 14:35 pts/4	   00:00:00 bash -i
+root	   63707       2  0 14:35 ?	   00:00:00 [kworker/5:3-events]
+root	   63709       2  0 14:35 ?	   00:00:00 [kworker/3:0-events]
+root	   63713       2  0 14:35 ?	   00:00:00 [kworker/1:0-events]
+root	   63732       2  0 14:36 ?	   00:00:00 [kworker/4:1-events]
+root	   63766       2  0 14:36 ?	   00:00:00 [kworker/7:2-mm_percpu_wq]
+root	   63778       2  0 14:38 ?	   00:00:00 [kworker/2:1-events]
+root	   63788       2  0 14:41 ?	   00:00:00 [kworker/3:1]
+root	   63789       2  0 14:41 ?	   00:00:00 [kworker/4:2-mm_percpu_wq]
+root	   63790       2  0 14:42 ?	   00:00:00 [kworker/1:2-events]
+root	   63792     825  0 14:44 ?	   00:00:00 systemd-userwork: waiting...
+root	   63793     825  0 14:44 ?	   00:00:00 systemd-userwork: waiting...
+root	   63794     825  0 14:44 ?	   00:00:00 systemd-userwork: waiting...
+root	   63795       2  0 14:44 ?	   00:00:00 [kworker/2:2-mm_percpu_wq]
+root	   63796       2  0 14:45 ?	   00:00:00 [kworker/6:0-events]
+root	   63800       1  1 14:45 ?	   00:00:00 /usr/libexec/fprintd
+root	   63804       2  0 14:45 ?	   00:00:00 [kworker/u32:0-flush-btrfs-1]
+root	   63805       2  0 14:45 ?	   00:00:00 [kworker/u32:1-events_unbound]
+luciet	   63838   63654 99 14:45 pts/4	   00:00:00 ps -ef
+0;luciet@fedora:~/Dokumenty/brno-linux/ukoly5-procesy_signaly666;vte.shell.postexec=0666;vte.shell.precmd!7;file://fedora/home/luciet/Dokumenty/brno-linux/ukoly5-procesy_signaly?2004h133;D;0133;A0m1m32mluciet@fedora0m:1m32m~/Dokumenty/brno-linux/ukoly5-procesy_signaly0m$ 133;BK7mpsfpsf-efg|egrep -w][r]ootl>cluciet/luciet1111111111111Proo1111PROOTCCCCCCCCCCCC
+666;vte.shell.preexec!0;luciet@fedora:~/Dokumenty/brno-linux/ukoly5-procesy_signaly666;vte.shell.postexec=0666;vte.shell.precmd!7;file://fedora/home/luciet/Dokumenty/brno-linux/ukoly5-procesy_signaly?2004h133;D;0133;A0m1m32mluciet@fedora0m:1m32m~/Dokumenty/brno-linux/ukoly5-procesy_signaly0m$ 133;Becho $?
+666;vte.shell.preexec!0
+0;luciet@fedora:~/Dokumenty/brno-linux/ukoly5-procesy_signaly666;vte.shell.postexec=0666;vte.shell.precmd!7;file://fedora/home/luciet/Dokumenty/brno-linux/ukoly5-procesy_signaly?2004h133;D;0133;A0m1m32mluciet@fedora0m:1m32m~/Dokumenty/brno-linux/ukoly5-procesy_signaly0m$ 133;Bpsh-ef?| grep -w [r]oo11111P1@l1@]1@u1@c1@i1@e1@tCCCCCCCCCCC111111111Pluciet/luciet_ps.txt
+666;vte.shell.preexec!0;luciet@fedora:~/Dokumenty/brno-linux/ukoly5-procesy_signaly666;vte.shell.postexec=0666;vte.shell.precmd!7;file://fedora/home/luciet/Dokumenty/brno-linux/ukoly5-procesy_signaly?2004h133;D;0133;A0m1m32mluciet@fedora0m:1m32m~/Dokumenty/brno-linux/ukoly5-procesy_signaly0m$ 133;Becho $?
+666;vte.shell.preexec!0
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCbeBETTER:Kpostexec=0666;vte.shell.precmd!7;file://fedora/home/luciet/Dokumenty/brno-linux/ukoly5-procesy_signaly?2004h133;D;0133;A0m1m32mluciet@fedora0m:1m32m~/Dokumenty/brno-linux/ukoly5-procesy_signaly0m$ 133;Bep2Pmk8PeP"PS1="""\[;$?\e\\\e]133;A\e\\\]${PROMPT_START@P}\[\e[0m\]${PROMPT_HIGHLIGHT:+\[\e[${PROMPT_HIGHLIGHT}m\]}${PROMPT_COLOR:+\[\e[${PROMPT_COLOR}m\]}${PROMPT_CONTAINER}${PROMPT_USERHOST:+${PROMPT_USERHOST@P}${PROMPT_SEPARATOR:+\[\e[0m\]${PROMPT_SEPARATOR_COLOR:+\[\e[${PROMPT_SEPARATOR_COLOR}m\]}${PROMPT_SEPARATOR@P}${PROMPT_SEPARATOR_COLOR:+\[\e[0m\]}${PROMPT_HIGHLIGHT:+\[\e[${PROMPT_HIGHLIGHT}m\]}${PROMPT_COLOR:+\[\e[${PROMPT_COLOR}m\]}}}${PROMPT_DIR_COLOR:+\[\e[${PROMPT_DIR_COLOR}m\]}${PROMPT_DIRECTORY@P}${PROMPT_GIT_BRANCH:+${PROMPT_SEPARATOR:+\[\e[0m\]${PROMPT_SEPARATOR_COLOR:+\[\e[${PROMPT_SEPARATOR_COLOR}m\]}${PROMPT_SEPARATOR@P}${PROMPT_SEPARATOR_COLOR:+\[\e[0m\]}${PROMPT_HIGHLIGHT:+\[\e[${PROMPT_HIGHLIGHT}m\]}${PROMPT_COLOR:+\[\e[${PROMPT_COLOR}m\]}${PROMPT_DIR_COLOR:+\[\e[${PROMPT_DIR_COLOR}m\]}}${PROMPT_GIT_COLOR:+\[\e[${PROMPT_GIT_COLOR}m\]}${PROMPT_GIT_BRANCH@P}}\[\e[0m\]${PROMPT_END@P}\$${PROMPT_END:AAAA
+K
+K
+K
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCbeBETTER:K;$?\e\\\e]133;A\e\\\]${PROMPT_START@P}\[\e[0m\]${PROMPT_HIGHLIGHT:+\[\e[${PROMPT_HIGHLIGHT}m\]}${PROMPT_COLOR:+\[\e[${PROMPT_COLOR}m\]}${PROMPT_CONTAINER}${PROMPT_USERHOST:+${PROMPT_USERHOST@P}${PROMPT_SEPARATOR:+\[\e[0m\]${PROMPT_SEPARATOR_COLOR:+\[\e[${PROMPT_SEPARATOR_COLOR}m\]}${PROMPT_SEPARATOR@P}${PROMPT_SEPARATOR_COLOR:+\[\e[0m\]}${PROMPT_HIGHLIGHT:+\[\e[${PROMPT_HIGHLIGHT}m\]}${PROMPT_COLOR:+\[\e[${PROMPT_COLOR}m\]}}}${PROMPT_DIR_COLOR:+\[\e[${PROMPT_DIR_COLOR}m\]}${PROMPT_DIRECTORY@P}${PROMPT_GIT_BRANCH:+${PROMPT_SEPARATOR:+\[\e[0m\]${PROMPT_SEPARATOR_COLOR:+\[\e[${PROMPT_SEPARATOR_COLOR}m\]}${PROMPT_SEPARATOR@P}${PROMPT_SEPARATOR_COLOR:+\[\e[0m\]}${PROMPT_HIGHLIGHT:+\[\e[${PROMPT_HIGHLIGHT}m\]}${PROMPT_COLOR:+\[\e[${PROMPT_COLOR}m\]}${PROMPT_DIR_COLOR:+\[\e[${PROMPT_DIR_COLOR}m\]}}${PROMPT_GIT_COLOR:+\[\e[${PROMPT_GIT_COLOR}m\]}${PROMPT_GIT_BRANCH@P}}\[\e[0m\]${PROMPT_END@P}\$${PROMPT_END:+\[\e[0m\]} \[\e]AAAA
+K
+K
+K
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC"""KC"PS1="""\[;$?\e\\\e]133;A\e\\\]${PROMPT_START@P}\[\e[0m\]${PROMPT_HIGHLIGHT:+\[\e[${PROMPT_HIGHLIGHT}m\]}${PROMPT_COLOR:+\[\e[${PROMPT_COLOR}m\]}${PROMPT_CONTAINER}${PROMPT_USERHOST:+${PROMPT_USERHOST@P}${PROMPT_SEPARATOR:+\[\e[0m\]${PROMPT_SEPARATOR_COLOR:+\[\e[${PROMPT_SEPARATOR_COLOR}m\]}${PROMPT_SEPARATOR@P}${PROMPT_SEPARATOR_COLOR:+\[\e[0m\]}${PROMPT_HIGHLIGHT:+\[\e[${PROMPT_HIGHLIGHT}m\]}${PROMPT_COLOR:+\[\e[${PROMPT_COLOR}m\]}}}${PROMPT_DIR_COLOR:+\[\e[${PROMPT_DIR_COLOR}m\]}${PROMPT_DIRECTORY@P}${PROMPT_GIT_BRANCH:+${PROMPT_SEPARATOR:+\[\e[0m\]${PROMPT_SEPARATOR_COLOR:+\[\e[${PROMPT_SEPARATOR_COLOR}m\]}${PROMPT_SEPARATOR@P}${PROMPT_SEPARATOR_COLOR:+\[\e[0m\]}${PROMPT_HIGHLIGHT:+\[\e[${PROMPT_HIGHLIGHT}m\]}${PROMPT_COLOR:+\[\e[${PROMPT_COLOR}m\]}${PROMPT_DIR_COLOR:+\[\e[${PROMPT_DIR_COLOR}m\]}}${PROMPT_GIT_COLOR:+\[\e[${PROMPT_GIT_COLOR}m\]}${PROMPT_GIT_BRANCH@P}}\[\e[0m\]${PROMPT_END@P}\$${PROMPT_END:AAAA
+K
+K
+K
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC"""KCPS1="""\[;$?\e\\\e]133;A\e\\\]${PROMPT_START@P}\[\e[0m\]${PROMPT_HIGHLIGHT:+\[\e[${PROMPT_HIGHLIGHT}m\]}${PROMPT_COLOR:+\[\e[${PROMPT_COLOR}m\]}${PROMPT_CONTAINER}${PROMPT_USERHOST:+${PROMPT_USERHOST@P}${PROMPT_SEPARATOR:+\[\e[0m\]${PROMPT_SEPARATOR_COLOR:+\[\e[${PROMPT_SEPARATOR_COLOR}m\]}${PROMPT_SEPARATOR@P}${PROMPT_SEPARATOR_COLOR:+\[\e[0m\]}${PROMPT_HIGHLIGHT:+\[\e[${PROMPT_HIGHLIGHT}m\]}${PROMPT_COLOR:+\[\e[${PROMPT_COLOR}m\]}}}${PROMPT_DIR_COLOR:+\[\e[${PROMPT_DIR_COLOR}m\]}${PROMPT_DIRECTORY@P}${PROMPT_GIT_BRANCH:+${PROMPT_SEPARATOR:+\[\e[0m\]${PROMPT_SEPARATOR_COLOR:+\[\e[${PROMPT_SEPARATOR_COLOR}m\]}${PROMPT_SEPARATOR@P}${PROMPT_SEPARATOR_COLOR:+\[\e[0m\]}${PROMPT_HIGHLIGHT:+\[\e[${PROMPT_HIGHLIGHT}m\]}${PROMPT_COLOR:+\[\e[${PROMPT_COLOR}m\]}${PROMPT_DIR_COLOR:+\[\e[${PROMPT_DIR_COLOR}m\]}}${PROMPT_GIT_COLOR:+\[\e[${PROMPT_GIT_COLOR}m\]}${PROMPT_GIT_BRANCH@P}}\[\e[0m\]${PROMPT_END@P}\$${PROMPT_END:+\[\e[0m\]} \[\e]133;B\e\\\]AAAA
+K
+K
+K
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCbeBETTER:K\e]133;D;$?\e\\\e]133;A\e\\\]${PROMPT_START@P}\[\e[0m\]${PROMPT_HIGHLIGHT:+\[\e[${PROMPT_HIGHLIGHT}m\]}${PROMPT_COLOR:+\[\e[${PROMPT_COLOR}m\]}${PROMPT_CONTAINER}${PROMPT_USERHOST:+${PROMPT_USERHOST@P}${PROMPT_SEPARATOR:+\[\e[0m\]${PROMPT_SEPARATOR_COLOR:+\[\e[${PROMPT_SEPARATOR_COLOR}m\]}${PROMPT_SEPARATOR@P}${PROMPT_SEPARATOR_COLOR:+\[\e[0m\]}${PROMPT_HIGHLIGHT:+\[\e[${PROMPT_HIGHLIGHT}m\]}${PROMPT_COLOR:+\[\e[${PROMPT_COLOR}m\]}}}${PROMPT_DIR_COLOR:+\[\e[${PROMPT_DIR_COLOR}m\]}${PROMPT_DIRECTORY@P}${PROMPT_GIT_BRANCH:+${PROMPT_SEPARATOR:+\[\e[0m\]${PROMPT_SEPARATOR_COLOR:+\[\e[${PROMPT_SEPARATOR_COLOR}m\]}${PROMPT_SEPARATOR@P}${PROMPT_SEPARATOR_COLOR:+\[\e[0m\]}${PROMPT_HIGHLIGHT:+\[\e[${PROMPT_HIGHLIGHT}m\]}${PROMPT_COLOR:+\[\e[${PROMPT_COLOR}m\]}${PROMPT_DIR_COLOR:+\[\e[${PROMPT_DIR_COLOR}m\]}}${PROMPT_GIT_COLOR:+\[\e[${PROMPT_GIT_COLOR}m\]}${PROMPT_GIT_BRANCH@P}}\[\e[0m\]${PROMPT_END@P}\$${PROMPT_END:+\[\e[0m\]} \[\e]133;B\e\\\]AAAA
+K
+K
+K
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCbeBETTER:Ke]133;D;$?\e\\\e]133;A\e\\\]${PROMPT_START@P}\[\e[0m\]${PROMPT_HIGHLIGHT:+\[\e[${PROMPT_HIGHLIGHT}m\]}${PROMPT_COLOR:+\[\e[${PROMPT_COLOR}m\]}${PROMPT_CONTAINER}${PROMPT_USERHOST:+${PROMPT_USERHOST@P}${PROMPT_SEPARATOR:+\[\e[0m\]${PROMPT_SEPARATOR_COLOR:+\[\e[${PROMPT_SEPARATOR_COLOR}m\]}${PROMPT_SEPARATOR@P}${PROMPT_SEPARATOR_COLOR:+\[\e[0m\]}${PROMPT_HIGHLIGHT:+\[\e[${PROMPT_HIGHLIGHT}m\]}${PROMPT_COLOR:+\[\e[${PROMPT_COLOR}m\]}}}${PROMPT_DIR_COLOR:+\[\e[${PROMPT_DIR_COLOR}m\]}${PROMPT_DIRECTORY@P}${PROMPT_GIT_BRANCH:+${PROMPT_SEPARATOR:+\[\e[0m\]${PROMPT_SEPARATOR_COLOR:+\[\e[${PROMPT_SEPARATOR_COLOR}m\]}${PROMPT_SEPARATOR@P}${PROMPT_SEPARATOR_COLOR:+\[\e[0m\]}${PROMPT_HIGHLIGHT:+\[\e[${PROMPT_HIGHLIGHT}m\]}${PROMPT_COLOR:+\[\e[${PROMPT_COLOR}m\]}${PROMPT_DIR_COLOR:+\[\e[${PROMPT_DIR_COLOR}m\]}}${PROMPT_GIT_COLOR:+\[\e[${PROMPT_GIT_COLOR}m\]}${PROMPT_GIT_BRANCH@P}}\[\e[0m\]${PROMPT_END@P}\$${PROMPT_END:+\[\e[0m\]} \[\e]133;B\e\\\]AAAA
+K
+K
+K
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCechoC$PS1K[\e]133;D;$?\e\\\e]133;A\e\\\]${PROMPT_START@P}\[\e[0m\]${PROMPT_HIGHLIGHT:+\[\e[${PROMPT_HIGHLIGHT}m\]}${PROMPT_COLOR:+\[\e[${PROMPT_COLOR}m\]}${PROMPT_CONTAINER}${PROMPT_USERHOST:+${PROMPT_USERHOST@P}${PROMPT_SEPARATOR:+\[\e[0m\]${PROMPT_SEPARATOR_COLOR:+\[\e[${PROMPT_SEPARATOR_COLOR}m\]}${PROMPT_SEPARATOR@P}${PROMPT_SEPARATOR_COLOR:+\[\e[0m\]}${PROMPT_HIGHLIGHT:+\[\e[${PROMPT_HIGHLIGHT}m\]}${PROMPT_COLOR:+\[\e[${PROMPT_COLOR}m\]}}}${PROMPT_DIR_COLOR:+\[\e[${PROMPT_DIR_COLOR}m\]}${PROMPT_DIRECTORY@P}${PROMPT_GIT_BRANCH:+${PROMPT_SEPARATOR:+\[\e[0m\]${PROMPT_SEPARATOR_COLOR:+\[\e[${PROMPT_SEPARATOR_COLOR}m\]}${PROMPT_SEPARATOR@P}${PROMPT_SEPARATOR_COLOR:+\[\e[0m\]}${PROMPT_HIGHLIGHT:+\[\e[${PROMPT_HIGHLIGHT}m\]}${PROMPT_COLOR:+\[\e[${PROMPT_COLOR}m\]}${PROMPT_DIR_COLOR:+\[\e[${PROMPT_DIR_COLOR}m\]}}${PROMPT_GIT_COLOR:+\[\e[${PROMPT_GIT_COLOR}m\]}${PROMPT_GIT_BRANCH@P}}\[\e[0m\]${PROMPT_END@P}\$${PROMPT_END:+\[\e[0m\]} \[\e]133;B\e\\\]AAAA
+K
+K
+K
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCbeBETTER:K5P1Pe1PPS1=\[\e]133;D;$?\e\\\e]133;A\e\\\]${PROMPT_START@P}\[\e[0m\]${PROMPT_HIGHLIGHT:+\[\e[${PROMPT_HIGHLIGHT}m\]}${PROMPT_COLOR:+\[\e[${PROMPT_COLOR}m\]}${PROMPT_CONTAINER}${PROMPT_USERHOST:+${PROMPT_USERHOST@P}${PROMPT_SEPARATOR:+\[\e[0m\]${PROMPT_SEPARATOR_COLOR:+\[\e[${PROMPT_SEPARATOR_COLOR}m\]}${PROMPT_SEPARATOR@P}${PROMPT_SEPARATOR_COLOR:+\[\e[0m\]}${PROMPT_HIGHLIGHT:+\[\e[${PROMPT_HIGHLIGHT}m\]}${PROMPT_COLOR:+\[\e[${PROMPT_COLOR}m\]}}}${PROMPT_DIR_COLOR:+\[\e[${PROMPT_DIR_COLOR}m\]}${PROMPT_DIRECTORY@P}${PROMPT_GIT_BRANCH:+${PROMPT_SEPARATOR:+\[\e[0m\]${PROMPT_SEPARATOR_COLOR:+\[\e[${PROMPT_SEPARATOR_COLOR}m\]}${PROMPT_SEPARATOR@P}${PROMPT_SEPARATOR_COLOR:+\[\e[0m\]}${PROMPT_HIGHLIGHT:+\[\e[${PROMPT_HIGHLIGHT}m\]}${PROMPT_COLOR:+\[\e[${PROMPT_COLOR}m\]}${PROMPT_DIR_COLOR:+\[\e[${PROMPT_DIR_COLOR}m\]}}${PROMPT_GIT_COLOR:+\[\e[${PROMPT_GIT_COLOR}m\]}${PROMPT_GIT_BRANCH@P}}\[\e[0m\]${PROMPT_END@P}\$${PROMPT_END:+\[\e[0m\]} \[\e]133;B\e\\\]AAAA
+K
+K
+K
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC"KCCCCCCC"\[\e]133;D;$?\e\\\e]133;A\e\\\]${PROMPT_START@P}\[\e[0m\]${PROMPT_HIGHLIGHT:+\[\e[${PROMPT_HIGHLIGHT}m\]}${PROMPT_COLOR:+\[\e[${PROMPT_COLOR}m\]}${PROMPT_CONTAINER}${PROMPT_USERHOST:+${PROMPT_USERHOST@P}${PROMPT_SEPARATOR:+\[\e[0m\]${PROMPT_SEPARATOR_COLOR:+\[\e[${PROMPT_SEPARATOR_COLOR}m\]}${PROMPT_SEPARATOR@P}${PROMPT_SEPARATOR_COLOR:+\[\e[0m\]}${PROMPT_HIGHLIGHT:+\[\e[${PROMPT_HIGHLIGHT}m\]}${PROMPT_COLOR:+\[\e[${PROMPT_COLOR}m\]}}}${PROMPT_DIR_COLOR:+\[\e[${PROMPT_DIR_COLOR}m\]}${PROMPT_DIRECTORY@P}${PROMPT_GIT_BRANCH:+${PROMPT_SEPARATOR:+\[\e[0m\]${PROMPT_SEPARATOR_COLOR:+\[\e[${PROMPT_SEPARATOR_COLOR}m\]}${PROMPT_SEPARATOR@P}${PROMPT_SEPARATOR_COLOR:+\[\e[0m\]}${PROMPT_HIGHLIGHT:+\[\e[${PROMPT_HIGHLIGHT}m\]}${PROMPT_COLOR:+\[\e[${PROMPT_COLOR}m\]}${PROMPT_DIR_COLOR:+\[\e[${PROMPT_DIR_COLOR}m\]}}${PROMPT_GIT_COLOR:+\[\e[${PROMPT_GIT_COLOR}m\]}${PROMPT_GIT_BRANCH@P}}\[\e[0m\]${PROMPT_END@P}\$${PROMPT_END:+\[\e[0m\]} \[\e]133;B\e\\\]AAAA
+K
+K
+K
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC"""KCPS1="""\[\e]133;D;$?\e\\\e]133;A\e\\\]${PROMPT_START@P}\[\e[0m\]${PROMPT_HIGHLIGHT:+\[\e[${PROMPT_HIGHLIGHT}m\]}${PROMPT_COLOR:+\[\e[${PROMPT_COLOR}m\]}${PROMPT_CONTAINER}${PROMPT_USERHOST:+${PROMPT_USERHOST@P}${PROMPT_SEPARATOR:+\[\e[0m\]${PROMPT_SEPARATOR_COLOR:+\[\e[${PROMPT_SEPARATOR_COLOR}m\]}${PROMPT_SEPARATOR@P}${PROMPT_SEPARATOR_COLOR:+\[\e[0m\]}${PROMPT_HIGHLIGHT:+\[\e[${PROMPT_HIGHLIGHT}m\]}${PROMPT_COLOR:+\[\e[${PROMPT_COLOR}m\]}}}${PROMPT_DIR_COLOR:+\[\e[${PROMPT_DIR_COLOR}m\]}${PROMPT_DIRECTORY@P}${PROMPT_GIT_BRANCH:+${PROMPT_SEPARATOR:+\[\e[0m\]${PROMPT_SEPARATOR_COLOR:+\[\e[${PROMPT_SEPARATOR_COLOR}m\]}${PROMPT_SEPARATOR@P}${PROMPT_SEPARATOR_COLOR:+\[\e[0m\]}${PROMPT_HIGHLIGHT:+\[\e[${PROMPT_HIGHLIGHT}m\]}${PROMPT_COLOR:+\[\e[${PROMPT_COLOR}m\]}${PROMPT_DIR_COLOR:+\[\e[${PROMPT_DIR_COLOR}m\]}}${PROMPT_GIT_COLOR:+\[\e[${PROMPT_GIT_COLOR}m\]}${PROMPT_GIT_BRANCH@P}}\[\e[0m\]${PROMPT_END@P}\$${PROMPT_END:+\[\e[0m\]} \[\e]133;B\e\\\]AAAA
+K
+K
+K
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC"""KCPS1="""\[;$?\e\\\e]133;A\e\\\]${PROMPT_START@P}\[\e[0m\]${PROMPT_HIGHLIGHT:+\[\e[${PROMPT_HIGHLIGHT}m\]}${PROMPT_COLOR:+\[\e[${PROMPT_COLOR}m\]}${PROMPT_CONTAINER}${PROMPT_USERHOST:+${PROMPT_USERHOST@P}${PROMPT_SEPARATOR:+\[\e[0m\]${PROMPT_SEPARATOR_COLOR:+\[\e[${PROMPT_SEPARATOR_COLOR}m\]}${PROMPT_SEPARATOR@P}${PROMPT_SEPARATOR_COLOR:+\[\e[0m\]}${PROMPT_HIGHLIGHT:+\[\e[${PROMPT_HIGHLIGHT}m\]}${PROMPT_COLOR:+\[\e[${PROMPT_COLOR}m\]}}}${PROMPT_DIR_COLOR:+\[\e[${PROMPT_DIR_COLOR}m\]}${PROMPT_DIRECTORY@P}${PROMPT_GIT_BRANCH:+${PROMPT_SEPARATOR:+\[\e[0m\]${PROMPT_SEPARATOR_COLOR:+\[\e[${PROMPT_SEPARATOR_COLOR}m\]}${PROMPT_SEPARATOR@P}${PROMPT_SEPARATOR_COLOR:+\[\e[0m\]}${PROMPT_HIGHLIGHT:+\[\e[${PROMPT_HIGHLIGHT}m\]}${PROMPT_COLOR:+\[\e[${PROMPT_COLOR}m\]}${PROMPT_DIR_COLOR:+\[\e[${PROMPT_DIR_COLOR}m\]}}${PROMPT_GIT_COLOR:+\[\e[${PROMPT_GIT_COLOR}m\]}${PROMPT_GIT_BRANCH@P}}\[\e[0m\]${PROMPT_END@P}\$${PROMPT_END:+\[\e[0m\]} \[\e]133;B\e\\\]AAAA
+K
+K
+K
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC"""KCPS1="""\[;$?\e\\\e]133;A\e\\\]${PROMPT_START@P}\[\e[0m\]${PROMPT_HIGHLIGHT:+\[\e[${PROMPT_HIGHLIGHT}m\]}${PROMPT_COLOR:+\[\e[${PROMPT_COLOR}m\]}${PROMPT_CONTAINER}${PROMPT_USERHOST:+${PROMPT_USERHOST@P}${PROMPT_SEPARATOR:+\[\e[0m\]${PROMPT_SEPARATOR_COLOR:+\[\e[${PROMPT_SEPARATOR_COLOR}m\]}${PROMPT_SEPARATOR@P}${PROMPT_SEPARATOR_COLOR:+\[\e[0m\]}${PROMPT_HIGHLIGHT:+\[\e[${PROMPT_HIGHLIGHT}m\]}${PROMPT_COLOR:+\[\e[${PROMPT_COLOR}m\]}}}${PROMPT_DIR_COLOR:+\[\e[${PROMPT_DIR_COLOR}m\]}${PROMPT_DIRECTORY@P}${PROMPT_GIT_BRANCH:+${PROMPT_SEPARATOR:+\[\e[0m\]${PROMPT_SEPARATOR_COLOR:+\[\e[${PROMPT_SEPARATOR_COLOR}m\]}${PROMPT_SEPARATOR@P}${PROMPT_SEPARATOR_COLOR:+\[\e[0m\]}${PROMPT_HIGHLIGHT:+\[\e[${PROMPT_HIGHLIGHT}m\]}${PROMPT_COLOR:+\[\e[${PROMPT_COLOR}m\]}${PROMPT_DIR_COLOR:+\[\e[${PROMPT_DIR_COLOR}m\]}}${PROMPT_GIT_COLOR:+\[\e[${PROMPT_GIT_COLOR}m\]}${PROMPT_GIT_BRANCH@P}}\[\e[0m\]${PROMPT_END@P}\$${PROMPT_END:AAAA
+K
+K
+K
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC"""K"""\[;$?\e\\\e]133;A\e\\\]${PROMPT_START@P}\[\e[0m\]${PROMPT_HIGHLIGHT:+\[\e[${PROMPT_HIGHLIGHT}m\]}${PROMPT_COLOR:+\[\e[${PROMPT_COLOR}m\]}${PROMPT_CONTAINER}${PROMPT_USERHOST:+${PROMPT_USERHOST@P}${PROMPT_SEPARATOR:+\[\e[0m\]${PROMPT_SEPARATOR_COLOR:+\[\e[${PROMPT_SEPARATOR_COLOR}m\]}${PROMPT_SEPARATOR@P}${PROMPT_SEPARATOR_COLOR:+\[\e[0m\]}${PROMPT_HIGHLIGHT:+\[\e[${PROMPT_HIGHLIGHT}m\]}${PROMPT_COLOR:+\[\e[${PROMPT_COLOR}m\]}}}${PROMPT_DIR_COLOR:+\[\e[${PROMPT_DIR_COLOR}m\]}${PROMPT_DIRECTORY@P}${PROMPT_GIT_BRANCH:+${PROMPT_SEPARATOR:+\[\e[0m\]${PROMPT_SEPARATOR_COLOR:+\[\e[${PROMPT_SEPARATOR_COLOR}m\]}${PROMPT_SEPARATOR@P}${PROMPT_SEPARATOR_COLOR:+\[\e[0m\]}${PROMPT_HIGHLIGHT:+\[\e[${PROMPT_HIGHLIGHT}m\]}${PROMPT_COLOR:+\[\e[${PROMPT_COLO22PR}m\]}${PROMPT_DIR_COLOR:+\[\e[${PROMPT_DIR_COLOR}m\]}}${PROMPT_GIT_COLOR:+\[\e[${PROMPT_GIT_COLOR}m\]}${PROMPT_GIT_BRANCH@P}}\[\e[0m\]${PROMPT_END@P}\$${PROMPT_END:AAAAND:+\[\e[0m\]} \[\e]AAAA
+K
+K
+K
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC"""KCPS1="""\[;$?\e\\\e]133;A\e\\\]${PROMPT_START@P}\[\e[0m\]${PROMPT_HIGHLIGHT:+\[\e[${PROMPT_HIGHLIGHT}m\]}${PROMPT_COLOR:+\[\e[${PROMPT_COLOR}m\]}${PROMPT_CONTAINER}${PROMPT_USERHOST:+${PROMPT_USERHOST@P}${PROMPT_SEPARATOR:+\[\e[0m\]${PROMPT_SEPARATOR_COLOR:+\[\e[${PROMPT_SEPARATOR_COLOR}m\]}${PROMPT_SEPARATOR@P}${PROMPT_SEPARATOR_COLOR:+\[\e[0m\]}${PROMPT_HIGHLIGHT:+\[\e[${PROMPT_HIGHLIGHT}m\]}${PROMPT_COLOR:+\[\e[${PROMPT_COLOR}m\]}}}${PROMPT_DIR_COLOR:+\[\e[${PROMPT_DIR_COLOR}m\]}${PROMPT_DIRECTORY@P}${PROMPT_GIT_BRANCH:+${PROMPT_SEPARATOR:+\[\e[0m\]${PROMPT_SEPARATOR_COLOR:+\[\e[${PROMPT_SEPARATOR_COLOR}m\]}${PROMPT_SEPARATOR@P}${PROMPT_SEPARATOR_COLOR:+\[\e[0m\]}${PROMPT_HIGHLIGHT:+\[\e[${PROMPT_HIGHLIGHT}m\]}${PROMPT_COLOR:+\[\e[${PROMPT_COLOR}m\]}${PROMPT_DIR_COLOR:+\[\e[${PROMPT_DIR_COLOR}m\]}}${PROMPT_GIT_COLOR:+\[\e[${PROMPT_GIT_COLOR}m\]}${PROMPT_GIT_BRANCH@P}}\[\e[0m\]${PROMPT_END@P}\$${PROMPT_END:AAAA
+K
+K
+K
+KAAAACCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCPemk2P8PteeKK7mps$-efe|-grepl-wc[r]ootl|cwct-l27met_ps.txt
+ACCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCps -ef | grep -w [r]o1P11P1@l1@]1@u1@c1@i1@eCCCCCCCCC
+ACCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC >> luciet/luciet_ps.txt
+666;vte.shell.preexec!0;luciet@fedora:~/Dokumenty/brno-linux/ukoly5-procesy_signaly666;vte.shell.postexec=0666;vte.shell.precmd!7;file://fedora/home/luciet/Dokumenty/brno-linux/ukoly5-procesy_signaly?2004h133;D;0133;A0m1m32mluciet@fedora0m:1m32m~/Dokumenty/brno-linux/ukoly5-procesy_signaly0m$ 133;Bechoe$?K grep -w [l]uciet | wc -l >> luciet/luciet_ps.txt
+666;vte.shell.preexec!0
+0;luciet@fedora:~/Dokumenty/brno-linux/ukoly5-procesy_signaly666;vte.shell.postexec=0666;vte.shell.precmd!7;file://fedora/home/luciet/Dokumenty/brno-linux/ukoly5-procesy_signaly?2004h133;D;0133;A0m1m32mluciet@fedora0m:1m32m~/Dokumenty/brno-linux/ukoly5-procesy_signaly0m$ 133;Bpsh-ef?| grep -w [l]uciet | wc -l >> lucie111111P1@r1@]1@o1@oCCCCCCCCCCCCCKROOT/root_ps.txtK
+666;vte.shell.preexec!0;luciet@fedora:~/Dokumenty/brno-linux/ukoly5-procesy_signaly666;vte.shell.postexec=0666;vte.shell.precmd!7;file://fedora/home/luciet/Dokumenty/brno-linux/ukoly5-procesy_signaly?2004h133;D;0133;A0m1m32mluciet@fedora0m:1m32m~/Dokumenty/brno-linux/ukoly5-procesy_signaly0m$ 133;Bechoe$?K grep -w [r]oot | wc -l >> ROOT/root_ps.txt
+666;vte.shell.preexec!0
+0;luciet@fedora:~/Dokumenty/brno-linux/ukoly5-procesy_signaly666;vte.shell.postexec=0666;vte.shell.precmd!7;file://fedora/home/luciet/Dokumenty/brno-linux/uk
