@@ -1,0 +1,37 @@
+Úkoly - Bash I #
+1. 
+	C. Seřadí soubory podle hodnot (víceciferných) čísel v názvech
+	
+2. 
+	I. cd ..
+	
+3. 
+	E. original/ pnas_final/ pnas_2/
+	
+4. 
+	B. ls -r -F
+	
+5. 
+	1. udelal novy soubor s timto nazvem
+	2. ano
+	3. nic neobsahuje, napsan tam rozmer souboru 0
+	4. k udelani pusteho souboru
+	
+6. 
+	mv sucrose.dat maltose.dat ../raw/
+	
+7. 
+	B. mv statsitika.txt statistika.txt
+	
+8. 
+	A. proteiny2.dat rekombinace
+
+9. 
+	mv fructose.dat sucrose.dat analyzed/
+	
+10. 
+	A, B, D
+	
+	
+	
+
