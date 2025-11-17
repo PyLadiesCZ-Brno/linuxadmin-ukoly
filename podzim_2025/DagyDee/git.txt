@@ -1,0 +1,57 @@
+Úkoly - Git
+
+Teoretické otázky
+
+    Proč je vhodné nastavit uživatelské jméno a e-mail hned po instalaci?
+    	-> Aby šlo při spolupráci dohledat, kdo udělal v projektu jakou změnu.
+    
+    Jaký je rozdíl mezi pracovním adresářem, indexem (staging area) a repozitářem?
+    	-> V pracovním adresáři provádím změny.
+    	-> V indexu určím, které změny chci uložit - připravuji commit.
+    	-> Repozitář obsahuje historii všech commitnutých změn.
+    
+    Co se děje při příkazu git add a co při git commit?
+    	-> git add přidává soubory nebo složky mezi sledované
+    	-> git commit zaverzuje stav sledovaných souborů
+    
+    Vysvětli, co je to commit hash a proč je důležitý.
+    	-> Vygenerovaný unikátní řetězec znaků pomocí kterého se můžeme přesunout na konkrétní verzi repozitáře.
+    
+    Jak Git uchovává historii změn? Uveď rozdíl oproti klasickému ukládání souborů.
+    	-> Git ukládá každou verzi celé složky s repozitářem zvlášť, s popisem provedených změn a s unikátním hashem, takže se vždy lze ke konkrétní verzi snadno vrátit.
+    	-> Při ukládání souborů jen uložím stav konkrétního souboru, bez historie a popisu změn.
+    
+    Co znamená, že Git je „distribuovaný systém pro správu verzí“?
+    	-> Každý uživatel má ve svém počítači přístup k celé historii repozitáře.
+    
+    Proč je doporučeno používat větve místo práce přímo v hlavní větvi (main/master)?
+    	-> Může se pracovat "vedle" na více různých opravách nebo updatech (ideálně pro každou úpravu jedna větev) vycháyejících z různých verzí hlavní větve. Přitom v hlavní větvi zůstávají jen prověřené verze, ze kterých lze vycházet a do kterých se mergují hotové a vyzkoušené změny z vedlejších větví.
+    
+    Jaký je rozdíl mezi git merge a git rebase? Uveď příklad, kdy bys použil/a který. Co se stane s historií, pokud sloučíš větev pomocí merge? A co při rebase? Pozn.: Co je rebase jsme se na kurzu neučili, ale jde taky o způsob slučování větví, který je dobré znát. Zkus si o tom dohledat informace.
+    	-> git merge sloučí změny, nepřepisuje historii
+    	-> git rebase posune vedlejší větev tak, jako by vycházela z posledního commitu hlavní větve, zahrne do ní změny provedené v hlavní větvi, přepíše historii commitů
+    	-> merge bych používala v případě, že na jedné větvi pracuje více lidí
+    	-> rebase nechává čistší historii, ale používala bych ho jen když na větvi pracuji sama
+    
+    Jaký je účel pull requestu a proč se používá?
+    	-> Požadavek na začlenění provedených změn do repozitáře jiného autora. Aby si do veřejného repozitáře nemohl kdokoli pushnout cokoli, pull request schválí autor repa nebo jím oprávněné osoby.
+    
+    Co znamená code review a jaký je jeho přínos?
+    	-> kontrola kódu jiným vývojářem
+    	-> pomůže odhalit chyby, zlepšit kvalitu a jednotnost kódu, rozšířit obzory
+    
+    K čemu je soubor .gitignore ?
+    	-> K ignorování souborů, které v repozitáři nechceme, ale mohou být viditelné pro všechny (např. soubory, které si každý spuštěním programu vytvoří sám - program nakreslí obrázek, který ukládá do souboru)
+    
+    Co se stane, pokud přidáš do .gitignore soubor, který už je ve verzovací historii?
+    	-> Nic. Git soubor nepřestane sledovat, .gitignore funguje pro soubory, které nejsou v indexu.
+    
+    Proč je vhodné ignorovat logy, dočasné soubory editorů nebo sestavení?
+    	-> Protože u každého uživatele se vytvoří při používání programů také, ale mohou se lišit podle jeho nastavení systému.
+    
+    Jak se zapisují vzory do .gitignore? Uveď příklady pro:
+        ignorování všech .log souborů -> *.log
+        ignorování adresáře build -> build/
+        
+
+
