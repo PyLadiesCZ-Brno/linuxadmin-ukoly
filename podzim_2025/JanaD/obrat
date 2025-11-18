@@ -20,19 +20,19 @@ obracena_pismena = {
 def obrat(text):
     return ''.join(obracena_pismena.get(c, c) for c in reversed(text))
 
-def chyba2(text):
-    for c in reversed(text):
+def znaky_v_textu_podporovany(text):
+    for c in text:
         if obracena_pismena.get(c) == None and c != ' ':
             return False
     return True    
 
-def obraceni(vstup, pismeno_je_v_slovniku):
+def obrat_po_radcich(vstup, pismeno_je_v_slovniku):
     for line in vstup:
          sys.stdout.write(obrat(line.rstrip())+'\n')
-         pismeno_je_v_slovniku = pismeno_je_v_slovniku and chyba2(line.rstrip())
+         pismeno_je_v_slovniku = pismeno_je_v_slovniku and znaky_v_textu_podporovany(line.rstrip())
     return pismeno_je_v_slovniku   
 
-napoveda = '''Kratka napoveda
+NAPOVEDA = '''Kratka napoveda
 Skript obraci pismena. 
 Jine prepinace nez --help zde nejsou
 '''
@@ -44,19 +44,19 @@ pismeno_je_v_slovniku = True
 
 if len(sys.argv) > 1:
     if '--help' in sys.argv:
-        sys.stdout.write(napoveda) 
-    elif neplatny_prepinac != None:
+        sys.stdout.write(napoveda)
+        exit(0)
+    if neplatny_prepinac != None:
         sys.stderr.write(f'Přepínač {neplatny_prepinac.group(0)} neexistuje, viz --help \n')
         exit(1)
-    else:
-        for vstup in sys.argv[1:]:
-            if vstup == '-':
-               pismeno_je_v_slovniku = obraceni(sys.stdin, pismeno_je_v_slovniku)
-            else:
-                with open(vstup, encoding = 'utf-8') as soubor:
-                    pismeno_je_v_slovniku = obraceni(soubor, pismeno_je_v_slovniku)
+    for vstup in sys.argv[1:]:
+        if vstup == '-':
+            pismeno_je_v_slovniku = obrat_po_radcich(sys.stdin, pismeno_je_v_slovniku)
+        else:
+            with open(vstup, encoding = 'utf-8') as soubor:
+                pismeno_je_v_slovniku = obrat_po_radcich(soubor, pismeno_je_v_slovniku)
 else:
-    pismeno_je_v_slovniku = obraceni(sys.stdin, pismeno_je_v_slovniku)
+    pismeno_je_v_slovniku = obrat_po_radcich(sys.stdin, pismeno_je_v_slovniku)
 
 if not pismeno_je_v_slovniku:
     exit(2)
