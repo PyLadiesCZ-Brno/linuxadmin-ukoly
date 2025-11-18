@@ -1,9 +1,9 @@
 1. C 
    Bonus: A ls --version
-   	  B pwd (pomoci ls nevím)
+   	  B ls -d "$PWD"
    	  C ls -m
    	  
-2. C, E, G, H, I
+2. C, E, G, H, I, J
 
 3. E
 
