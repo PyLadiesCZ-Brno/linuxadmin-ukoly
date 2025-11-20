@@ -1,0 +1,95 @@
+1. Co dělá příkaz ls -v?
+C. Seřadí soubory podle hodnot (víceciferných) čísel v názvech
+
+2. Začnu-li (jako uživatel mh) v adresáři /home/mh/data, které z těchto příkazů mě dostanou do /home/mh?
+C. cd /home/mh
+E. cd ~
+G. cd ~/data/..
+H. cd
+I. cd ..
+J. otevření nového terminálu
+
+3. Mám-li níže ukázané adresáře, a pwd vypisuje /home/mh/vec, co ukáže ls -F ../archiv?
+C. 2012-12-01/ 2013-01-08/ 2013-01-27/
+
+4. Vypadá-li disk jako v předchozím úkolu a pwd vypisuje /home/mh/archiv, které z těchto příkazů vypíšou pnas_2/ pnas_final/ original/?
+B. ls -r -F
+C. ls -r -F /home/mh/archiv
+
+5. Zadej tenhle příkaz: touch novy_soubor.txt
+Co tenhle příkaz udělal? (Nápověda: Použij ls) - vytvořil nový textový soubor
+Když se do aktuálního adresáře podíváš grafickým manažerem souborů, ukáže se ti novy_soubor.txt? - ano
+Pusť ls -l. Zjistíš z výpisu, co nový soubor obsahuje? - nic neobsahuje - 0 kb
+K čemu slouží příkaz touch? - vytváří nové soubory
+
+6. Po tom, co pustíš následující příkazy, si uvědomíš, že soubory sucrose.dat a maltose.dat jsou špatně umístěné – měly by být v adresáři raw.
+mv sucrose.dat maltose.dat ../raw/
+
+7. Vytvořila sis soubor statsitika.txt, ve kterém máš nějaké výpočty. Ale ve jméně je překlep! Které z těchto příkazů to spraví?
+B. mv statsitika.txt statistika.txt
+
+8. Co vypíše ls na konci této sekvence příkazů?
+pwd
+	/home/jamie/data
+ls
+	proteiny.dat
+mkdir rekombinace
+mv proteiny.dat rekombinace
+cp rekombinace/proteiny.dat ../proteiny2.dat
+ls
+A. proteiny2.dat rekombinace
+
+9. Máš následující soubory:
+ls -F
+	analyzed/  fructose.dat    raw/   sucrose.dat
+Zkus napsat co nejkratší příkaz, kterým přesuneš fructose.dat a sucrose.dat do adresáře analyzed/.
+mv fructose.dat sucrose.dat analyzed/
+
+10. Které z následujících sad příkazů vytvoří tuhle strukturu adresářů?
+2016-05-20/
+└── data
+    ├── processed
+    └── raw
+
+A. 
+mkdir 2016-05-20
+mkdir 2016-05-20/data
+mkdir 2016-05-20/data/processed
+mkdir 2016-05-20/data/raw
+
+B. 
+mkdir 2016-05-20
+cd 2016-05-20
+mkdir data
+cd data
+mkdir raw processed
+
+D.
+mkdir -p 2016-05-20/data/raw
+mkdir -p 2016-05-20/data/processed
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
