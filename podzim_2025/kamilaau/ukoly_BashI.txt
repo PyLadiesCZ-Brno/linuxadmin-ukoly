@@ -1,0 +1,37 @@
+Úkoly BashI
+
+1. Co dělá příkaz ls -v?
+- C. Seřadí soubory podle hodnot (víceciferných) čísel v názvech
+
+2. Začnu-li (jako uživatel mh) v adresáři /home/mh/data, které z těchto příkazů mě dostanou do /home/mh?
+- I. cd ..
+
+3. Mám-li níže ukázané adresáře, a pwd vypisuje /home/mh/vec, co ukáže ls -F ../archiv?
+
+- E. original/ pnas_final/ pnas_2/
+
+4. Vypadá-li disk jako v předchozím úkolu a pwd vypisuje /home/mh/archiv, které z těchto příkazů vypíšou pnas_2/ pnas_final/ original/?
+- B. ls -r -F
+
+5. touch novy_soubor.txt
+	1. vytvoří nový soubor
+	2. ano
+	3. ne
+	4. k vytvoření nového souboru
+	
+6. Po tom, co pustíš následující příkazy, si uvědomíš, že soubory sucrose.dat a maltose.dat jsou špatně umístěné – měly by být v adresáři raw.
+
+mv sucrose.dat maltose.dat ../raw
+
+7. Vytvořila sis soubor statsitika.txt, ve kterém máš nějaké výpočty. Ale ve jméně je překlep! Které z těchto příkazů to spraví?
+- B. mv statsitika.txt statistika.txt
+
+8. Co vypíše ls na konci této sekvence příkazů?
+- B. rekombinace
+
+9. mv *.dat analysed/
+
+10.
+- E
+
+
