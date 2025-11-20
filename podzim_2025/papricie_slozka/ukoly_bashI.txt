@@ -46,6 +46,7 @@ Zkus napsat co nejkratší příkaz, kterým přesuneš fructose.dat a sucrose.d
 mv fructose.dat sucrose.dat analyzed/
 
 10. Které z následujících sad příkazů vytvoří tuhle strukturu adresářů?
+
 2016-05-20/
 └── data
     ├── processed
