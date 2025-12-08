@@ -1,0 +1,38 @@
+A. Práce se soubory a výstupem #
+
+    Co udělá příkaz cat a kdy je vhodné ho použít?
+    - vypise obsah i nekolika souboru, vhodne pro mensi soubory
+    Jaký je rozdíl mezi less a cat?
+    - cat: vypise obsah souboru naraz
+    - less: vypise po strankach, lze v nich lidtovat, vhodne pro vetsi soubory
+    K čemu slouží příkaz head a jak určíš, kolik řádků zobrazí?
+    - defualtne vypise prvnich deset radku souboru, radky lze urcovat pomoci prepinace -n
+    Jak bys zjistil, kolik má soubor řádků nebo slov?
+    - wc -l pro pocet radku 
+    - wc -w pro pocet slov
+    Jaký příkaz bys použil, pokud chceš zobrazit pouze posledních 10 řádků souboru?
+    - tail
+
+B. Uživatelé, skupiny a práva #
+
+    Jaký je rozdíl mezi uživatelem a skupinou v Linuxu?
+    - uzivatel ma konkretni ucet
+    - skupina je celek uzivatelu, ktery sdili urcita opravneni
+    Co znamenají jednotlivé části výpisu oprávnění u souboru (např. -rw-r--r--)?
+    - tri trojice pismen rwx (cteni, zapis, spusteni) vztahujici se k vlastnikovi, skupine a ostatnim uzivatelum
+    Jaký je rozdíl mezi vlastníkem souboru a skupinou souboru?
+    - vlastnik je hlavni uzivatel, ktery soubor vytvoril a ma nejvetsi prava
+    - skupina je celek uzivatelu, kteri maji udelena urcita prava
+    Co obsahují soubory /etc/passwd a /etc/shadow?
+    - passwd - info o uzivatelich bez hesla
+    - shadow - obsahuje hesla, lze pristoupit jen z rootu
+    K čemu slouží příkaz chmod a jak se používá?
+    - meni opravneni souboru a adresaru, bud + nebo -, kategorii u/g/o/a a prislusne pismenko r/w/x
+    K čemu slouží příkazy useradd, groupadd, usermod, passwd, userdel a groupdel?
+    - useradd - vytvoreni noveho uzivatele
+    - groupadd - vytvoreni nove skupiny
+    - usermod - editace uzivatele
+    - passwd - nastaveni nebo zmena hesla
+    - userdel - smazani uzivatele
+    - groupdel - smazani skupiny
+
