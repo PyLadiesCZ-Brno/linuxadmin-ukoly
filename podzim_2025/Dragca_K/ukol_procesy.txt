@@ -1,0 +1,29 @@
+1. Rozdělte tuto tabulku do dvou souborů, root_ps.txt, který bude ve složce root a <jméno uživatele>_ps.txt, který bude ve složce pro uživatele:. 
+když jsem ve vytvořené složce:
+ps -ef | grep -w root > root/root-ps.txt
+nebo: 
+ps -u root > root/root-ps.txt
+
+ps -ef | grep dragca > dragca/dragca-ps.txt
+nebo:
+ps -u dragca > dragca/dragca-ps.txt
+
+2. Teď by nás zajímalo kolik procesů, měl spuštěných root i uživatel, Zapište počet procesů na konec příslušných souborů. :
+wc -l root/root-ps.txt >> root/root-ps.txt
+wc -l dragca/dragca-ps.txt >> dragca/dragca-ps.txt 
+
+3. Tyto soubory spojte do jednoho souboru vsechny_ps.txt, který sa bude nacházet ve vaší dočasné složce. Obsah oddelte jedním prázdným řádkem:
+
+cat root/root-ps.txt > vsechny_ps.txt
+echo "" >> vsechny_ps.txt
+cat dragca/dragca-ps.txt >> vsechny_ps.txt
+
+výsledný strom:
+.
+├── dragca
+│   └── dragca-ps.txt
+├── root
+│   └── root-ps.txt
+└── vsechny_ps.txt
+
+
