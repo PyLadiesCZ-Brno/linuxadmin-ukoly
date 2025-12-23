@@ -1,0 +1,1219 @@
+commit 53c87365c247e9de6ec53d4859d92f00d96d71c5
+Author: Aline Laizane <alinelaizane@gmail.com>
+Date:   Thu Oct 9 12:49:36 2025 +0200
+
+    Aline: lekce1
+
+diff --git a/podzim_2025/Aline/lekce1/Ukolylinux.txt b/podzim_2025/Aline/lekce1/Ukolylinux.txt
+new file mode 100644
+index 0000000..e69de29
+diff --git a/podzim_2025/Aline/lekce1/berlin.txt b/podzim_2025/Aline/lekce1/berlin.txt
+new file mode 100644
+index 0000000..63fc8e0
+--- /dev/null
++++ b/podzim_2025/Aline/lekce1/berlin.txt
+@@ -0,0 +1,3 @@
++Interests: Brandenburg Gate, Museum Island
++Food: Currywurst, Pretzel
++Transportation: U-Bahn, Bus
+diff --git a/podzim_2025/Aline/lekce1/londyn.txt b/podzim_2025/Aline/lekce1/londyn.txt
+new file mode 100644
+index 0000000..8ae0a60
+--- /dev/null
++++ b/podzim_2025/Aline/lekce1/londyn.txt
+@@ -0,0 +1,3 @@
++Interests: Big Ben, London Eye
++Food: Fish & Chips, Pie
++Transportation: Tube, Bus
+diff --git a/podzim_2025/Aline/lekce1/pariz.txt b/podzim_2025/Aline/lekce1/pariz.txt
+new file mode 100644
+index 0000000..c3e335c
+--- /dev/null
++++ b/podzim_2025/Aline/lekce1/pariz.txt
+@@ -0,0 +1,3 @@
++Zajimavost: Eiffelova vez
++Jidlo: Croissant
++Doprava: Metro
+diff --git a/podzim_2025/Aline/lekce1/teorie.txt b/podzim_2025/Aline/lekce1/teorie.txt
+new file mode 100644
+index 0000000..6343418
+--- /dev/null
++++ b/podzim_2025/Aline/lekce1/teorie.txt
+@@ -0,0 +1,64 @@
++"1.Proč je vhodné nastavit uživatelské jméno a e-mail hned po instalaci?
++Protože Git ukládá do každého commitu informaci o autorovi. Pokud není jméno a e-mail nastaveno, commit nemusí být správně identifikovatelný, což komplikuje spolupráci.
++
++2. Jaký je rozdíl mezi pracovním adresářem, indexem (staging area) a repozitářem?
++
++Pracovní adresář – aktuální stav souborů na disku.
++
++Index (staging area) – příprava souborů, které budou zahrnuty do příštího commitu.
++
++Repozitář – databáze historie commitů a metadat uvnitř adresáře .git.
++
++3. Co se děje při příkazu git add a co při git commit?
++
++git add – přidá změny z pracovního adresáře do indexu.
++
++git commit – uloží změny z indexu do repozitáře jako nový commit.
++
++4. Vysvětli, co je to commit hash a proč je důležitý.
++Je to jedinečný identifikátor (SHA-1 nebo novější algoritmus), který jednoznačně určuje konkrétní commit. Díky němu lze přesně odkazovat na konkrétní stav projektu.
++
++5. Jak Git uchovává historii změn? Uveď rozdíl oproti klasickému ukládání souborů.
++Git ukládá rozdíly (snapshots) a propojuje commity grafovou strukturou. Na rozdíl od klasického ukládání souborů neukládá celé kopie projektu, ale efektivně sleduje změny.
++
++6. Co znamená, že Git je „distribuovaný systém pro správu verzí“?
++Každý uživatel má plnohodnotnou kopii celého repozitáře včetně historie. Není potřeba centrální server k práci.
++
++7. Proč je doporučeno používat větve místo práce přímo v hlavní větvi (main/master)?
++Větve umožňují vyvíjet nové funkce nebo opravy izolovaně, aniž by se rozbil stabilní kód v hlavní větvi. Zvyšují bezpečnost a přehlednost vývoje.
++
++8. Jaký je rozdíl mezi git merge a git rebase? Uveď příklad, kdy bys použil/a který.
++
++Merge – spojí dvě větve dohromady, zachová jejich historii. Vhodné při týmové práci, protože historie zůstane čitelná.
++
++Rebase – „přehraje“ commity jedné větve na konec druhé, čímž vytvoří lineární historii. Hodí se pro osobní větve před sdílením, aby byla historie přehlednější.
++
++Historie:
++
++Merge → vznikne nový merge commit, větve zůstanou zachované.
++
++Rebase → historie se přepíše, působí, jako by změny vznikly přímo po sobě.
++
++9. Jaký je účel pull requestu a proč se používá?
++Pull request slouží k navržení změn z jedné větve do jiné (např. feature → main). Umožňuje týmovou diskuzi, code review a kontrolu před začleněním kódu.
++
++10. Co znamená code review a jaký je jeho přínos?
++Je to proces, kdy kolegové kontrolují kód před sloučením. Přínos: zlepšení kvality, nalezení chyb, sdílení znalostí, dodržování standardů.
++
++11. K čemu je soubor .gitignore?
++Slouží k určení souborů a složek, které nemají být sledovány Gitem (např. logy, dočasné soubory, buildy).
++
++12. Co se stane, pokud přidáš do .gitignore soubor, který už je ve verzovací historii?
++Git ho bude dál sledovat, dokud ho z historie neodstraníš (git rm --cached). .gitignore funguje jen na nové (nesledované) soubory.
++
++13. Proč je vhodné ignorovat logy, dočasné soubory editorů nebo sestavení?
++Protože jsou generované automaticky, často se mění a nemají význam pro historii projektu. Zbytečně by znepřehledňovaly repozitář.
++
++14. Jak se zapisují vzory do .gitignore? Uveď příklady:
++
++Ignorování všech .log souborů:
++
++*.log
++Ignorování adresáře build:
++
++/build/" > myfile.txt
+
+commit 72424c42dba062f7a357d2f2a6d20aa3e7e3f0be
+Merge: 28ba2f3 678c713
+Author: HankaStamberkova <160598200+HankaStamberkova@users.noreply.github.com>
+Date:   Wed Oct 1 20:03:02 2025 +0200
+
+    Merge pull request #15 from PyLadiesCZ-Brno/ukol
+    
+    Pridani domaciho ukolu
+
+commit 678c7133ac86200e4763d2b45de2a29a6e8ddc8c
+Author: Hana Štamberková <hanastamberkova@seznam.cz>
+Date:   Wed Oct 1 21:11:17 2025 +0200
+
+    deleted file
+
+diff --git "a/Hana_Stamberkova/Teoretick\303\251 ot\303\241zky.odt" "b/Hana_Stamberkova/Teoretick\303\251 ot\303\241zky.odt"
+deleted file mode 100644
+index ecaa9cb..0000000
+Binary files "a/Hana_Stamberkova/Teoretick\303\251 ot\303\241zky.odt" and /dev/null differ
+
+commit f504546d51230c0dfa8a5214b630795dec9c13c4
+Author: Hana Štamberková <hanastamberkova@seznam.cz>
+Date:   Wed Oct 1 21:03:48 2025 +0200
+
+    Pridání domácího úkolu
+
+diff --git "a/podzim_2025/Hana_Stamberkova/Teoretick\303\251 ot\303\241zky.odt" "b/podzim_2025/Hana_Stamberkova/Teoretick\303\251 ot\303\241zky.odt"
+new file mode 100644
+index 0000000..ecaa9cb
+Binary files /dev/null and "b/podzim_2025/Hana_Stamberkova/Teoretick\303\251 ot\303\241zky.odt" differ
+
+commit 4171fb95fbdea4cf808ef7993d7d7b05bd907bd9
+Author: Hana Štamberková <hanastamberkova@seznam.cz>
+Date:   Wed Oct 1 20:47:08 2025 +0200
+
+    Pridani domaciho ukolu
+
+diff --git "a/Hana_Stamberkova/Teoretick\303\251 ot\303\241zky.odt" "b/Hana_Stamberkova/Teoretick\303\251 ot\303\241zky.odt"
+new file mode 100644
+index 0000000..ecaa9cb
+Binary files /dev/null and "b/Hana_Stamberkova/Teoretick\303\251 ot\303\241zky.odt" differ
+
+commit 28ba2f3b23cb6eb5e523c73395a61b64d7f896b4
+Merge: 0e13bb4 c1fec53
+Author: ejegrova <54178110+ejegrova@users.noreply.github.com>
+Date:   Wed Oct 1 19:54:46 2025 +0200
+
+    Merge pull request #19 from PyLadiesCZ-Brno/UkolyAline
+    
+    Vytvorila sem soubor ukoly
+
+commit 0e13bb458268226141b55d00fb47ced76e0d14f4
+Merge: f83e3ab cd899f9
+Author: ejegrova <54178110+ejegrova@users.noreply.github.com>
+Date:   Wed Oct 1 19:54:17 2025 +0200
+
+    Merge pull request #16 from PyLadiesCZ-Brno/SarkaTauerova
+    
+    Sarka tauerova
+
+commit f83e3abf00cc32028797ff94f95959c9a4f31c02
+Merge: 708ad7b d0354b5
+Author: ejegrova <54178110+ejegrova@users.noreply.github.com>
+Date:   Wed Oct 1 19:53:54 2025 +0200
+
+    Merge pull request #20 from PyLadiesCZ-Brno/Jimyho_branchka
+    
+    zatim nic tam nemam ale bude to tam!
+
+commit cd899f94b5d4a7a42ab2482629719de9607c3579
+Author: Šárka Tauerová <sarka.tauerova@gmail.com>
+Date:   Wed Oct 1 19:47:10 2025 +0200
+
+    Pridana slozka na ukoly
+
+diff --git a/podzim_2025/ukol.txt b/podzim_2025/SarkaTauerova/ukol.txt
+similarity index 100%
+rename from podzim_2025/ukol.txt
+rename to podzim_2025/SarkaTauerova/ukol.txt
+diff --git a/podzim_2025/ukoly.txt b/podzim_2025/SarkaTauerova/ukoly.txt
+similarity index 100%
+rename from podzim_2025/ukoly.txt
+rename to podzim_2025/SarkaTauerova/ukoly.txt
+
+commit 708ad7b65fdcf63360c6387a0da5f2dc6320f5bb
+Merge: 8c02d3d 8fbd49e
+Author: ejegrova <54178110+ejegrova@users.noreply.github.com>
+Date:   Wed Oct 1 19:45:43 2025 +0200
+
+    Merge pull request #18 from Luc1et/lucie-talasova
+    
+    Odtraněn celý projekt, přidán jen log-soubor úkolu
+
+commit 8c02d3d712b4d1be67067260e749376139e67c20
+Merge: c9480f5 38f1479
+Author: ejegrova <54178110+ejegrova@users.noreply.github.com>
+Date:   Wed Oct 1 19:45:15 2025 +0200
+
+    Merge pull request #14 from PyLadiesCZ-Brno/HonzaO
+    
+    Honza o
+
+commit c9480f5c5b3bfc96c5c87e18a5eb12d261118614
+Merge: c0cb990 e41730f
+Author: ejegrova <54178110+ejegrova@users.noreply.github.com>
+Date:   Wed Oct 1 19:43:12 2025 +0200
+
+    Merge pull request #17 from PyLadiesCZ-Brno/helena_uk
+    
+    pridavam ukol 1
+
+commit 8fbd49eb592451fde7aa17f5b5bd46a076287913
+Author: Luc1et-Fedora <milujememarcipan@seznam.cz>
+Date:   Wed Oct 1 19:41:26 2025 +0200
+
+    Odtraněn celý projekt, přidán jen log-soubor úkolu
+
+diff --git a/podzim_2025/lucie-talasova/log-pruvodce-talasova.txt b/podzim_2025/lucie-talasova/log-pruvodce-talasova.txt
+new file mode 100644
+index 0000000..a92b84f
+--- /dev/null
++++ b/podzim_2025/lucie-talasova/log-pruvodce-talasova.txt
+@@ -0,0 +1,163 @@
++commit 5a683953fad0a946a4ee0716db83419a226047f6
++Author: Luc1et-Fedora <milujememarcipan@seznam.cz>
++Date:   Tue Sep 30 14:11:52 2025 +0200
++
++    Přidán soubor .gitignore
++
++diff --git a/.gitignore b/.gitignore
++new file mode 100644
++index 0000000..613bf00
++--- /dev/null
+++++ b/.gitignore
++@@ -0,0 +1,2 @@
+++*.tmp
+++pracovni/
++
++commit 4bc264ab6fafcc62ba8157d39984235cd4d08148
++Author: Luc1et-Fedora <milujememarcipan@seznam.cz>
++Date:   Tue Sep 30 14:09:26 2025 +0200
++
++    Opraven překlep v readme
++
++diff --git a/README.md b/README.md
++index 040fe50..eac9907 100644
++--- a/README.md
+++++ b/README.md
++@@ -1,2 +1,2 @@
++-Tento repozitáx obsahuje cestovní průvodce po  městech a státech.
+++Tento repozitář obsahuje cestovní průvodce po  městech a státech.
++ Obsahuje: Paříž, Francie, Londýn
++
++commit fb03745678f2f33cfe7efda59340f877fa2fcf67
++Author: Luc1et-Fedora <milujememarcipan@seznam.cz>
++Date:   Tue Sep 30 14:05:23 2025 +0200
++
++    Přidán průvodce po Berlíně .txt
++
++diff --git a/berlin.txt b/berlin.txt
++new file mode 100644
++index 0000000..f20e01f
++--- /dev/null
+++++ b/berlin.txt
++@@ -0,0 +1,5 @@
+++Stručný průvodce po Berlíně:
+++
+++- Zajímavost: Braniborská brána – symbol města a historické místo.
+++- Jídlo: Currywurst – oblíbená berlínská specialita.
+++- Doprava: Metro (U-Bahn) a tramvaje umožňují snadné cestování po městě.
++
++commit d124ed71e1d6cdb935fc49be94ef69134e703f4b
++Author: Luc1et-Fedora <milujememarcipan@seznam.cz>
++Date:   Tue Sep 30 14:03:32 2025 +0200
++
++    Přidán průvodce po Berlíně .md
++
++diff --git a/berlin.md b/berlin.md
++new file mode 100644
++index 0000000..506b57b
++--- /dev/null
+++++ b/berlin.md
++@@ -0,0 +1,10 @@
+++# Průvodce Berlínem
+++
+++## Zajímavost
+++Braniborská brána – symbol města a důležité historické místo.
+++
+++## Jídlo
+++Currywurst – typická berlínská specialita, kterou najdete na každém rohu.
+++
+++## Doprava
+++Rozsáhlá síť metra (U-Bahn) a tramvají, ideální pro rychlé cestování po městě.
++
++commit 37dbef158c614def7856879dc25786ed84a203ca
++Merge: 3a29679 7e16dfc
++Author: Luc1et-Fedora <milujememarcipan@seznam.cz>
++Date:   Tue Sep 30 13:52:58 2025 +0200
++
++    Sjednocen popis v README.md.
++
++commit 3a296791ca2b0fafe713ca5d751e096d444ae20c
++Author: Luc1et-Fedora <milujememarcipan@seznam.cz>
++Date:   Tue Sep 30 13:47:27 2025 +0200
++
++    Rozšířen seznam v README.md
++
++diff --git a/README.md b/README.md
++index b69d5ad..e13ffa5 100644
++--- a/README.md
+++++ b/README.md
++@@ -1 +1,2 @@
++ Tento repozitáx obsahuje cestovní průvodce po různých městech a zemích.
+++Obsahuje: Paříž, Francie
++
++commit 7e16dfc9a2f78a346ae7fc9b3163668c94ca0980
++Author: Luc1et-Fedora <milujememarcipan@seznam.cz>
++Date:   Tue Sep 30 13:43:00 2025 +0200
++
++    Upraveno README
++
++diff --git a/README.md b/README.md
++index b69d5ad..ba58686 100644
++--- a/README.md
+++++ b/README.md
++@@ -1 +1,3 @@
++-Tento repozitáx obsahuje cestovní průvodce po různých městech a zemích.
+++Tento repozitáx obsahuje cestovní průvodce po těchto městech:
+++Paříž
+++Londýn
++
++commit 3049677b58c681088784dd4ab40ce6d6d139a501
++Author: Luc1et-Fedora <milujememarcipan@seznam.cz>
++Date:   Tue Sep 30 13:40:29 2025 +0200
++
++    Přidán průvodce po Londýně.
++
++diff --git a/londyn.txt b/londyn.txt
++new file mode 100644
++index 0000000..711f619
++--- /dev/null
+++++ b/londyn.txt
++@@ -0,0 +1,8 @@
+++Stručný průvodce po Londýně:
+++
+++- Big Ben a Westminsterský palác: symbol Londýna.
+++- Tower Bridge: slavný zdvižný most.
+++- Tower of London: historická pevnost a korunovační klenoty.
+++- British Museum: jedno z největších muzeí světa, vstup zdarma.
+++- Buckingham Palace: sídlo královské rodiny, střídání stráží.
+++- London Eye: obří vyhlídkové kolo s krásným výhledem.
++
++commit bdf45cdfeb7e7cf624386e517653bdb862199d11
++Author: Luc1et-Fedora <milujememarcipan@seznam.cz>
++Date:   Tue Sep 30 13:35:38 2025 +0200
++
++    Přidán průvodce po Paříži
++
++diff --git a/pariz.txt b/pariz.txt
++new file mode 100644
++index 0000000..229e059
++--- /dev/null
+++++ b/pariz.txt
++@@ -0,0 +1,8 @@
+++Stručný průvodce po Paříži:
+++
+++- Eiffelova věž: symbol města, krásný výhled na Paříž.
+++- Louvre: slavné muzeum s Monou Lisou.
+++- Notre-Dame: gotická katedrála, nutná zastávka.
+++- Montmartre: umělecká čtvrť, bazilika Sacré-Cœur.
+++- Champs-Élysées: slavný bulvár k Vítěznému oblouku.
+++- Seina: projížďka lodí ukáže město z jiné perspektivy.
++
++commit 057709fc8b953df97797488151ffae6a567d96d7
++Author: Luc1et-Fedora <milujememarcipan@seznam.cz>
++Date:   Tue Sep 30 13:24:21 2025 +0200
++
++    Inicializace projektu
++
++diff --git a/README.md b/README.md
++new file mode 100644
++index 0000000..b69d5ad
++--- /dev/null
+++++ b/README.md
++@@ -0,0 +1 @@
+++Tento repozitáx obsahuje cestovní průvodce po různých městech a zemích.
+diff --git a/podzim_2025/lucie-talasova/pruvodce b/podzim_2025/lucie-talasova/pruvodce
+deleted file mode 160000
+index 5a68395..0000000
+--- a/podzim_2025/lucie-talasova/pruvodce
++++ /dev/null
+@@ -1 +0,0 @@
+-Subproject commit 5a683953fad0a946a4ee0716db83419a226047f6
+
+commit c1fec539c8330241a220ca8a5a0459b66a563dae
+Author: Aline Laizane <alinelaizane@gmail.com>
+Date:   Wed Oct 1 19:39:54 2025 +0200
+
+    Vytvorila sem soubor ukoly
+
+diff --git a/podzim_2025/Aline/Ukolylinux.txt b/podzim_2025/Aline/Ukolylinux.txt
+new file mode 100644
+index 0000000..e69de29
+
+commit 38f14792b5fc046afea719cc32e6db0a2f77520b
+Merge: 2fb8245 c0cb990
+Author: Honza Ostrý <jostry79@gmail.com>
+Date:   Wed Oct 1 19:38:23 2025 +0200
+
+    Merge branch 'main' into HonzaO
+
+commit c0cb990f050c54f1ece0c58365920943958ef195
+Merge: b4e0bd4 bfc58a2
+Author: ejegrova <54178110+ejegrova@users.noreply.github.com>
+Date:   Wed Oct 1 19:36:15 2025 +0200
+
+    Merge pull request #13 from PyLadiesCZ-Brno/to_je_jedno
+    
+    Prvni soubor
+
+commit ba85765aec4d4619954e5586ca1fe83187bc7a3c
+Author: Šárka Tauerová <sarka.tauerova@gmail.com>
+Date:   Wed Oct 1 19:32:15 2025 +0200
+
+    Pridana slozka na ukoly
+
+diff --git a/podzim_2025/ukoly.txt b/podzim_2025/ukoly.txt
+new file mode 100644
+index 0000000..e69de29
+
+commit 2fb82457584f55da051df6c92e4aa7a65c861c3f
+Author: Honza Ostrý <jostry79@gmail.com>
+Date:   Wed Oct 1 19:31:29 2025 +0200
+
+    Presunuti adresáře do správného umístění
+
+diff --git a/HonazaO/ukoly.txt b/podzim_2025/HonazaO/ukoly.txt
+similarity index 100%
+rename from HonazaO/ukoly.txt
+rename to podzim_2025/HonazaO/ukoly.txt
+
+commit e41730f1e81f0784ac2bc96bb4190aed9397f078
+Author: Bowienka <vyplelhel@seznam.cz>
+Date:   Wed Oct 1 19:31:26 2025 +0200
+
+    pridavam ukol 1
+
+diff --git a/podzim_2025/helena/ukol.txt b/podzim_2025/helena/ukol.txt
+new file mode 100644
+index 0000000..878043b
+--- /dev/null
++++ b/podzim_2025/helena/ukol.txt
+@@ -0,0 +1 @@
++tady by byl ukol
+
+commit b4e0bd4f50d50596ecf2982ad7c165342a2ed153
+Merge: 77c9def de52f4f
+Author: ejegrova <54178110+ejegrova@users.noreply.github.com>
+Date:   Wed Oct 1 19:30:29 2025 +0200
+
+    Merge pull request #4 from PyLadiesCZ-Brno/katerina_sujanova
+    
+    add new file with homework
+
+commit d0354b5a971acb3095ea7df93687c06034e67101
+Author: Jimy-42 <j.studeny42@gmail.com>
+Date:   Wed Oct 1 19:30:25 2025 +0200
+
+    zatim nic tam nemam ale bude to tam!
+
+diff --git a/podzim_2025/Jimyho_slozka/pruvodce.txt b/podzim_2025/Jimyho_slozka/pruvodce.txt
+new file mode 100644
+index 0000000..0df5939
+--- /dev/null
++++ b/podzim_2025/Jimyho_slozka/pruvodce.txt
+@@ -0,0 +1 @@
++zatim nic
+
+commit 77c9def50263fe818a61fabb62918b81aa6fd16b
+Merge: 98eb4e4 3acf352
+Author: ejegrova <54178110+ejegrova@users.noreply.github.com>
+Date:   Wed Oct 1 19:30:15 2025 +0200
+
+    Merge pull request #12 from PyLadiesCZ-Brno/nina_du1
+    
+    Pridavam soubor du.txt
+
+commit 98eb4e4e85dda04ebf4f0bfd1c0e343c04d0bdc1
+Merge: f50cea2 766661e
+Author: ejegrova <54178110+ejegrova@users.noreply.github.com>
+Date:   Wed Oct 1 19:29:54 2025 +0200
+
+    Merge pull request #3 from PyLadiesCZ-Brno/ukol_dragca
+    
+    Vytvořena složka a vložen soubor s ukolem.
+
+commit f50cea2ad61a5bf29d03abcb05a031ed2036800f
+Merge: f4c1188 e0b25b4
+Author: ejegrova <54178110+ejegrova@users.noreply.github.com>
+Date:   Wed Oct 1 19:29:33 2025 +0200
+
+    Merge pull request #2 from Luc1et/lucie-talasova
+    
+    Lucie talasova
+
+commit f4c118854ababb444e106304d6adba3695cba22d
+Merge: ef4892b d173722
+Author: ejegrova <54178110+ejegrova@users.noreply.github.com>
+Date:   Wed Oct 1 19:29:09 2025 +0200
+
+    Merge pull request #5 from PyLadiesCZ-Brno/ukol_git
+    
+    Slozka JanaD
+
+commit ef4892b547ced7085c3d395c1007f5b883a23492
+Merge: 9978c7a 506bd70
+Author: ejegrova <54178110+ejegrova@users.noreply.github.com>
+Date:   Wed Oct 1 19:28:49 2025 +0200
+
+    Merge pull request #11 from PyLadiesCZ-Brno/HonzaO
+    
+    Honza o
+
+commit 9978c7ab369d4410e1337dfdb2800c28a2f8f7fb
+Merge: 9413269 4bc8ac4
+Author: ejegrova <54178110+ejegrova@users.noreply.github.com>
+Date:   Wed Oct 1 19:28:28 2025 +0200
+
+    Merge pull request #6 from PyLadiesCZ-Brno/lot_test
+    
+    added test.txt and new folder
+
+commit 941326910488662e768e4495c877416abe07f84d
+Merge: 3152427 9fd3785
+Author: ejegrova <54178110+ejegrova@users.noreply.github.com>
+Date:   Wed Oct 1 19:28:08 2025 +0200
+
+    Merge pull request #10 from PyLadiesCZ-Brno/du_monika
+    
+    zaciname
+
+commit 3152427ef03e846f17c57cc504b66f845e259e76
+Merge: 83f016c 8ac7317
+Author: ejegrova <54178110+ejegrova@users.noreply.github.com>
+Date:   Wed Oct 1 19:27:50 2025 +0200
+
+    Merge pull request #7 from PyLadiesCZ-Brno/Eva_Olejova
+    
+    Vytvoření souboru
+
+commit 83f016cf7ee523a50e0eb98285ebc86be877c88f
+Merge: 0464abb 6fafc0f
+Author: ejegrova <54178110+ejegrova@users.noreply.github.com>
+Date:   Wed Oct 1 19:27:27 2025 +0200
+
+    Merge pull request #9 from PyLadiesCZ-Brno/AnnaKas
+    
+    Pridani ukolu do spolecneho repozitare.
+
+commit 0464abb125ec3af35cb3a03b23248f9ed71b8e6d
+Merge: 67223be 92df903
+Author: ejegrova <54178110+ejegrova@users.noreply.github.com>
+Date:   Wed Oct 1 19:27:02 2025 +0200
+
+    Merge pull request #8 from PyLadiesCZ-Brno/prvni-vetev
+    
+    První commit
+
+commit bfc58a2f7a9fdb430d46a7d33997dad7e56a2012
+Author: Veronika Vrbková <veronikavrbkova10@gmail.com>
+Date:   Wed Oct 1 19:26:53 2025 +0200
+
+    Prvni soubor
+
+diff --git a/podzim_2025/veronika_vrbkova/modre_capky.txt b/podzim_2025/veronika_vrbkova/modre_capky.txt
+new file mode 100644
+index 0000000..49ce31d
+--- /dev/null
++++ b/podzim_2025/veronika_vrbkova/modre_capky.txt
+@@ -0,0 +1 @@
++It is cold outside
+
+commit 506bd700251306e7b3cb9a9f06d2dd5b22426d82
+Author: Honza Ostrý <jostry79@gmail.com>
+Date:   Wed Oct 1 19:25:22 2025 +0200
+
+    Doplnění dalšího ukolu 14.
+
+diff --git a/HonazaO/ukoly.txt b/HonazaO/ukoly.txt
+index d72474e..b7887f2 100644
+--- a/HonazaO/ukoly.txt
++++ b/HonazaO/ukoly.txt
+@@ -1,3 +1,12 @@
+ K čemu slouží .gitignore.
+ 
+-Je to soubor kam se vypisuji soubory a adresáře co git nemá versovat. Velmi často provozní prostředí co vytváří třeba python nebo soubory s hesly a pod.
++Je to soubor kam se vypisuji soubory a adresáře co git nemá versovat. Velmi často provozní prostředí co vytváří třeba python nebo soubory s hesly a pod
++
++Ja se zapisuji vzory do .gitignore uveď příklady pro:
++	Ignrování všech .log souborů
++	Ignorování adresáře build.
++
++Řešení
++
++*.log #Bude ignorovat všechny log soubory
++build/  #Bude ignorovat adresař a vše v něm.
+
+commit 9fd37851e66f533c2f2b51bc2f42831480f6ae17
+Author: Monika <srajerov@post.cz>
+Date:   Wed Oct 1 19:20:46 2025 +0200
+
+    zaciname
+
+diff --git a/podzim_2025/domaci ukoly/zaciname.txt b/podzim_2025/domaci ukoly/zaciname.txt
+new file mode 100644
+index 0000000..af607e6
+--- /dev/null
++++ b/podzim_2025/domaci ukoly/zaciname.txt	
+@@ -0,0 +1,2 @@
++zaciname
++
+
+commit 92df9032d9308e85ad75037be352d209932f4af2
+Author: Kamila Auermullerova <souckam@gmail.com>
+Date:   Wed Oct 1 19:17:17 2025 +0200
+
+    První commit
+
+diff --git a/podzim_2025/kamilaau/londyn.txt b/podzim_2025/kamilaau/londyn.txt
+new file mode 100644
+index 0000000..2f76cb8
+--- /dev/null
++++ b/podzim_2025/kamilaau/londyn.txt
+@@ -0,0 +1,5 @@
++Londýn
++
++Zajímavost: Warner Bros. Studio Tour London - The Making of Harry Potter
++Jídlo: Butterbeer
++Doprava: Hogwarts Express
+
+commit c71b8e373d2b0e507106461a0d9b82fa0c82a65f
+Author: Šárka Tauerová <sarka.tauerova@gmail.com>
+Date:   Wed Oct 1 19:16:42 2025 +0200
+
+    Přidána složka na úkoly.
+
+diff --git a/podzim_2025/ukol.txt b/podzim_2025/ukol.txt
+new file mode 100644
+index 0000000..e69de29
+
+commit 8ac73171899c090381efddd6e42a2dc0e71d7df9
+Author: Efca Olejova <eva.olejova@seznam.cz>
+Date:   Wed Oct 1 19:13:16 2025 +0200
+
+    Vytvoření souboru
+    
+    Přidání složky Eva_Olejova a souboru uvnitř
+
+diff --git a/podzim_2025/Eva_Olejova/EO_DU.txt b/podzim_2025/Eva_Olejova/EO_DU.txt
+new file mode 100644
+index 0000000..d426682
+--- /dev/null
++++ b/podzim_2025/Eva_Olejova/EO_DU.txt
+@@ -0,0 +1 @@
++Ukol, který udělám
+
+commit ee6446e8bce233d88ed6a895db13c1485bc8e40c
+Author: Honza Ostrý <jostry79@gmail.com>
+Date:   Wed Oct 1 19:13:00 2025 +0200
+
+    Přianí svého adresáře a první ukol k čemu slouži .gitignore
+
+diff --git a/HonazaO/ukoly.txt b/HonazaO/ukoly.txt
+new file mode 100644
+index 0000000..d72474e
+--- /dev/null
++++ b/HonazaO/ukoly.txt
+@@ -0,0 +1,3 @@
++K čemu slouží .gitignore.
++
++Je to soubor kam se vypisuji soubory a adresáře co git nemá versovat. Velmi často provozní prostředí co vytváří třeba python nebo soubory s hesly a pod.
+
+commit d173722af6b995279fa9490ebc65bddfc53cbc37
+Author: Jana Dražková <drazkova.j@gmail.com>
+Date:   Wed Oct 1 19:11:50 2025 +0200
+
+    Pridan log ukolu pruvodce
+
+diff --git a/podzim_2025/JanaD/log_z_git2.txt b/podzim_2025/JanaD/log_z_git2.txt
+new file mode 100644
+index 0000000..d46659f
+--- /dev/null
++++ b/podzim_2025/JanaD/log_z_git2.txt
+@@ -0,0 +1,54 @@
++commit e3478e9ad30a87540a04b9d42e1eed5421feb6c8
++Author: Jana Dražková <drazkova.j@gmail.com>
++Date:   Sun Sep 28 00:05:10 2025 +0200
++
++    Přidán soubor .gitignore
++
++commit 8ac034c038d7e2ac92d56b843a042754e0e317a9
++Author: Jana Dražková <drazkova.j@gmail.com>
++Date:   Sat Sep 27 23:56:41 2025 +0200
++
++    Opravenen překlep v readme
++
++commit 121dc1f68d1430852c4a6184d2eea12af995b267
++Author: Jana Dražková <drazkova.j@gmail.com>
++Date:   Sat Sep 27 23:52:02 2025 +0200
++
++    Přidán průvodce po Berlíně
++
++commit 66e0a29416f0de69a8b25ea3f245ee039472bddc
++Merge: 80c2f97 f24328e
++Author: Jana Dražková <drazkova.j@gmail.com>
++Date:   Sat Sep 27 23:49:21 2025 +0200
++
++    Merge branch 'pridat-londyn'
++
++commit 80c2f97dbf8fed54bcf31fa44b1a6e2fd66daa35
++Author: Jana Dražková <drazkova.j@gmail.com>
++Date:   Sat Sep 27 23:39:20 2025 +0200
++
++    Rozšířen seznam v README.md
++
++commit f24328ecc14983aae17f085ac4be79358a4dc571
++Author: Jana Dražková <drazkova.j@gmail.com>
++Date:   Sat Sep 27 23:37:16 2025 +0200
++
++    Přidán obsah do READ.md
++
++commit 136cd4182300e2f1c1290e2d03c9d21011e1da04
++Author: Jana Dražková <drazkova.j@gmail.com>
++Date:   Sat Sep 27 23:35:52 2025 +0200
++
++    Přidán průvodce po Londýně
++
++commit 68948506c74d1980db296b3272ca2233d0efabbc
++Author: Jana Dražková <drazkova.j@gmail.com>
++Date:   Sat Sep 27 23:32:51 2025 +0200
++
++    Přidán průvodce po Paříži
++
++commit 1b0197a15ad8851b38f7bb434dcf2ec987a0d47c
++Author: Jana Dražková <drazkova.j@gmail.com>
++Date:   Sat Sep 27 23:24:58 2025 +0200
++
++    Inicializace projektu
+
+commit 3acf352678cec9bda66cadcc4d62e877cc362c73
+Author: Nina Leonidovna <abasheeva@gmail.com>
+Date:   Wed Oct 1 19:05:03 2025 +0200
+
+    Pridavam soubor du.txt
+
+diff --git a/podzim_2025/nina_du/du.txt b/podzim_2025/nina_du/du.txt
+new file mode 100644
+index 0000000..df41a42
+--- /dev/null
++++ b/podzim_2025/nina_du/du.txt
+@@ -0,0 +1,144 @@
++commit 87d71bc94f7fd0c53b9534cbfd526cb4f4707d84 (HEAD -> master, pridat-gitignore)
++Author: Nina Leonidovna <abasheeva@gmail.com>
++Date:   Wed Oct 1 14:58:20 2025 +0200
++
++    Přidán soubor .gitignore
++
++diff --git a/.gitignore b/.gitignore
++new file mode 100644
++index 0000000..613bf00
++--- /dev/null
+++++ b/.gitignore
++@@ -0,0 +1,2 @@
+++*.tmp
+++pracovni/
++
++commit 00aeca69c065b093ded421dd7bdef266ceb01ec2 (oprava-readme)
++Author: Nina Leonidovna <abasheeva@gmail.com>
++Date:   Wed Oct 1 14:54:15 2025 +0200
++
++    Opravenen překlep v readme
++
++diff --git a/readme.md b/readme.md
++index 618d118..a59efc0 100644
++--- a/readme.md
+++++ b/readme.md
++@@ -1,3 +1,3 @@
++ Tento repozitáx obsahuje cestovní průvodce po různých městech a zemích.
++ 
++-Obsahuje: Paříž, Francie, Londýn
+++Obsahuje: Paříž, Francie, Londýn, Berlin
++
++commit b84114c91a771257a3aa2fffea05e76cfbd19667 (pridat-berlin)
++Author: Nina Leonidovna <abasheeva@gmail.com>
++Date:   Wed Oct 1 14:51:34 2025 +0200
++
++    Přidán průvodce po Berlíně
++
++diff --git a/berlin.md b/berlin.md
++new file mode 100644
++index 0000000..469dd49
++--- /dev/null
+++++ b/berlin.md
++@@ -0,0 +1,13 @@
+++Berlín (německy Berlin, IPA: [bɛʁˈliːn], zvuk poslech) je hlavní a největší město Německa a zároveň městskou spolkovou zemí Spolkové republiky Německo. Hlavním městem Německa se stal roku 1991 a od znovusjednocení Německa 3. října 1990, a tím i obou částí města – západní a východní, patří Berlín mezi největší města v Evropě a je největším městem Evropské unie. Zcela jej obklopuje spolkový stát Braniborsko. Žije zde přibližně 3,78 milionu[3] obyvatel. V metropolitní oblasti Berlína žije přibližně 4,5 milionu obyvatel, takže je po Porúří druhou nejlidnatější oblastí v Německu.[4] Ve 20. letech 20. století byl Berlín třetím největším městem na světě. Metropolitní region Berlín-Braniborsko je třetí největší metropolitní oblastí po Porýní-Porúří a Porýní-Pomohaní.[5]
+++
+++Berlín leží v rovině, na břehu řeky Sprévy, která se vlévá do Havoly – pravostranného přítoku Labe, v západní čtvrti Špandava. Mezi hlavní topografické rysy města patří mnoho jezer v západních a jihovýchodních čtvrtích, z nichž největší je jezero Müggelsee. Jezera jsou tvořena výše zmíněnými řekami. Asi jednu třetinu rozlohy města tvoří lesy, parky, zahrady, řeky, vodní kanály a jezera.[6]
+++
+++Existence města je prvně doložena ze 13. století. Tehdy se zde křížily dvě důležité obchodní stezky.[7] V 15. století se stalo hlavním městem Braniborského markrabství (1417–1701) a Pruského království (1701–1918), jeho důležitost však vzrostla zejména roku 1871, kdy se stalo hlavním městem Německé říše (1871–1918). Od té doby si pozici nejdůležitějšího německého města Berlín podržel i za Výmarské republiky (1918–1933) a Třetí říše (1933–1945).
+++
+++Po druhé světové válce bylo válkou poničené město rozděleno na čtyři sektory patřící vítězům druhé světové války. Sovětský sektor (Východní Berlín) se stal hlavním městem menšího východního Německa, kdežto metropolí západního Německa se stal Bonn. V té době část města, tzv. Západní Berlín, který vznikl z francouzské, britské a americké části, měla status nezávislého státu, byť v zásadě kulturně i politicky přináležela k západnímu Německu. Obě části města byly od roku 1961 odděleny Berlínskou zdí, která se stala symbolem studené války a její pád roku 1989 pak symbolem pádu komunismu v Evropě. Po znovusjednocení Německa 3. října 1990 se sjednotilo znovu i město a stalo se opět celoněmeckou metropolí. Přesídlil sem i parlament – Německý spolkový sněm (německy Deutscher Bundestag), pro nějž byla rekonstruována budova Říšského sněmu (Reichstag).
+++
+++Berlín je světovým centrem kultury, politiky, médií a vědy.[8] Ekonomika města je založena high-tech firmách a sektoru služeb, který zahrnuje širokou škálu společností. Berlín je také evropským dopravním uzlem letecké a železniční dopravy. Sám má velmi složitou síť veřejné dopravy.
+++
+++Berlín je domovem světově uznávaných univerzit, jako je Humboldtova univerzita, Svobodná univerzita Berlín, Univerzita umění v Berlíně nebo Technická univerzita Berlín. Berlínská zoologická zahrada je nejnavštěvovanější zoologickou zahradou v Evropě. Proslulým je každoroční filmový festival obvykle nazývaný zkráceně Berlinale. Filmy se natáčí například ve studiích Babelsberg. Celkově je město stále oblíbenějším cílem filmařů.[9]
+++
+++Známou lokalitou je Ostrov muzeí, kde se krom pěti slavných muzeí nachází i Berlínská katedrála. Ostrov patří ke třem berlínským položkám zapsaným na seznam Světového dědictví UNESCO. Dalšími dvěma jsou paláce a parky v Postupimi a Berlíně a skupina modernistických budov z let 1913–1934. K dalším symbolům města patří Braniborská brána, třída Unter den Linden, Postupimské náměstí, Židovský památník, Vítězný sloup, East Side Gallery, Alexanderplatz a nedaleko stojící berlínský televizní vysílač (Berliner Fernsehturm), nejvyšší stavba v Německu s výškou 368 metrů. 
++
++commit 5bb66f890da3d6c3c243c903949ee737adb99b7e
++Merge: 241e6e7 db867df
++Author: Nina Leonidovna <abasheeva@gmail.com>
++Date:   Wed Oct 1 14:48:10 2025 +0200
++
++    Merge branch 'pridat-londyn'
++
++commit 241e6e7951456b23f4632eb4e2feb4db4d734224
++Author: Nina Leonidovna <abasheeva@gmail.com>
++Date:   Wed Oct 1 14:44:14 2025 +0200
++
++    Rozšířen seznam v README.md
++
++diff --git a/readme.md b/readme.md
++index b69d5ad..f53da71 100644
++--- a/readme.md
+++++ b/readme.md
++@@ -1 +1,3 @@
++ Tento repozitáx obsahuje cestovní průvodce po různých městech a zemích.
+++
+++Obsahuje: Paříž, Francie
++
++commit db867dfb15869729f8e3682e8c321eb107be4709 (pridat-londyn)
++Author: Nina Leonidovna <abasheeva@gmail.com>
++Date:   Wed Oct 1 14:41:06 2025 +0200
++
++    Upraven readme.md
++
++diff --git a/readme.md b/readme.md
++index b69d5ad..7477b14 100644
++--- a/readme.md
+++++ b/readme.md
++@@ -1 +1,3 @@
++ Tento repozitáx obsahuje cestovní průvodce po různých městech a zemích.
+++
+++Obsahuje: Paříž, Londýn
++
++commit fb5f137f435578062c79000067a92d214ee811b5
++Author: Nina Leonidovna <abasheeva@gmail.com>
++Date:   Wed Oct 1 14:36:08 2025 +0200
++
++    Přidán průvodce po Londynu
++
++diff --git a/londyn.txt b/londyn.txt
++new file mode 100644
++index 0000000..3e3f23a
++--- /dev/null
+++++ b/londyn.txt
++@@ -0,0 +1,7 @@
+++Londýn (anglicky London s výslovností výslovnost [ˈlʌndən]IPA) je s 8,8 miliony obyvatel hlavní a největší město Anglie a Spojeného království.[2] Leží na řece Temži v jihovýchodní Anglii, 80 km[3] od ústí řeky Temže do Severního moře a je významným osídlením již téměř dvě tisíciletí.[4] City, starověké jádro a finanční centrum města, bylo založeno Římany jako Londinium.[5] Ve Westminsteru, západně od City, po staletí sídlí národní vláda a parlament. Od 19. století[6] název „Londýn“ odkazuje také na metropoli kolem tohoto jádra, historicky rozdělenou mezi hrabství Middlesex, Essex, Surrey, Kent a Hertfordshire.[7]
+++
+++Londýn má jako jedno z největších světových globálních měst[8] silný vliv na světové umění, zábavu, módu, obchod a finance, vzdělání, zdravotnictví, média, vědu a techniku, cestovní ruch, dopravu a komunikace.[9][10] Jeho HDP ve výši 801,66 miliard EUR v roce 2017 z něj dělá největší městskou ekonomiku v Evropě[11] a je jedním z hlavních finančních center světa. S největší koncentrací vysokoškolských institucí v Evropě[12] je sídlem některých z nejlépe hodnocených akademických institucí na světě – Imperial College London (přírodní a aplikované vědy), London School of Economics (společenské vědy) a University College London.[13][14] Londýn je nejnavštěvovanějším městem v Evropě a má nejrušnější letiště na světě.[15] Londýnské metro je nejstarší na světě.[16]
+++
+++V Londýně se mluví více než 300 jazyky.[17] Počet obyvatel Velkého Londýna byl v roce 2023 necelých 10 milionů,[18] což z něj dělá druhé nejlidnatější město Evropy.[19] Žije zde 13,4 % obyvatel Spojeného království[20] a více než 16 % obyvatel Anglie. Londýnská metropolitní oblast je s asi 14 miliony obyvatel v roce 2016 třetí nejlidnatější v Evropě.[21]
+++
+++V Londýně se nachází čtyři památky světového dědictví: Tower; Královské botanické zahrady; Westminsterský palác, Westminsterské opatství a kostel sv. Markéty; a také historické osídlení v Greenwichi, kde se nachází Královská greenwichská observatoř, kterou prochází základní poledník (0° zeměpisné délky) a pomocí které je definován greenwichský střední čas.[22] Mezi další památky patří Buckinghamský palác, Londýnské oko, Piccadilly Circus, Katedrála svatého Pavla, Tower Bridge a Trafalgarské náměstí. Londýn má mnoho muzeí, galerií, knihoven a kulturních míst, včetně Britského muzea, Národní galerie, Přírodopisného muzea, Tate Modern, Britské knihovny a četných divadel ve West Endu.[23] Mezi důležité sportovní události konané v Londýně patří finále FA Cupu, tenisový turnaj Wimbledon a londýnský maraton. V roce 2012 se Londýn stal prvním městem, které hostilo letní olympijské hry třikrát.[24] 
++
++commit a2734507f6d83a2a6992b5e1c0576b93ad013e80 (pridat-pariz, pariz-update)
++Author: Nina Leonidovna <abasheeva@gmail.com>
++Date:   Wed Oct 1 14:28:50 2025 +0200
++
++    Přidán průvodce po Paříži
++
++diff --git a/pariz.txt b/pariz.txt
++new file mode 100644
++index 0000000..cfa8d92
++--- /dev/null
+++++ b/pariz.txt
++@@ -0,0 +1,3 @@
+++Paříž (francouzsky Paris), hlavní a zároveň největší město Francie, je správním centrem regionu Île-de-France, zahrnujícího Paříž a její předměstí, přičemž sama tvoří správní obvod se zvláštním statutem Ville de Paris („město Paříž“). Představuje přirozené centrum Pařížské aglomerace a díky 552,7 miliardám € HDP (2008)[2] hospodářsky nejaktivnější oblast ve Francii.
+++
+++V Paříži sídlí vedení téměř poloviny všech francouzských společností stejně jako kanceláře hlavních mezinárodních firem a ředitelství mnoha mezinárodních organizací, jako jsou UNESCO, OECD nebo ICC. Paříž je proto významným světovým kulturním, obchodním i politickým centrem. Počet obyvatel v roce 2021 činil 2 138 551,[1] v celé aglomeraci pak 11 133 427[1] (údaj z roku 2021). Město se stalo nositelem Řádu čestné legie,[3] Válečného kříže 1914–1918[4] a Řádu osvobození.[5] 
++
++commit 6421a1bc2206e1c009a8907c7b24bce8e1c7f3a5
++Author: Nina Leonidovna <abasheeva@gmail.com>
++Date:   Wed Oct 1 14:25:00 2025 +0200
++
++    Inicializace projektu
++
++diff --git a/readme.md b/readme.md
++new file mode 100644
++index 0000000..b69d5ad
++--- /dev/null
+++++ b/readme.md
++@@ -0,0 +1 @@
+++Tento repozitáx obsahuje cestovní průvodce po různých městech a zemích.
++
+
+commit 766661e9d484a825a82ee9a58acc119d505389fe
+Author: Dragca Kvasnickova <kvasnickova@kvadr.eu>
+Date:   Wed Oct 1 19:01:13 2025 +0200
+
+    Vytvořena složka a vložen soubor s ukolem.
+
+diff --git a/podzim_2025/Dragca_K/Teoreticke_otazky_ukol.txt b/podzim_2025/Dragca_K/Teoreticke_otazky_ukol.txt
+new file mode 100644
+index 0000000..cbd43b3
+--- /dev/null
++++ b/podzim_2025/Dragca_K/Teoreticke_otazky_ukol.txt
+@@ -0,0 +1,56 @@
++Teoretické otázky
++
++ 1. Proč je vhodné nastavit uživatelské jméno a e-mail hned po instalaci?
++ - aby bylo dohledatelné, kdo udělal kterou změnu. Což je v týmovém projektu žádoucí 
++ 2. Jaký je rozdíl mezi pracovním adresářem, indexem (staging area) a repozitářem?
++ pracovní adresář - místo na disku, kde pracuji se soubory (vytvářím, mažu, edituju...)
++ index(staging area) - dočasné uložiště změn, které budu commitovat
++ git add nazev souboru
++ repozitář - místo, kde git ukládá historii změn
++ Je to vnitřní databáze Gitu, kde se trvale ukládají commity a historie projektu. Git ukládá každý commit jako „snímek“ aktuálního stavu (snapshot).
++Tato databáze je ve skryté složce .git/ uvnitř projektu(uvniř adresáře projektu na disku, zakládá se git init.
++ PRACOVNÍ ADRESÁŘ → (git add) → INDEX → (git commit) → REPOZITÁŘ
++ 
++ 3. Co se děje při příkazu git add a co při git commit?
++ git add - přídá změny do indexu(staging area), připravuji si změnu nebo soubor ke commitu
++ git add soubor.txt - přidán jeden soubor
++ git add . - přidá všechny změny
++ !!git add neukládá změny do historie, jen je připraví
++ git commit vezme změny ze staging area a uloží je do repozitáře jako nový commit 
++ git commit -m "Přidal jsem nový soubor"
++git uloží obraz těchto změn do své databáze(.git/)
++ 4. Vysvětli, co je to commit hash a proč je důležitý.
++ Unikátní označení revize(commitu), pomocí kterého se vždy bude dát dostat k této konkrétní verzi projektu.
++je to 40místný kód vygenerovaný pomocí SHA-1 hashovací funkce,jednoznačné identifikuje každou revizi (verzi).
++ 5. Jak Git uchovává historii změn? Uveď rozdíl oproti klasickému ukládání souborů.
++ git ukládá změny jako snapshoty(snímky) celého projektu v čase, neduplikuje obsah, ukládá pouze změny a nový commit odkazuje na předchozí commit a tím vzniká historie. Lze se vrátit ke každé předchozí verzi, komprimuje změny efektivně (neduplikuje)
++ 6. Co znamená, že Git je „distribuovaný systém pro správu verzí“?
++ Každý z vývojářů/uživatelů má u sebe kompletní plnohodnotnou verzi repozitáře projektu s celou historií a může na projektu pracovat nezávisle na připojení k nějakému centrálnímu serveru.
++ 7. Proč je doporučeno používat větve místo práce přímo v hlavní větvi (main/master)?
++Je výhodné udržovat master/main ve funkční verzi a změny provádět ve vedlejší větvi a sloučit je do main až, když jsem spokojen.Díkz tomu může pracovat na různých úpravách paralelně více lidí a main zůstává stále funkční a stabilní, až je změna otestovaná, funkční, schválená, zmerguje se do main. Nebo se taky může od změny ustoupit a větev se pak jednoduše smaže. Main zůstává stále funkční.
++ 8. Jaký je rozdíl mezi git merge a git rebase? Uveď příklad, kdy bys použil/a který. Co se stane s historií, pokud sloučíš větev pomocí merge? A co při rebase? Pozn.: Co je rebase jsme se na kurzu neučili, ale jde taky o způsob slučování větví, který je dobré znát. Zkus si o tom dohledat informace.
++ Git merge používáme k začlenení úprav provedených ve větvích do main, při použití git merge se zachová historie včetně větví. 
++ Git rebase- při tomto použití se změny větvi zařadí za main, vzpadá to, jako kdyby vznikly z main.. historie je lineární.- nesmí se používat na veřejných větvích. 
++9.  Jaký je účel pull requestu a proč se používá?
++je to žádost o začlenění mnou provedených změn z mé kopie repozitáře y mé větve funkce do hlavního repozitáře autorů projektu. Umožňuje spolupráci více lidí na jednom projektu a do stabilní verze main projektu jsou tyto změny přidány až po schválení autory. 
++10. Co znamená code review a jaký je jeho přínos?
++kodová kontrola, zpravidla během pull requestu, kolegové si mohou projít  změnz řádek po řádku, mohou yanechat komentáře, návrhy, připomínky, zvyšuje kvalitu kódu a snižuje počet chyb. 
++11. K čemu je soubor .gitignore ?
++je to speciální soubor, do kterého zapisujeme soubory nebo složky, které nemá Git sledovat (trackovat) a nemá je zahrnovat do commitů.
++repozitář zůstává čistý a přehledný, Git nesleduje stovky zbytečných souborů.
++12. Co se stane, pokud přidáš do .gitignore soubor, který už je ve verzovací historii?
++Git ho NEPŘESTANE sledovat automaticky.
++Přestože je uvedený v .gitignore, zůstává sledovaný, dokud ho ručně neodstraníš z indexu.
++13. Proč je vhodné ignorovat logy, dočasné soubory editorů nebo sestavení?
++Nejsou součástí zdrojového kódu, zbytečně by nafukovaly repozitář, dočasné soubory se čast mění.
++Logy - Velké, mění se, nikdo je nepotřebuje verzovat
++Soubory editorů - Osobní nastavení, nepatří do repozitáře
++Sestavení (build) - Vygenerované, dá se je znovu vytvořit
++Dočasné soubory- Nepodstatné pro projekt, vznikají automaticky
++14. Jak se zapisují vzory do .gitignore? Uveď příklady pro:
++        ignorování všech .log souborů - *.log
++        ignorování adresáře build - build/
++        ignoruje všechny složky build kdekoliv v projektu - **/build/
++        *.tmp - Ignoruje všechny dočasné .tmp soubory
++        !important.log - NEignoruje soubor important.log (výjimka)
++
+
+commit 4bc8ac4f8165c9489116b9319da9a5f5b372706f
+Author: Lucia Otiepkova <otiepkova.lucia@gmail.com>
+Date:   Wed Oct 1 19:00:50 2025 +0200
+
+    added test.txt and new folder
+
+diff --git a/podzim_2025/Lucia_O/test.txt b/podzim_2025/Lucia_O/test.txt
+new file mode 100644
+index 0000000..9daeafb
+--- /dev/null
++++ b/podzim_2025/Lucia_O/test.txt
+@@ -0,0 +1 @@
++test
+
+commit 6fafc0f8271a0ca5e531368b198601de704fbac6
+Author: Anna Kašíková <anna.kasikova6@gmail.com>
+Date:   Wed Oct 1 18:59:57 2025 +0200
+
+    Pridani ukolu do spolecneho repozitare.
+
+diff --git a/podzim_2025/09/ukol_jaky_svet_nevidel.txt b/podzim_2025/09/ukol_jaky_svet_nevidel.txt
+new file mode 100644
+index 0000000..e69de29
+
+commit 67223beac3e5569afdfacc7e8996757c08c5ac6e
+Author: Dragca Kvasnickova <kvasnickova@kvadr.eu>
+Date:   Wed Oct 1 18:51:47 2025 +0200
+
+    Revert "Vytvořena složka a vložen soubor s ukolem."
+    
+    This reverts commit 27631d1564b0864a2d657a3c4dee6e3ac5a6f298.
+
+diff --git a/podzim_2025/Dragca_K/Teoreticke_otazky_ukol.txt b/podzim_2025/Dragca_K/Teoreticke_otazky_ukol.txt
+deleted file mode 100644
+index cbd43b3..0000000
+--- a/podzim_2025/Dragca_K/Teoreticke_otazky_ukol.txt
++++ /dev/null
+@@ -1,56 +0,0 @@
+-Teoretické otázky
+-
+- 1. Proč je vhodné nastavit uživatelské jméno a e-mail hned po instalaci?
+- - aby bylo dohledatelné, kdo udělal kterou změnu. Což je v týmovém projektu žádoucí 
+- 2. Jaký je rozdíl mezi pracovním adresářem, indexem (staging area) a repozitářem?
+- pracovní adresář - místo na disku, kde pracuji se soubory (vytvářím, mažu, edituju...)
+- index(staging area) - dočasné uložiště změn, které budu commitovat
+- git add nazev souboru
+- repozitář - místo, kde git ukládá historii změn
+- Je to vnitřní databáze Gitu, kde se trvale ukládají commity a historie projektu. Git ukládá každý commit jako „snímek“ aktuálního stavu (snapshot).
+-Tato databáze je ve skryté složce .git/ uvnitř projektu(uvniř adresáře projektu na disku, zakládá se git init.
+- PRACOVNÍ ADRESÁŘ → (git add) → INDEX → (git commit) → REPOZITÁŘ
+- 
+- 3. Co se děje při příkazu git add a co při git commit?
+- git add - přídá změny do indexu(staging area), připravuji si změnu nebo soubor ke commitu
+- git add soubor.txt - přidán jeden soubor
+- git add . - přidá všechny změny
+- !!git add neukládá změny do historie, jen je připraví
+- git commit vezme změny ze staging area a uloží je do repozitáře jako nový commit 
+- git commit -m "Přidal jsem nový soubor"
+-git uloží obraz těchto změn do své databáze(.git/)
+- 4. Vysvětli, co je to commit hash a proč je důležitý.
+- Unikátní označení revize(commitu), pomocí kterého se vždy bude dát dostat k této konkrétní verzi projektu.
+-je to 40místný kód vygenerovaný pomocí SHA-1 hashovací funkce,jednoznačné identifikuje každou revizi (verzi).
+- 5. Jak Git uchovává historii změn? Uveď rozdíl oproti klasickému ukládání souborů.
+- git ukládá změny jako snapshoty(snímky) celého projektu v čase, neduplikuje obsah, ukládá pouze změny a nový commit odkazuje na předchozí commit a tím vzniká historie. Lze se vrátit ke každé předchozí verzi, komprimuje změny efektivně (neduplikuje)
+- 6. Co znamená, že Git je „distribuovaný systém pro správu verzí“?
+- Každý z vývojářů/uživatelů má u sebe kompletní plnohodnotnou verzi repozitáře projektu s celou historií a může na projektu pracovat nezávisle na připojení k nějakému centrálnímu serveru.
+- 7. Proč je doporučeno používat větve místo práce přímo v hlavní větvi (main/master)?
+-Je výhodné udržovat master/main ve funkční verzi a změny provádět ve vedlejší větvi a sloučit je do main až, když jsem spokojen.Díkz tomu může pracovat na různých úpravách paralelně více lidí a main zůstává stále funkční a stabilní, až je změna otestovaná, funkční, schválená, zmerguje se do main. Nebo se taky může od změny ustoupit a větev se pak jednoduše smaže. Main zůstává stále funkční.
+- 8. Jaký je rozdíl mezi git merge a git rebase? Uveď příklad, kdy bys použil/a který. Co se stane s historií, pokud sloučíš větev pomocí merge? A co při rebase? Pozn.: Co je rebase jsme se na kurzu neučili, ale jde taky o způsob slučování větví, který je dobré znát. Zkus si o tom dohledat informace.
+- Git merge používáme k začlenení úprav provedených ve větvích do main, při použití git merge se zachová historie včetně větví. 
+- Git rebase- při tomto použití se změny větvi zařadí za main, vzpadá to, jako kdyby vznikly z main.. historie je lineární.- nesmí se používat na veřejných větvích. 
+-9.  Jaký je účel pull requestu a proč se používá?
+-je to žádost o začlenění mnou provedených změn z mé kopie repozitáře y mé větve funkce do hlavního repozitáře autorů projektu. Umožňuje spolupráci více lidí na jednom projektu a do stabilní verze main projektu jsou tyto změny přidány až po schválení autory. 
+-10. Co znamená code review a jaký je jeho přínos?
+-kodová kontrola, zpravidla během pull requestu, kolegové si mohou projít  změnz řádek po řádku, mohou yanechat komentáře, návrhy, připomínky, zvyšuje kvalitu kódu a snižuje počet chyb. 
+-11. K čemu je soubor .gitignore ?
+-je to speciální soubor, do kterého zapisujeme soubory nebo složky, které nemá Git sledovat (trackovat) a nemá je zahrnovat do commitů.
+-repozitář zůstává čistý a přehledný, Git nesleduje stovky zbytečných souborů.
+-12. Co se stane, pokud přidáš do .gitignore soubor, který už je ve verzovací historii?
+-Git ho NEPŘESTANE sledovat automaticky.
+-Přestože je uvedený v .gitignore, zůstává sledovaný, dokud ho ručně neodstraníš z indexu.
+-13. Proč je vhodné ignorovat logy, dočasné soubory editorů nebo sestavení?
+-Nejsou součástí zdrojového kódu, zbytečně by nafukovaly repozitář, dočasné soubory se čast mění.
+-Logy - Velké, mění se, nikdo je nepotřebuje verzovat
+-Soubory editorů - Osobní nastavení, nepatří do repozitáře
+-Sestavení (build) - Vygenerované, dá se je znovu vytvořit
+-Dočasné soubory- Nepodstatné pro projekt, vznikají automaticky
+-14. Jak se zapisují vzory do .gitignore? Uveď příklady pro:
+-        ignorování všech .log souborů - *.log
+-        ignorování adresáře build - build/
+-        ignoruje všechny složky build kdekoliv v projektu - **/build/
+-        *.tmp - Ignoruje všechny dočasné .tmp soubory
+-        !important.log - NEignoruje soubor important.log (výjimka)
+-
+
+commit de52f4ff75058b3dccd62f0677d1a448275a827f
+Author: Katerina Sujanova <katerina.sujanova@gmail.com>
+Date:   Wed Oct 1 18:45:31 2025 +0200
+
+    add new file with homework
+
+diff --git a/podzim_2025/katerinasujanova/soubor_s_ukolem.txt b/podzim_2025/katerinasujanova/soubor_s_ukolem.txt
+new file mode 100644
+index 0000000..2f5ef2c
+--- /dev/null
++++ b/podzim_2025/katerinasujanova/soubor_s_ukolem.txt
+@@ -0,0 +1 @@
++Novy soubor s ukolem
+
+commit 27631d1564b0864a2d657a3c4dee6e3ac5a6f298
+Author: Dragca Kvasnickova <kvasnickova@kvadr.eu>
+Date:   Wed Oct 1 18:41:27 2025 +0200
+
+    Vytvořena složka a vložen soubor s ukolem.
+
+diff --git a/podzim_2025/Dragca_K/Teoreticke_otazky_ukol.txt b/podzim_2025/Dragca_K/Teoreticke_otazky_ukol.txt
+new file mode 100644
+index 0000000..cbd43b3
+--- /dev/null
++++ b/podzim_2025/Dragca_K/Teoreticke_otazky_ukol.txt
+@@ -0,0 +1,56 @@
++Teoretické otázky
++
++ 1. Proč je vhodné nastavit uživatelské jméno a e-mail hned po instalaci?
++ - aby bylo dohledatelné, kdo udělal kterou změnu. Což je v týmovém projektu žádoucí 
++ 2. Jaký je rozdíl mezi pracovním adresářem, indexem (staging area) a repozitářem?
++ pracovní adresář - místo na disku, kde pracuji se soubory (vytvářím, mažu, edituju...)
++ index(staging area) - dočasné uložiště změn, které budu commitovat
++ git add nazev souboru
++ repozitář - místo, kde git ukládá historii změn
++ Je to vnitřní databáze Gitu, kde se trvale ukládají commity a historie projektu. Git ukládá každý commit jako „snímek“ aktuálního stavu (snapshot).
++Tato databáze je ve skryté složce .git/ uvnitř projektu(uvniř adresáře projektu na disku, zakládá se git init.
++ PRACOVNÍ ADRESÁŘ → (git add) → INDEX → (git commit) → REPOZITÁŘ
++ 
++ 3. Co se děje při příkazu git add a co při git commit?
++ git add - přídá změny do indexu(staging area), připravuji si změnu nebo soubor ke commitu
++ git add soubor.txt - přidán jeden soubor
++ git add . - přidá všechny změny
++ !!git add neukládá změny do historie, jen je připraví
++ git commit vezme změny ze staging area a uloží je do repozitáře jako nový commit 
++ git commit -m "Přidal jsem nový soubor"
++git uloží obraz těchto změn do své databáze(.git/)
++ 4. Vysvětli, co je to commit hash a proč je důležitý.
++ Unikátní označení revize(commitu), pomocí kterého se vždy bude dát dostat k této konkrétní verzi projektu.
++je to 40místný kód vygenerovaný pomocí SHA-1 hashovací funkce,jednoznačné identifikuje každou revizi (verzi).
++ 5. Jak Git uchovává historii změn? Uveď rozdíl oproti klasickému ukládání souborů.
++ git ukládá změny jako snapshoty(snímky) celého projektu v čase, neduplikuje obsah, ukládá pouze změny a nový commit odkazuje na předchozí commit a tím vzniká historie. Lze se vrátit ke každé předchozí verzi, komprimuje změny efektivně (neduplikuje)
++ 6. Co znamená, že Git je „distribuovaný systém pro správu verzí“?
++ Každý z vývojářů/uživatelů má u sebe kompletní plnohodnotnou verzi repozitáře projektu s celou historií a může na projektu pracovat nezávisle na připojení k nějakému centrálnímu serveru.
++ 7. Proč je doporučeno používat větve místo práce přímo v hlavní větvi (main/master)?
++Je výhodné udržovat master/main ve funkční verzi a změny provádět ve vedlejší větvi a sloučit je do main až, když jsem spokojen.Díkz tomu může pracovat na různých úpravách paralelně více lidí a main zůstává stále funkční a stabilní, až je změna otestovaná, funkční, schválená, zmerguje se do main. Nebo se taky může od změny ustoupit a větev se pak jednoduše smaže. Main zůstává stále funkční.
++ 8. Jaký je rozdíl mezi git merge a git rebase? Uveď příklad, kdy bys použil/a který. Co se stane s historií, pokud sloučíš větev pomocí merge? A co při rebase? Pozn.: Co je rebase jsme se na kurzu neučili, ale jde taky o způsob slučování větví, který je dobré znát. Zkus si o tom dohledat informace.
++ Git merge používáme k začlenení úprav provedených ve větvích do main, při použití git merge se zachová historie včetně větví. 
++ Git rebase- při tomto použití se změny větvi zařadí za main, vzpadá to, jako kdyby vznikly z main.. historie je lineární.- nesmí se používat na veřejných větvích. 
++9.  Jaký je účel pull requestu a proč se používá?
++je to žádost o začlenění mnou provedených změn z mé kopie repozitáře y mé větve funkce do hlavního repozitáře autorů projektu. Umožňuje spolupráci více lidí na jednom projektu a do stabilní verze main projektu jsou tyto změny přidány až po schválení autory. 
++10. Co znamená code review a jaký je jeho přínos?
++kodová kontrola, zpravidla během pull requestu, kolegové si mohou projít  změnz řádek po řádku, mohou yanechat komentáře, návrhy, připomínky, zvyšuje kvalitu kódu a snižuje počet chyb. 
++11. K čemu je soubor .gitignore ?
++je to speciální soubor, do kterého zapisujeme soubory nebo složky, které nemá Git sledovat (trackovat) a nemá je zahrnovat do commitů.
++repozitář zůstává čistý a přehledný, Git nesleduje stovky zbytečných souborů.
++12. Co se stane, pokud přidáš do .gitignore soubor, který už je ve verzovací historii?
++Git ho NEPŘESTANE sledovat automaticky.
++Přestože je uvedený v .gitignore, zůstává sledovaný, dokud ho ručně neodstraníš z indexu.
++13. Proč je vhodné ignorovat logy, dočasné soubory editorů nebo sestavení?
++Nejsou součástí zdrojového kódu, zbytečně by nafukovaly repozitář, dočasné soubory se čast mění.
++Logy - Velké, mění se, nikdo je nepotřebuje verzovat
++Soubory editorů - Osobní nastavení, nepatří do repozitáře
++Sestavení (build) - Vygenerované, dá se je znovu vytvořit
++Dočasné soubory- Nepodstatné pro projekt, vznikají automaticky
++14. Jak se zapisují vzory do .gitignore? Uveď příklady pro:
++        ignorování všech .log souborů - *.log
++        ignorování adresáře build - build/
++        ignoruje všechny složky build kdekoliv v projektu - **/build/
++        *.tmp - Ignoruje všechny dočasné .tmp soubory
++        !important.log - NEignoruje soubor important.log (výjimka)
++
+
+commit e0b25b4938f4d33fae85d9ecb83f719e59bef958
+Author: Luc1et-Fedora <milujememarcipan@seznam.cz>
+Date:   Wed Oct 1 18:37:56 2025 +0200
+
+    První domácí úkol
+
+diff --git a/podzim_2025/lucie-talasova/pruvodce b/podzim_2025/lucie-talasova/pruvodce
+new file mode 160000
+index 0000000..5a68395
+--- /dev/null
++++ b/podzim_2025/lucie-talasova/pruvodce
+@@ -0,0 +1 @@
++Subproject commit 5a683953fad0a946a4ee0716db83419a226047f6
+diff --git a/podzim_2025/lucie-talasova/test-ukol.py b/podzim_2025/lucie-talasova/test-ukol.py
+deleted file mode 100644
+index e69de29..0000000
+
+commit 93ae775bfd756ea0d8a979d12f27dc5f0fe51053
+Author: Luc1et-Fedora <milujememarcipan@seznam.cz>
+Date:   Wed Oct 1 18:34:49 2025 +0200
+
+    Zkouška spojení, prosím...
+
+diff --git a/podzim_2025/lucie-talasova/test-ukol.py b/podzim_2025/lucie-talasova/test-ukol.py
+new file mode 100644
+index 0000000..e69de29
+
+commit aeeeef9b7726c61957b2e7e9943f2292cd921b8a
+Merge: ab80544 4381270
+Author: ejegrova <54178110+ejegrova@users.noreply.github.com>
+Date:   Wed Oct 1 18:26:35 2025 +0200
+
+    Merge pull request #1 from PyLadiesCZ-Brno/first_dir
+    
+    Přidána složka pro rok 2025
+
+commit 43812709219274aec458627a1f0b7cea201548ce
+Author: Eliska Jegrova <jegrovaeliska@seznam.cz>
+Date:   Wed Oct 1 18:20:27 2025 +0200
+
+    Přidána složka pro rok 2025
+
+diff --git a/podzim_2025/.gitkeep b/podzim_2025/.gitkeep
+new file mode 100644
+index 0000000..e69de29
+
+commit ab80544fb1bcdae42de985ee83f6fbc07510314d
+Author: Eliska Jegrova <jegrovaeliska@seznam.cz>
+Date:   Wed Oct 1 18:13:52 2025 +0200
+
+    Initial commit
+
+diff --git a/README.md b/README.md
+new file mode 100644
+index 0000000..e100c6f
+--- /dev/null
++++ b/README.md
+@@ -0,0 +1 @@
++# linuxadmin-ukoly
