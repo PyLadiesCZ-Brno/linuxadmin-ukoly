@@ -20,12 +20,23 @@ B. Uživatelé, skupiny a práva #
     - skupina je celek uzivatelu, ktery sdili urcita opravneni
     Co znamenají jednotlivé části výpisu oprávnění u souboru (např. -rw-r--r--)?
     - tri trojice pismen rwx (cteni, zapis, spusteni) vztahujici se k vlastnikovi, skupine a ostatnim uzivatelum
+
+-----OPRAVA-----
+prvni pomlcka znamena, ze je to bezny soubor, kdyby tam bylo d, tak jde o adresar
+----------------
+
     Jaký je rozdíl mezi vlastníkem souboru a skupinou souboru?
     - vlastnik je hlavni uzivatel, ktery soubor vytvoril a ma nejvetsi prava
     - skupina je celek uzivatelu, kteri maji udelena urcita prava
     Co obsahují soubory /etc/passwd a /etc/shadow?
     - passwd - info o uzivatelich bez hesla
     - shadow - obsahuje hesla, lze pristoupit jen z rootu
+    
+-----OPRAVA-----
+/etc/shadow obsahuje hash hesel uživatelů a informace o expiraci hesla. Hesla samotná tam nejsou čitelná a přístup k souboru má pouze root
+----------------
+
+
     K čemu slouží příkaz chmod a jak se používá?
     - meni opravneni souboru a adresaru, bud + nebo -, kategorii u/g/o/a a prislusne pismenko r/w/x
     K čemu slouží příkazy useradd, groupadd, usermod, passwd, userdel a groupdel?
