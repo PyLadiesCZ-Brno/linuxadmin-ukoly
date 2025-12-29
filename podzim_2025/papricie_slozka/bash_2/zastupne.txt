@@ -1,0 +1,80 @@
+Sam má následující soubory:
+.
+├── 2015-10-23-calibration.txt
+├── 2015-10-23-dataset1.txt
+├── 2015-10-23-dataset2.txt
+├── 2015-10-23-dataset_overview.txt
+├── 2015-10-26-calibration.txt
+├── 2015-10-26-dataset1.txt
+├── 2015-10-26-dataset2.txt
+├── 2015-10-26-dataset_overview.txt
+├── 2015-11-23-calibration.txt
+├── 2015-11-23-dataset1.txt
+├── 2015-11-23-dataset2.txt
+├── 2015-11-23-dataset_overview.txt
+├── backup
+│   ├── calibration
+│   └── datasets
+└── send_to_bob
+    ├── all_datasets_created_on_a_23rd
+    └── all_november_files
+
+Doplň následující příkazy...
+
+kopirovat dataset soubory do backup/datasets
+cp *dataset* backup/datasets
+
+kopírovat calibration soubory do backup/calibration
+cp *calibration* backup/calibration
+
+kopírovat listopadové soubory do send_to_bob/all_november_files/
+cp 2015-11-23-* send_to_bob/all_november_files/
+
+kopírovat dataset soubory z 23. dne do send_to_bob/all_datasets_created_on_a_23rd/
+cp 2015-*-23-*dataset* send_to_bob/all_datasets_created_on_a_23rd/
+
+
+... aby výsledek vypadal takhle:
+
+.
+├── 2015-10-23-calibration.txt
+├── 2015-10-23-dataset1.txt
+├── 2015-10-23-dataset2.txt
+├── 2015-10-23-dataset_overview.txt
+├── 2015-10-26-calibration.txt
+├── 2015-10-26-dataset1.txt
+├── 2015-10-26-dataset2.txt
+├── 2015-10-26-dataset_overview.txt
+├── 2015-11-23-calibration.txt
+├── 2015-11-23-dataset1.txt
+├── 2015-11-23-dataset2.txt
+├── 2015-11-23-dataset_overview.txt
+├── backup
+│   ├── calibration
+│   │   ├── 2015-10-23-calibration.txt
+│   │   ├── 2015-10-26-calibration.txt
+│   │   └── 2015-11-23-calibration.txt
+│   └── datasets
+│       ├── 2015-10-23-dataset1.txt
+│       ├── 2015-10-23-dataset2.txt
+│       ├── 2015-10-23-dataset_overview.txt
+│       ├── 2015-10-26-dataset1.txt
+│       ├── 2015-10-26-dataset2.txt
+│       ├── 2015-10-26-dataset_overview.txt
+│       ├── 2015-11-23-dataset1.txt
+│       ├── 2015-11-23-dataset2.txt
+│       └── 2015-11-23-dataset_overview.txt
+└── send_to_bob
+    ├── all_datasets_created_on_a_23rd
+    │   ├── 2015-10-23-dataset1.txt
+    │   ├── 2015-10-23-dataset2.txt
+    │   ├── 2015-10-23-dataset_overview.txt
+    │   ├── 2015-11-23-dataset1.txt
+    │   ├── 2015-11-23-dataset2.txt
+    │   └── 2015-11-23-dataset_overview.txt
+    └── all_november_files
+        ├── 2015-11-23-calibration.txt
+        ├── 2015-11-23-dataset1.txt
+        ├── 2015-11-23-dataset2.txt
+        └── 2015-11-23-dataset_overview.txt
+
