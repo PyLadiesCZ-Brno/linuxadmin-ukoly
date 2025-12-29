@@ -1,0 +1,23 @@
+    Kolik bylo Pyv v Brně?
+        Pro každý sraz existuje soubor.
+        
+patriciehermanova@fedora:~/pyvo-data-master/series/brno-pyvo/events$ ls | wc -l
+165
+
+    Kolik bylo Pyv celkem?
+    
+patriciehermanova@fedora:~/pyvo-data-master/series$ find . -path "*pyvo*/events/*" -type f | wc -l
+606
+
+
+    Z kolika přednášek na Pyvech jsou videa? (Předpokládej že každá přednáška může mít max. 1 video)
+        Videa jsou označena video:
+patriciehermanova@fedora:~/pyvo-data-master/series$ grep -Rl "video:" *pyvo*/events | wc -l
+148
+
+    Kolik bylo kurzů/srazů PyLadies?
+        Srazy jsou v adresáři meetups/ a každý má jméno, name:
+patriciehermanova@fedora:~/pyladies.cz-master/meetups$ grep -o "name:" *.yml | wc -l
+210
+
+
