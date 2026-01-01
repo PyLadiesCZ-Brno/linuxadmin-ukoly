@@ -1,0 +1,26 @@
+1. C 
+   Bonus: A ls --version
+   	  B ls -d "$PWD"
+   	  C ls -m
+   	  
+2. C, E, G, H, I, J
+
+3. E
+
+4. B, C
+
+5. 1) vytvoří soubor
+   2) ano
+   3) je tam velikost souboru 0, takže asi nic
+   4) k vytvoření prázdného souboru
+   
+6. ../raw
+
+7. B
+
+8. B
+
+9. mv maltose.dat sucrose.dat analyzed
+
+10. A, B, D
+
