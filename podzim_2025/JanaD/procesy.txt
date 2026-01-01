@@ -1,0 +1,17 @@
+Vypis root
+ps -ef | grep -w ^root > root/root_ps.txt
+
+Vypis user
+ps -ef | grep -w ^$USER > $USER/$USER.txt
+
+Pridani poctu
+ps -ef | grep -w ^root | wc -l >> root/root_ps.txt
+
+ps -ef | grep -w ^$USER | wc -l >> $USER/$USER.txt
+
+Souhrnny soubor
+cat root/root_ps.txt > vsechny_ps.txt
+echo "" >> vsechny_ps.txt 
+cat $USER/$USER.txt >> vsechny_ps.txt 
+
+
