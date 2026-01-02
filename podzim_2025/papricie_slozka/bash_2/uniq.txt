@@ -1,0 +1,156 @@
+    Vypiš všechna místa konání Pyv (stačí mít v rámci každého řádku identifikátor jako artbar).
+    
+patriciehermanova@fedora:~/pyvo-data-master/series$ find . -type f -path "*/events/*.yaml" -exec grep "^venue:" {} \; | cut -d':' -f2- | sort | uniq
+ acko
+ alvi
+ andini
+ artbar
+ avu
+ baroko
+ beer-factory
+ beskydsky-pivovarek
+ botic-restaurant
+ cafe-falk
+ cafe-lajka
+ coolarna
+ crosscafe
+ cyrils-pub
+ depo
+ edunesto
+ etaz
+ frankies
+ hlavni-nadrazi
+ hnizdo-snu
+ holesovicka-sachta
+ hub-20
+ h55
+ impact-hub
+ ires-sc
+ jama
+ jiraskovy-sady
+ kavarna-liberal
+ kaverna
+ kolocava
+ konvikt
+ kravi-hora
+ local-lokal-industry-pub
+ lumir
+ luzanky
+ masarykovo-namesti
+ moving-station
+ na-hradbach
+ na-venecku
+ palouk
+ park-bozetechova
+ picolo-piratske-centrum-olomouc
+ pivnice-doga
+ pivon
+ pivovarske-domy
+ raven-pub-bolevec
+ raven-pub-city
+ reset-point
+ restaurace-a-penzion-u-salzmannu
+ selepka
+ sklipek-kiwi-com
+ snyt
+ sport-club
+ the-pub-dejvice
+ tyrsuv-sad
+ u-drevaka
+ u-dreveneho-orla
+ u-kachnicky
+ u-morice
+ u-prejezdu
+ u-ptaka
+ u-travise
+ vila-stvanice
+ vinograf
+ v-lochu
+ vr-levsky
+ zivo-u-palecka
+ 2to2
+
+
+    
+    Přidej informaci o tom, kolikrát na kterém místě Pyvo bylo.
+    
+patriciehermanova@fedora:~/pyvo-data-master/series$ find . -type f -path "*/events/*.yaml" -exec grep "^venue:" {} \; | cut -d':' -f2- | sort | uniq -c | sort -nr
+    135  na-venecku
+     62  vr-levsky
+     54  artbar
+     29  u-ptaka
+     29  u-drevaka
+     29  coolarna
+     22  pivovarske-domy
+     18  raven-pub-bolevec
+     16  picolo-piratske-centrum-olomouc
+     16  palouk
+     13  kolocava
+     13  beer-factory
+     12  luzanky
+     10  sklipek-kiwi-com
+      9  kaverna
+      6  u-morice
+      5  restaurace-a-penzion-u-salzmannu
+      5  pivnice-doga
+      5  holesovicka-sachta
+      4  u-dreveneho-orla
+      4  sport-club
+      4  hub-20
+      4  depo
+      3  vila-stvanice
+      3  cyrils-pub
+      3  cafe-lajka
+      2  na-hradbach
+      2  lumir
+      2  kavarna-liberal
+      2  h55
+      2  hnizdo-snu
+      2  frankies
+      2  cafe-falk
+      2  baroko
+      2  andini
+      2  alvi
+      1  2to2
+      1  zivo-u-palecka
+      1  v-lochu
+      1  vinograf
+      1  u-travise
+      1  u-prejezdu
+      1  u-kachnicky
+      1  tyrsuv-sad
+      1  the-pub-dejvice
+      1  snyt
+      1  selepka
+      1  reset-point
+      1  raven-pub-city
+      1  pivon
+      1  park-bozetechova
+      1  moving-station
+      1  masarykovo-namesti
+      1  local-lokal-industry-pub
+      1  kravi-hora
+      1  konvikt
+      1  jiraskovy-sady
+      1  jama
+      1  ires-sc
+      1  impact-hub
+      1  hlavni-nadrazi
+      1  etaz
+      1  edunesto
+      1  crosscafe
+      1  botic-restaurant
+      1  beskydsky-pivovarek
+      1  avu
+      1  acko
+
+
+    Jaké jsou 3 nejčastější křestní jména organizátorů/koučů/atd. PyLadies?
+
+patriciehermanova@fedora:~/pyladies.cz-master/teams$ grep -R "name:" . | sed 's/.*name: *//' | awk '{print $1}' | sort | uniq -c | sort -nr | head -n 3
+      8 Tomáš
+      7 Petr
+      6 Veronika
+
+
+

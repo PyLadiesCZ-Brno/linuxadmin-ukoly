@@ -1,0 +1,297 @@
+Praktická část #
+Úkol 1: Vytvoření skupin a uživatelů #
+
+    Vytvoř skupiny:
+patriciehermanova@fedora:~$ sudo groupadd studenti
+patriciehermanova@fedora:~$ sudo groupadd ucitele
+    
+    Vytvoř uživatele:
+        eva (člen skupiny studenti):
+patriciehermanova@fedora:~$ sudo useradd eva
+patriciehermanova@fedora:~$ sudo usermod -aG studenti eva
+        
+        adam (člen skupiny studenti)
+patriciehermanova@fedora:~$ sudo useradd adam
+patriciehermanova@fedora:~$ sudo usermod -aG studenti adam
+        
+        petr (člen skupiny ucitele)
+patriciehermanova@fedora:~$ sudo useradd petr
+patriciehermanova@fedora:~$ sudo usermod -aG ucitele petr
+    
+    Nastav každému uživateli heslo (např. test123).
+patriciehermanova@fedora:~$ sudo passwd eva (noveheslo)
+patriciehermanova@fedora:~$ sudo passwd adam (noveheslo)
+patriciehermanova@fedora:~$ sudo passwd petr (noveheslo)
+
+    Ověř, do jakých skupin uživatelé patří.
+patriciehermanova@fedora:~$ groups eva
+eva : eva studenti
+patriciehermanova@fedora:~$ groups adam
+adam : adam studenti
+patriciehermanova@fedora:~$ groups petr
+petr : petr ucitele
+
+    Přidej uživatele eva také do skupiny ucitele.
+patriciehermanova@fedora:~$ sudo usermod -aG ucitele eva
+
+    Smaž uživatele adam a skupinu ucitele.
+patriciehermanova@fedora:~$ sudo userdel -r adam
+patriciehermanova@fedora:~$ sudo groupdel ucitele
+
+
+Úkol 2: Práva a přístup k souborům #
+
+    Přepni se na uživatele petr.
+patriciehermanova@fedora:~$ su petr 
+
+    V jeho domovské složce vytvoř soubor poznamka.txt.
+petr@fedora:~$ touch poznamka.txt
+
+    Zobraz výpis oprávnění.
+petr@fedora:~$ ls -l poznamka.txt
+-rw-r--r--. 1 petr petr 0 22. lis 21.30 poznamka.txt
+
+    Nastav oprávnění tak, aby:
+        vlastník mohl číst i zapisovat,
+        skupina mohla pouze číst,
+        ostatní neměli žádný přístup.
+    Ověř, že změna proběhla správně.
+petr@fedora:~$ chmod u=rw,g=r,o= poznamka.txt
+petr@fedora:~$ ls -l poznamka.txt
+-rw-r-----. 1 petr petr 0 22. lis 21.30 poznamka.txt
+    
+    Změň vlastníka souboru na uživatele eva a skupinu na studenti.
+    patriciehermanova@fedora:/home/petr$ sudo chown eva:studenti poznamka.txt
+
+    Ověř, že soubor má nového vlastníka i skupinu.
+    petr@fedora:~$ ls -l poznamka.txt
+    -rw-r-----. 1 eva studenti 0 22. lis 21.30 poznamka.txt
+
+
+Úkol 3: Sdílená složka pro skupinu #
+
+    Jako root vytvoř složku /home/spolecne.
+root@fedora:~# sudo mkdir /home/spolecne
+
+    Nastav vlastníka root a skupinu studenti.
+root@fedora:~# sudo chgrp studenti /home/spolecne
+    
+    Nastav práva tak, aby:
+        vlastník měl práva rw,
+        skupina měla práva rw,
+        ostatní neměli žádná.
+root@fedora:~# sudo chmod u=rw,g=rw,o= /home/spolecne 
+root@fedora:~# ls -l /home
+celkem 0
+drwx------. 1 eva               eva                 80 22. lis 21.01 eva
+drwx------. 1 Osolsobe          Osolsobe            80 22. říj 18.21 Osolsobe
+drwx------. 1 patriciehermanova patriciehermanova 1110 24. lis 19.20 patriciehermanova
+drwx------. 1 petr              petr               200 24. lis 19.20 petr
+drwx------. 1 Skocdopole        Skocdopole         106 22. říj 18.18 Skocdopole
+drw-rw----. 1 root              studenti             0 24. lis 20.34 spolecne
+
+    Nastav setgid bit, aby nově vytvořené soubory ve složce zdědily skupinu studenti:
+chmod g+s /home/spolecne
+celkem 0
+drwx------. 1 eva               eva                 80 22. lis 21.01 eva
+drwx------. 1 Osolsobe          Osolsobe            80 22. říj 18.21 Osolsobe
+drwx------. 1 patriciehermanova patriciehermanova 1110 24. lis 19.20 patriciehermanova
+drwx------. 1 petr              petr               200 24. lis 19.20 petr
+drwx------. 1 Skocdopole        Skocdopole         106 22. říj 18.18 Skocdopole
+drw-rwS---. 1 root              studenti             0 24. lis 20.34 spolecne
+
+
+
+    Ve složce /home/spolecne vytvoř soubor zkouska.txt jako uživatel eva.
+    Ověř, že soubor má skupinu studenti.
+musela jsem pridat pres root pridat x abych mohla vytvorit soubor
+root@fedora:~# ls -ld /home/spolecne
+drw-rwS---. 1 root studenti 0 24. lis 20.34 /home/spolecne
+root@fedora:~# chmod u=rwx /home/spolecne
+root@fedora:~# chmod g=rwx /home/spolecne
+root@fedora:~# chmod g+s /home/spolecne
+root@fedora:~# ls -ld /home/spolecne
+drwxrws---. 1 root studenti 0 24. lis 20.34 /home/spolecne 
+(ted uz to jde)
+eva@fedora:~$ touch /home/spolecne/zkouska.txt
+
+
+    Přepni se na uživatele adam a zkontroluj, že může tento soubor číst i upravovat.
+uzivatel adam neexistuje, smazala jsem ho na zacatku
+eva@fedora:~$ su adam
+su: user adam does not exist or the user entry does not contain all the required fields
+
+
+Úkol 4: Struktura „Školní tým“ #
+
+    Znovu vytvoř skupinu ucitele.
+patriciehermanova@fedora:~$ sudo groupadd ucitele
+
+
+    Vytvoř uživatele:
+        reditel
+        ucitelka
+        student1
+        student2
+patriciehermanova@fedora:~$ sudo useradd reditel
+patriciehermanova@fedora:~$ sudo useradd ucitelka
+patriciehermanova@fedora:~$ sudo useradd student1
+patriciehermanova@fedora:~$ sudo useradd student2
+
+
+    Přiřaď uživatele do skupin:
+        reditel, ucitelka → ucitele
+        student1, student2 → studenti
+patriciehermanova@fedora:~$ sudo usermod -aG ucitele reditel
+patriciehermanova@fedora:~$ sudo usermod -aG ucitele ucitelka
+patriciehermanova@fedora:~$ sudo usermod -aG studenti student1
+patriciehermanova@fedora:~$ sudo usermod -aG studenti student2
+
+patriciehermanova@fedora:~$ groups reditel ucitelka student1 student2
+reditel : reditel ucitele
+ucitelka : ucitelka ucitele
+student1 : student1 studenti
+
+    Vytvoř strukturu složek:
+
+    /opt/skola/
+      ├── ucitele/
+      └── studenti/
+      
+patriciehermanova@fedora:~$ sudo su -
+root@fedora:~# mkdir /opt/skola
+root@fedora:~# mkdir /opt/skola/ucitele
+root@fedora:~# mkdir /opt/skola/studenti
+root@fedora:~# tree /opt
+/opt
+└── skola
+    ├── studenti
+    └── ucitele
+
+4 directories, 0 files
+
+    Nastav:
+        /opt/skola/ucitele → vlastník root, skupina ucitele, práva 770
+        /opt/skola/studenti → vlastník root, skupina studenti, práva 770
+        
+root@fedora:~# chown root:ucitele /opt/skola/ucitele
+root@fedora:~# chown root:studenti /opt/skola/studenti
+root@fedora:~# chmod u=rwx /opt/skola/ucitele
+root@fedora:~# chmod g=rwx /opt/skola/ucitele
+root@fedora:~# chmod o= /opt/skola/ucitele
+root@fedora:~# chmod u=rwx /opt/skola/studenti
+root@fedora:~# chmod g=rwx /opt/skola/studenti
+root@fedora:~# chmod o= /opt/skola/studenti
+root@fedora:~# ls -ld /opt/skola/ucitele
+drwxrwx---. 1 root ucitele 0  8. pro 19.19 /opt/skola/ucitele
+root@fedora:~# ls -ld /opt/skola/studenti
+drwxrwx---. 1 root studenti 0  8. pro 19.19 /opt/skola/studenti
+root@fedora:~# 
+
+
+    Do obou složek přidej soubor info.txt s krátkým textem (např. „Vítejte ve složce učitelů“).
+    
+root@fedora:~# echo "Vítejte ve složce učitelů" > /opt/skola/ucitele/info.txt
+root@fedora:~# echo "Vítejte ve složce studentů" > /opt/skola/studenti/info.txt
+
+    Ověř, že:
+        Učitelé mají přístup pouze do složky ucitele.
+        Studenti pouze do studenti.
+        Ostatní uživatelé nemají přístup do žádné z nich.
+        
+root@fedora:~# su - ucitelka
+ucitelka@fedora:~$ cd /opt/skola/ucitele
+ucitelka@fedora:/opt/skola/ucitele$ cat info.txt
+Vítejte ve složce učitelů
+
+root@fedora:~# su - student1
+student1@fedora:~$ cd /opt/skola/ucitele
+-bash: cd: /opt/skola/ucitele: Operace zamítnuta
+student1@fedora:~$ cd /opt/skola/studenti
+student1@fedora:/opt/skola/studenti$ cat info.txt
+Vítejte ve složce studentů
+
+
+
+
+
+Bonus: Sudo zapomíná #
+
+(sudo ti dává oprávnění, ale i zodpovědnost. Nauč se před každým použitím sudo přečíst spouštěný příkaz a zamyslet se, jestli ho opravdu chceš spustit. Ale opět, neboj se experimentovat – na virtuálním počítači není co zkazit.)
+
+Co by měl dělat tento příkaz?
+
+ll /var/db/sudo/lectured/
+
+Příkaz ale pod běžným uživatelským účtem nefunguje; potřebuješ sudo ll /var/db/sudo/lectured/. To ale taky nefunguje. Proč? Jak to spravit?
+
+    Jaké soubory jsou v /var/db/sudo/lectured/? Komu patří? Jak jsou velké?
+
+je potreba pouzit sudo a bez bashoveho aliasu ll, tedy ls -l, soubory o sudo pouceni
+patriciehermanova@fedora:~$ sudo ls -l /var/db/sudo/lectured/
+celkem 0
+-rw-------. 1 root patriciehermanova 0 19. říj 20.21 1000
+-rw-------. 1 root eva               0 24. lis 20.53 1003
+-rw-------. 1 root petr              0 22. lis 21.44 1005
+-rw-------. 1 root franta            0 26. lis 13.24 1010
+
+    
+    Jaké soubory jsou v /var/run/sudo/ts? Komu patří? Jak jsou velké? Kdo k nim má jaká práva?
+    
+soubory, ktere pracuji s overenim hesla
+    
+patriciehermanova@fedora:~$ sudo ls -l /var/run/sudo/ts
+celkem 8
+-rw-------. 1 root patriciehermanova 224  8. pro 19.47 1000
+-rw-------. 1 root ucitelka          112  8. pro 19.29 1007
+
+    
+    
+    Jak by vypadal příkaz, který smaže „tvůj“ soubor v /var/run/sudo/ts?
+    
+patriciehermanova@fedora:~$ sudo rm /var/run/sudo/ts/1000
+
+
+Když spustíš příkaz sudo, zeptá se tě na heslo. Když ho spustíš podruhé (ve stejném terminálu), už se neptá – pamatuje si, že jsi heslo před chvilkou zadala.
+
+Vyzkoušej si ale, že tohle nefunguje s příkazem pro smazání „tvého“ souboru v /var/run/sudo/ts. Když ho pustíš několikrát za sebou, sudo se vždycky znovu zeptá na heslo.
+Proč?
+
+protoze jsem smazala udaj o predeslem zadani hesla
+patriciehermanova@fedora:~$ sudo rm /var/run/sudo/ts/1000
+patriciehermanova@fedora:~$ sudo ls /var/run/sudo/ts
+[sudo] heslo pro patriciehermanova: 
+1000  1007
+patriciehermanova@fedora:~$ sudo ls /var/run/sudo/ts
+1000  1007
+
+
+
+    Zadej tyhle příkazy:
+        Smaž „svůj“ soubor z /var/db/sudo/lectured/.
+        Smaž „svůj“ soubor z /var/run/sudo/ts.
+        Spusť sudo echo.
+        
+patriciehermanova@fedora:~$ sudo rm /var/db/sudo/lectured/1000
+patriciehermanova@fedora:~$ sudo rm /var/run/sudo/ts/1000
+patriciehermanova@fedora:~$ sudo echo
+
+Věříme, že jste od správce místního systému obdrželi obvyklé školení.
+Obvykle se jedná o tyto tři věci:
+
+    1. Respektujte soukromí druhých.
+    2. Přemýšlejte, než začnete psát.
+    3. S velkými právy přichází velká zodpovědnost.
+
+Z bezpečnostních důvodů zadávané heslo nebude zobrazeno.
+
+[sudo] heslo pro patriciehermanova: 
+
+
+    A odpověz:
+        Co je u sudo echo jinak?
+        zobrazi mi znovu pouceni
+        
+        K čemu slouží soubory ve /var/db/sudo/lectured/? 
+        soubory o sudo pouceni
+

@@ -1,0 +1,68 @@
+    
+Proč je vhodné nastavit uživatelské jméno a e-mail hned po instalaci?
+
+	prirazuji se ke commitum, aby bylo jasne, kdo zmenu provedl
+  
+Jaký je rozdíl mezi pracovním adresářem, indexem (staging area) a repozitářem?
+
+	pracovni adresar - slozka s upravovanymi soubory
+	staging area - meziprostor kam se zmena prida pres git add
+	repozitar = uloziste commitu napr na githubu
+    
+Co se děje při příkazu git add a co při git commit?
+
+	git add - presun zmeny do staging area
+	git commit - odeslani do repozitare s pridanym komentarem o tom co se menilo
+	
+    
+Vysvětli, co je to commit hash a proč je důležitý.
+	
+	unikatni kod kazdeho commitu, je mozne skrze nej porovnavat verze nebo se vratit v historii
+    
+Jak Git uchovává historii změn? Uveď rozdíl oproti klasickému ukládání souborů.
+
+	uchovava pouze tu historii commitu, kterou umi porovnavat nebo vracet
+    
+Co znamená, že Git je „distribuovaný systém pro správu verzí“?
+
+	repozitar a kazdy jeho klon obsahuje celou historii projektu, lze pomoci nej pracovat nezavisle
+	a zmeny synchronizovat pozdeji
+    
+Proč je doporučeno používat větve místo práce přímo v hlavní větvi (main/master)?
+
+	kvuli bezpecnosti, prehlednosti, testovani bez ovlivneni hlavni vetve
+
+	
+    
+Jaký je rozdíl mezi git merge a git rebase? Uveď příklad, kdy bys použil/a který. Co se stane s 		 historií, pokud sloučíš větev pomocí merge? A co při rebase? Pozn.: Co je rebase jsme se na kurzu neučili, ale jde taky o způsob slučování větví, který je dobré znát. Zkus si o tom dohledat informace.
+
+	git merge - slouci dve vetve a zachova historii, vhodne pro verejne vetve
+	git rebase - prepise historii a vznikne novy zaklad, vhodne pro osobni vetve, 
+ 	pred odealanim do verejneho repo
+	
+    
+Jaký je účel pull requestu a proč se používá?
+
+	pridani vetve k hlavni vetvi po jejim schvaleni autory hlavni vetve
+    
+Co znamená code review a jaký je jeho přínos?
+
+	kontrala kodu druhou osobou, odhaluje chyby = kvalitni citelny kod
+    
+K čemu je soubor .gitignore ?
+
+	brani nahrani nechtenych dat do repozitare
+    
+Co se stane, pokud přidáš do .gitignore soubor, který už je ve verzovací historii?
+
+	je nutne ho odstranit, je porad sledovany
+    
+Proč je vhodné ignorovat logy, dočasné soubory editorů nebo sestavení?
+
+	jsou to docasne generaovane soubory, zbytecne zvysuji velikost a neprehlednost repa
+    
+Jak se zapisují vzory do .gitignore? Uveď příklady pro:
+
+	ignorování všech .log souborů - *.log
+	ignorování adresáře build - /build/
+
