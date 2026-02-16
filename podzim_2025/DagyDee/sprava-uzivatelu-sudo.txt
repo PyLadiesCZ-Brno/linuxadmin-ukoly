@@ -1,0 +1,202 @@
+Úkoly – Správa uživatelů, Sudo
+
+Teoretická část
+
+A. Práce se soubory a výstupem
+    Co udělá příkaz cat a kdy je vhodné ho použít?
+    	- spojuje řetězce a vypisuje na standardní výstup, používá se k vypsání obsahu souboru
+    Jaký je rozdíl mezi less a cat?
+    	- cat vypíše celý obsah, less vypisuje po jednotlivých stránkách
+    K čemu slouží příkaz head a jak určíš, kolik řádků zobrazí?
+    	- vypíše začátek souboru, přepínač -n určí počet řádků
+    Jak bys zjistil, kolik má soubor řádků nebo slov?
+    	- příkazem wc (první dvě vypsané hodnoty)
+    Jaký příkaz bys použil, pokud chceš zobrazit pouze posledních 10 řádků souboru?
+    	- tail
+
+B. Uživatelé, skupiny a práva
+    Jaký je rozdíl mezi uživatelem a skupinou v Linuxu?
+    	- uživatel je každý jednotlivý člověk (účet), skupinu tvoří uživatelé se stejnými právy, kteří můžou sdílet soubory či složky
+    Co znamenají jednotlivé části výpisu oprávnění u souboru (např. -rw-r--r--)?
+    	- 1.znak označuje typ souboru
+    	1. rwx - práva vlastníka
+    	2. rwx - práva skupiny (kromě vlastníka)
+    	3. rwx - práva ostatních uživatelů (mimo skupinu)
+    Jaký je rozdíl mezi vlastníkem souboru a skupinou souboru?
+    	- vlastník může být jen jeden uživatel, obvykle tvůrce, mívá největší oprávnění
+    	- skupina souboru je více uživatelů, kteří mají k souboru přístup
+    Co obsahují soubory /etc/passwd a /etc/shadow?
+    	- passwd obsahuje základní informace o uživatelských účtech
+    	- shadow obsahuje informace o heslech uživatelů
+    K čemu slouží příkaz chmod a jak se používá?
+    	- slouží k přidání či ubrání oprávnění na souboru
+    	- např. chmod g+wx skupině(g) přidá(+) práva zápisu(w) a spuštění(x)
+    K čemu slouží příkazy useradd, groupadd, usermod, passwd, userdel a groupdel?
+    	- přidání uživatele, přidání skupiny, úprava uživatele (např. přidání do skupiny), nastavení/změna hesla, smazání uživatele, smazání skupiny
+
+Praktická část
+
+Úkol 1: Vytvoření skupin a uživatelů
+
+	dagmarvodakova@uspgh-spgweb-d1:~$ sudo groupadd studenti
+	[sudo] heslo pro dagmarvodakova: 
+	dagmarvodakova@uspgh-spgweb-d1:~$ sudo groupadd ucitele
+	dagmarvodakova@uspgh-spgweb-d1:~$ sudo useradd eva
+	[sudo] heslo pro dagmarvodakova: 
+	dagmarvodakova@uspgh-spgweb-d1:~$ sudo useradd adam
+	dagmarvodakova@uspgh-spgweb-d1:~$ sudo useradd petr
+	dagmarvodakova@uspgh-spgweb-d1:~$ sudo usermod eva -aG studenti
+	dagmarvodakova@uspgh-spgweb-d1:~$ sudo usermod adam -aG studenti
+	dagmarvodakova@uspgh-spgweb-d1:~$ sudo usermod petr -aG ucitele
+	dagmarvodakova@uspgh-spgweb-d1:~$ sudo passwd eva
+	[sudo] heslo pro dagmarvodakova: 
+	Nové heslo: 
+	ŠPATNÉ HESLO: Heslo je kratší než 8 znaků
+	Opakujte nové heslo: 
+	passwd: heslo bylo úspěšně změněno
+	dagmarvodakova@uspgh-spgweb-d1:~$ sudo passwd adam
+	Nové heslo: 
+	ŠPATNÉ HESLO: Heslo je kratší než 8 znaků
+	Opakujte nové heslo: 
+	passwd: heslo bylo úspěšně změněno
+	dagmarvodakova@uspgh-spgweb-d1:~$ sudo passwd petr
+	Nové heslo: 
+	ŠPATNÉ HESLO: Heslo je kratší než 8 znaků
+	Opakujte nové heslo: 
+	passwd: heslo bylo úspěšně změněno
+	dagmarvodakova@uspgh-spgweb-d1:~$ groups eva adam petr
+	eva : eva studenti
+	adam : adam studenti
+	petr : petr ucitele
+	dagmarvodakova@uspgh-spgweb-d1:~$ sudo usermod eva -aG ucitele
+	dagmarvodakova@uspgh-spgweb-d1:~$ groups eva adam petr
+	eva : eva studenti ucitele
+	adam : adam studenti
+	petr : petr ucitele
+	dagmarvodakova@uspgh-spgweb-d1:~$ sudo userdel adam
+	dagmarvodakova@uspgh-spgweb-d1:~$ sudo groupdel ucitele
+	dagmarvodakova@uspgh-spgweb-d1:~$ groups eva adam petr
+	eva : eva studenti
+	groups: „adam“: uživatel neexistuje
+	petr : petr
+
+Úkol 2: Práva a přístup k souborům      
+
+	dagmarvodakova@uspgh-spgweb-d1:~$ su petr
+	Heslo: 
+	petr@uspgh-spgweb-d1:/home/dagmarvodakova$ cd ~
+	petr@uspgh-spgweb-d1:~$ touch poznamka.txt
+	petr@uspgh-spgweb-d1:~$ ls -l poznamka.txt 
+	-rw-r--r--. 1 petr petr 0 17. lis 20.44 poznamka.txt
+	petr@uspgh-spgweb-d1:~$ chmod o-r poznamka.txt 
+	petr@uspgh-spgweb-d1:~$ ls -l poznamka.txt 
+	-rw-r-----. 1 petr petr 0 17. lis 20.44 poznamka.txt
+
+	dagmarvodakova@uspgh-spgweb-d1:~$ sudo find /home/petr -name "poznamka.txt"
+	[sudo] heslo pro dagmarvodakova: 
+	/home/petr/poznamka.txt
+	dagmarvodakova@uspgh-spgweb-d1:~$ sudo chown eva /home/petr/poznamka.txt
+	dagmarvodakova@uspgh-spgweb-d1:~$ sudo chgrp studenti /home/petr/poznamka.txt
+	dagmarvodakova@uspgh-spgweb-d1:~$ sudo ls -l /home/petr/poznamka.txt
+	-rw-r-----. 1 eva studenti 0 17. lis 20.44 /home/petr/poznamka.txt
+
+Úkol 3: Sdílená složka pro skupinu
+
+    Ověř, že soubor má skupinu studenti.
+    	-> Soubor zdědil skupinu, ale nezdědil oprávnění zápisu pro skupinu.
+    Přepni se na uživatele adam a zkontroluj, že může tento soubor číst i upravovat.
+    	-> Adama jsme smazali v předchozím úkolu.
+    	-> Číst by mohl, zapisovat nikoliv.
+    
+	dagmarvodakova@uspgh-spgweb-d1:~$ sudo su root
+	[sudo] heslo pro dagmarvodakova: 
+	root@uspgh-spgweb-d1:/home/dagmarvodakova# cd ~
+	root@uspgh-spgweb-d1:~# mkdir /home/spolecne
+	root@uspgh-spgweb-d1:~# chgrp studenti /home/spolecne
+	root@uspgh-spgweb-d1:~# chmod u=rwx,g=rwx,o= /home/spolecne
+	root@uspgh-spgweb-d1:~# chmod g+s /home/spolecne
+	root@uspgh-spgweb-d1:~# exit
+	exit
+	dagmarvodakova@uspgh-spgweb-d1:~$ su eva
+	Heslo: 
+	eva@uspgh-spgweb-d1:/home/dagmarvodakova$ touch /home/spolecne/zkouska.txt
+	eva@uspgh-spgweb-d1:/home/dagmarvodakova$ ls -l /home/spolecne/zkouska.txt
+	-rw-r--r--. 1 eva studenti 0 17. lis 22.41 /home/spolecne/zkouska.txt
+	eva@uspgh-spgweb-d1:/home/dagmarvodakova$ exit
+	exit
+	dagmarvodakova@uspgh-spgweb-d1:~$ su adam
+	su: user adam does not exist or the user entry does not contain all the required fields
+	dagmarvodakova@uspgh-spgweb-d1:~$ sudo usermod petr -aG studenti
+	[sudo] heslo pro dagmarvodakova: 
+	dagmarvodakova@uspgh-spgweb-d1:~$ su petr
+	Heslo: 
+	petr@uspgh-spgweb-d1:/home/dagmarvodakova$ ls -l /home/spolecne/zkouska.txt 
+	-rw-r--r--. 1 eva studenti 0 17. lis 22.41 /home/spolecne/zkouska.txt
+	petr@uspgh-spgweb-d1:/home/dagmarvodakova$ ls -ld /home/spolecne
+	drwxrws---. 1 root studenti 22 17. lis 22.41 /home/spolecne
+
+Úkol 4: Struktura „Školní tým“
+
+	dagmarvodakova@uspgh-spgweb-d1:~$ sudo groupadd ucitele
+	[sudo] heslo pro dagmarvodakova: 
+	dagmarvodakova@uspgh-spgweb-d1:~$ sudo useradd riditel
+	dagmarvodakova@uspgh-spgweb-d1:~$ sudo useradd ucitelka
+	dagmarvodakova@uspgh-spgweb-d1:~$ sudo useradd student1
+	dagmarvodakova@uspgh-spgweb-d1:~$ sudo useradd student2
+	dagmarvodakova@uspgh-spgweb-d1:~$ sudo usermod -aG ucitele riditel
+	dagmarvodakova@uspgh-spgweb-d1:~$ sudo usermod -aG ucitele ucitelka
+	dagmarvodakova@uspgh-spgweb-d1:~$ sudo usermod -aG studenti student1
+	dagmarvodakova@uspgh-spgweb-d1:~$ sudo usermod -aG studenti student2
+	dagmarvodakova@uspgh-spgweb-d1:~$ groups riditel ucitelka student1 student2
+	riditel : riditel ucitele
+	ucitelka : ucitelka ucitele
+	student1 : student1 studenti
+	student2 : student2 studenti
+	dagmarvodakova@uspgh-spgweb-d1:~$ sudo mkdir -p /opt/skola/studenti
+	[sudo] heslo pro dagmarvodakova: 
+	dagmarvodakova@uspgh-spgweb-d1:~$ sudo mkdir -p /opt/skola/ucitele
+	dagmarvodakova@uspgh-spgweb-d1:~$ sudo chown root:studenti /opt/skola/studenti/
+	dagmarvodakova@uspgh-spgweb-d1:~$ sudo chown root:ucitele /opt/skola/ucitele/
+	dagmarvodakova@uspgh-spgweb-d1:~$ sudo chmod 770 /opt/skola/studenti/
+	dagmarvodakova@uspgh-spgweb-d1:~$ sudo chmod 770 /opt/skola/ucitele/
+	dagmarvodakova@uspgh-spgweb-d1:~$ sudo touch /opt/skola/studenti/info.txt
+	dagmarvodakova@uspgh-spgweb-d1:~$ sudo touch /opt/skola/ucitele/info.txt
+	dagmarvodakova@uspgh-spgweb-d1:~$ sudo su root
+	[sudo] heslo pro dagmarvodakova: 
+	root@uspgh-spgweb-d1:/home/dagmarvodakova# echo 'Vítejte ve studentské složce.' > /opt/skola/studenti/info.txt
+	root@uspgh-spgweb-d1:/home/dagmarvodakova# echo 'Vítejte v učitelské složce.' > /opt/skola/ucitele/info.txt
+	root@uspgh-spgweb-d1:/home/dagmarvodakova# exit
+	exit
+	dagmarvodakova@uspgh-spgweb-d1:~$ sudo passwd riditel
+	[sudo] heslo pro dagmarvodakova: 
+	Nové heslo: 
+	ŠPATNÉ HESLO: Heslo je kratší než 8 znaků
+	Opakujte nové heslo: 
+	passwd: heslo bylo úspěšně změněno
+	dagmarvodakova@uspgh-spgweb-d1:~$ sudo passwd student1
+	Nové heslo: 
+	ŠPATNÉ HESLO: Heslo je kratší než 8 znaků
+	Opakujte nové heslo: 
+	passwd: heslo bylo úspěšně změněno
+	dagmarvodakova@uspgh-spgweb-d1:~$ su riditel
+	Heslo: 
+	riditel@uspgh-spgweb-d1:/home/dagmarvodakova$ cat /opt/skola/ucitele/info.txt 
+	Vítejte v učitelské složce.
+	riditel@uspgh-spgweb-d1:/home/dagmarvodakova$ cat /opt/skola/studenti/info.txt 
+	cat: /opt/skola/studenti/info.txt: Operace zamítnuta
+	riditel@uspgh-spgweb-d1:/home/dagmarvodakova$ su student1
+	Heslo: 
+	student1@uspgh-spgweb-d1:/home/dagmarvodakova$ cat /opt/skola/ucitele/info.txt 
+	cat: /opt/skola/ucitele/info.txt: Operace zamítnuta
+	student1@uspgh-spgweb-d1:/home/dagmarvodakova$ cat /opt/skola/studenti/info.txt 
+	Vítejte ve studentské složce.
+	student1@uspgh-spgweb-d1:/home/dagmarvodakova$ exit
+	exit
+	riditel@uspgh-spgweb-d1:/home/dagmarvodakova$ exit
+	exit
+	dagmarvodakova@uspgh-spgweb-d1:~$ cat /opt/skola/ucitele/info.txt 
+	cat: /opt/skola/ucitele/info.txt: Operace zamítnuta
+	dagmarvodakova@uspgh-spgweb-d1:~$ cat /opt/skola/studenti/info.txt 
+	cat: /opt/skola/studenti/info.txt: Operace zamítnuta
+
+
